@@ -1,0 +1,55 @@
+body{
+    padding-inline: 10rem;
+}
+
+.row>* {
+    padding: 0 !important;
+}
+
+.card{
+    /* background-color: #fff; */
+    margin: 5rem 2rem;
+}
+
+.card-badges{
+    margin-bottom: 1rem;
+    display: flex; 
+    justify-content: space-between;
+}
+
+.card-body{
+    padding-inline: 2rem !important;
+    /* padding-right: 1.5rem !important; */
+    padding-bottom: 2rem !important;
+}
+
+.card-text{
+    font-size: 0.8rem;
+}
+
+.img-4-3{
+    aspect-ratio: 4 / 3; 
+    width: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 1140px) { 
+    body{
+        padding-inline: 0;
+    }
+
+    .card{
+        margin: 5% 0;
+    }
+
+    .card-badges{
+        display: flex; 
+        flex-direction: column;
+    }
+
+    .card-body{
+        padding-inline: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+}
