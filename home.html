@@ -21,39 +21,76 @@
 
 <body style="border: 1px solid black;">
 
-    <div>
-        <div>
-            李欣霏0
-            LEE SIN FEI
+    <div class="my-5 container">
+        <div class="row  justify-content-evenly">
+            <div class="col-3 col-xl-1">
+                <img class="img-fluid" style="height: auto;" src="./image/home/Phoebe.jpg">
+            </div>
+            
+
+            <div class="col-7 col-xl-4">
+                <div class="d-flex" style="flex-direction:column; align-items: center;">
+                    <div>
+                        <div>
+                            <h2>李欣霏</h2>
+                            <h2>LEE SIN FEI</h2>
+                        </div>
+                
+                        <div>
+                            <p>
+                                國立政治大學 數位內容碩士學位學程 碩士 (2024) <BR>
+        
+                                國立台北教育大學 數位科技設計學系 學士 (2021) <BR>
+        
+                                Email: 0304phoebe@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="col-10 col-xl-4">
+                <h2>
+                    SKILL
+                </h2>
+                
+                <div class="d-flex">
+                    <div class="me-2">
+                        <h5>
+                            CODING 
+                        </h5>
+                        <mark>html</mark> <mark>css</mark> <mark>js</mark>
+                        <mark>c++</mark> <mark>c</mark> <mark>c#</mark>
+                        <mark>python</mark>
+
+                    </div>
+                   
+                    <div  class="ms-2">
+                        <h5>
+                            SOFTWARE
+                        </h5>
+                        <mark>Unity</mark> <mark>Unreal</mark>  <mark>Rhino</mark>
+                        <mark>Figma</mark> <mark>Proto.io</mark> <mark>AfterEffects</mark>
+                        <mark>Illustrator</mark> <mark>Photoshop</mark> 
+                        <mark>ClipStudioPaint</mark>
+                             
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div>
-            國立政治大學 數位內容碩士學位學程 碩士 (2024)
-            國立台北教育大學 數位科技設計學系 學士 (2021)
-        </div>
-        <div>
-            SKILL
-
-            CODING
-            c#
-            python
-            c++
-            c
-
-
-            DESIGN
-
-
-        </div>
-        <div>
-            CONTACT
-            email:0304phoebe@gmail.com
-        </div>
+        
+        
+        
     </div>
 
 
-    <div>
-        WORK
+    <div style="border-top: 1px solid #F2F2F2;">
+        <div class="d-flex justify-content-center">
+            <h2 class="m-5">WORK</h2>
+        </div>
+
         <div class="container">
             <div id="app" class="row justify-content-evenly">
                 <div v-for="(card, index) in cards" :key="index" class="card col-5 col-xl-3">
@@ -61,10 +98,10 @@
                         :style="{ 'object-position': card.imgPosition }" alt="...">
                     <div class="card-body">
                         <div class="card-badges">
-                            <span class="badge rounded-pill bg-light text-dark">{{ card.badge }}</span>
+                            <span class="badge rounded-pill bg-g b-g text-dark">{{ card.badge }}</span>
                             <div>
                                 <span v-for="(item, idx) in card.tool" :key="idx"
-                                    class="badge rounded-pill bg-light text-dark">{{ item.tools }}</span>
+                                    class="badge rounded-pill b-g text-dark">{{ item.tools }}</span>
                             </div>
                         </div>
                         <h5 class="card-title">{{ card.name }}</h5>
@@ -75,28 +112,28 @@
         </div>
 
 
-        WEB
+        <!-- WEB -->
         <!-- openhci -->
         <!-- MateLight -->
 
-        GAME
+        <!-- GAME -->
         <!-- Pick Up Memories - 2023-->
         <!-- Routine -2023 -->
 
-        APP ＆ MINI APP
+        <!-- APP ＆ MINI APP -->
         <!-- 友善地圖 -->
         <!-- 涼拌小秘書 MINI App-->
 
 
-        DIGITAL ART
+        <!-- DIGITAL ART -->
         <!-- Illusory Eyescape -->
 
 
-        PAINTING
+        <!-- PAINTING -->
         <!-- 水墨 -->
 
 
-        SIDE PROJECT
+        <!-- SIDE PROJECT -->
         <!-- LoRA -->
 
 
@@ -109,7 +146,7 @@
             data: {
                 cards: [
                     {
-                        img: './image/Illusory Eyescape/0.jpg',
+                        img: 'image/Illusory Eyescape/0.jpg',
                         name: 'Illusory Eyescape',
                         badge: 'DIGITAL ART',
                         tool: [
@@ -120,13 +157,14 @@
                         imgPosition: 'center 33%'
                     },
                     {
-                        img: '',
+                        img: 'image/涼拌小秘書/0_工作區域 1.png',
                         name: '涼拌小秘書',
                         badge: 'APP & MINI APP',
                         tool: [
-                            { tools: 'PYTHON' },
+                            { tools: 'Python' },
+                            { tools: 'JS' },
                         ],
-                        intro: '',
+                        intro: '獨居或是平日無法與家人相處的長輩們，時常會有孤獨的心理狀態，這會間接的影響他們的身體狀況。我們藉由一系列使用者研究探索台灣長者的社交習慣，提出了讓老者能輕鬆的在Line上與人工智慧聊天並創作屬於自己的長輩圖，同時也協助他們解決各方面的問題。',
                         imgPosition: ''
                     },
                     {
@@ -136,27 +174,29 @@
                         tool: [
                             { tools: 'UNREAL' },
                         ],
-                        intro: '',
+                        intro: '現今的社會型態使得越來越多人必須搬到非成長的都市打拼生活。離開家鄉長年孤單一人在外地，總會想帶一些充滿回憶的物品在新的住處陪伴自己。因此藉由選擇回憶中的物品作為一個契機，發想出一款近似人格測試的遊戲，檢視目前玩家所嚮往的未來與了解玩家努力生活的動力來源。',
                         imgPosition: '65% center'
                     },
                     {
-                        img: '',
+                        img: './image/openhci/0.png',
                         name: 'OpenHCI',
-                        badge: '',
+                        badge: 'WEB',
                         tool: [
-                            { tools: '' },
+                            { tools: 'HTML' },
+                            { tools: 'JS' },
+                            { tools: 'CSS' },
                         ],
-                        intro: '',
+                        intro: 'OpenHCI是由學生自治籌備的人機互動工作坊，本活動希望能夠以推廣HCI為主要宗旨，招收工程、設計及跨領域背景的學生，共同學習並進行跨領域的合作，探索人類生活空間中的各種互動模式。此網站為第12屆OpenHCI工作坊之形象網站，內容包括展示講者、主辦者資訊與詳細日程、報名方式等等。',
                         imgPosition: ''
                     },
                     {
-                        img: '',
+                        img: 'image/matelight/0-02.png',
                         name: 'MateLight',
                         badge: 'WEB',
                         tool: [
                             { tools: 'FIGMA' },
                         ],
-                        intro: '',
+                        intro: '在許多產品開發流程中，材料通常在中、後階段才被納入設計師的思考，「MATELIGHT」希望成為設計師探索材料的最佳平台，幫助設計師挑選材質遇到困難時，透過AI系統提供個人化的搜尋與推薦，同時輔以提供社群交流平台，讓設計師可以輕鬆地從從基本特性、使用方法及製作效果等，一手掌握完整的材料資訊！',
                         imgPosition: ''
                     },
                     {
@@ -170,35 +210,151 @@
                         imgPosition: '75% center'
                     },
                     {
-                        img: '',
+                        img: './image/play around with LoRA/0.png',
                         name: 'play around with LoRA',
-                        badge: 'SIDE PROJECT',
+                        badge: 'CREATIVE',
                         tool: [
-                            { tools: '' },
+                            { tools: 'Python' },
                         ],
-                        intro: '',
+                        intro: '嘗試使用LoRA訓練不同風格的模型。從網路上蒐集了20張漫畫風格肖像畫作品進行訓練。',
                         imgPosition: ''
                     },
                     {
-                        img: '',
+                        img: './image/友善地圖/0.png',
                         name: '友善地圖',
                         badge: 'APP & MINI APP',
                         tool: [
-                            { tools: '' },
+                            { tools: 'React Native' },
+                        ],
+                        intro: '友善地圖App能夠幫助使用者安全順利的抵達目的地、解決使用者的需求。此App建立在Google Map的雛型上，並新增更多對於個人、環境有幫助的功能，如：安全路段導航、即時路段回報、共享定位、錄影、緊急連絡、推播通知、尋找廁所／垃圾桶等等。透過此App，使用者就能了解所在地的資訊。',
+                        imgPosition: ''
+                    },
+                    {
+                        img: 'image/線上演唱會模擬系統/0.png',
+                        name: '線上演唱會模擬系統',
+                        badge: 'DEVICE & SYSTEM',
+                        tool: [   
+                            { tools: 'Unity' },
+                            { tools: 'c#' },
+                        ],
+                        intro: '在後疫情社會中，我們常常要面臨大型活動臨時取消的可能性，現在也有不少音樂團體與虛擬偶像會舉行線上演唱會。為了讓觀眾在家中也可以享有實體演唱會的氣氛，我們使用Arduino、Unity開發，用電腦與3D投影模擬實際舞台，並提供觀眾有互動功能的手燈與發送即時彈幕的平台，提升在家中參與演唱會的互動體驗。',
+                        imgPosition: ''
+                    },
+                    {
+                        img: './image/電子雞/0.png',
+                        name: '電子寵物雞',
+                        badge: 'DEVICE & SYSTEM',
+                        tool: [
+                            { tools: 'Unity' },
+                            { tools: 'c#' },
+                        ],
+                        intro: '使用WiFiBoy開發的掌上型電子寵物。使用者必須隨時注意寵物的狀態，適當清掃他的環境以及適量餵食他。妥善照顧他可以使其進化，但如果疏於照顧他除了會使他不健康，甚至會讓他死掉喔！',
+                        imgPosition: ''
+                    },
+                    {
+                        img: './image/gamejam/0.png',
+                        name: 'Baboo BEBELU',
+                        badge: 'GAME',
+                        tool: [
+                            { tools: 'Illustrator' },
+                        ],
+                        intro: '參與 NTUE DTD Game Jam 為期三天與小組共同製作的遊戲。Baboo BEBELU為一款音樂雙人對戰遊戲。玩家需配合音樂控制嬰兒爬去搜集物件，最先搜集到物件的玩家獲勝。',
+                        imgPosition: ''
+                    },
+                    {
+                        img: 'image/故事盒/0.png',
+                        name: '"?"',
+                        badge: 'CREATIVE',
+                        tool: [
+                            { tools: 'AI' },
+                            { tools: 'PS' },
+                            { tools: 'Electronics' },
                         ],
                         intro: '',
                         imgPosition: ''
                     },
                     {
-                        img: '',
+                        img: 'image/inkpaint/2019-10-25 11.06.24.jpg',
                         name: '',
-                        badge: '',
+                        badge: 'PAINTING',
                         tool: [
-                            { tools: '' },
+                            { tools: 'Ink' },
+                        ],
+                        intro: '',
+                        imgPosition: 'center 86%'
+                    },
+                    {
+                        img: 'image/inkpaint/2016-10-10 13.38.47.jpg',
+                        name: '為美好的世界獻上祝福',
+                        badge: 'PAINTING',
+                        tool: [
+                            { tools: 'Ink' },
                         ],
                         intro: '',
                         imgPosition: ''
                     },
+                    {
+                        img: 'image/inkpaint/2015「迢迢新秋夕，亭亭月將圓」.jpg',
+                        name: '迢迢新秋夕 亭亭月將圓',
+                        badge: 'PAINTING',
+                        tool: [
+                            { tools: 'Ink' },
+                        ],
+                        intro: '',
+                        imgPosition: 'center 28%'
+                    },
+                    {
+                        img: 'image/inkpaint/2014相望相忘.jpg',
+                        name: '相望相忘',
+                        badge: 'PAINTING',
+                        tool: [
+                            { tools: 'Ink' },
+                        ],
+                        intro: '',
+                        imgPosition: 'center 58%'
+                    },
+                    {
+                        img: 'image/watercolor/20180604.jpg',
+                        name: '九份',
+                        badge: 'PAINTING',
+                        tool: [
+                            { tools: 'Watercolor' },
+                        ],
+                        intro: '',
+                        imgPosition: ''
+                    },
+                    {
+                        img: 'image/watercolor/作品集_畫_181120_0028.jpg',
+                        name: '靜',
+                        badge: 'PAINTING',
+                        tool: [
+                            { tools: 'Watercolor' },
+                        ],
+                        intro: '',
+                        imgPosition: 'center 32%'
+                    },
+                    {
+                        img: 'image/watercolor/作品集_畫_181120_0029.jpg',
+                        name: '',
+                        badge: 'PAINTING',
+                        tool: [
+                            { tools: 'Watercolor' },
+                            { tools: 'Crayon' },
+                        ],
+                        intro: '',
+                        imgPosition: 'center 32%'
+                    },
+                    {
+                        img: 'image/watercolor/作品集_畫_181120_0035.jpg',
+                        name: '',
+                        badge: 'PAINTING',
+                        tool: [
+                            { tools: 'Watercolor' },
+                        ],
+                        intro: '',
+                        imgPosition: 'center 30%'
+                    },
+                    
                 ]
             }
         })

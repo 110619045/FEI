@@ -2,6 +2,20 @@ body{
     padding-inline: 10rem;
 }
 
+mark {
+    background-color: #F2F2F2 !important;
+    color: black;
+    line-height: 2  !important;
+}
+
+.b-g{
+    border:#F2F2F2 1px solid;
+}
+
+.bg-g{
+    background-color: #F2F2F2;
+}
+
 .row>* {
     padding: 0 !important;
 }
@@ -15,6 +29,8 @@ body{
     margin-bottom: 1rem;
     display: flex; 
     justify-content: space-between;
+    line-height: 1;
+    margin-inline: -0.5rem;
 }
 
 .card-body{
