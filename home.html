@@ -15,8 +15,6 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
 </head>
 
 <body style="border: 1px solid black;">
@@ -39,9 +37,9 @@
                         <div>
                             <p>
                                 國立政治大學 數位內容碩士學位學程 碩士 (2024) <BR>
-        
+                                <small class="text-black-50">Master's Program in Digital Content and Technologies</small> <BR>
                                 國立台北教育大學 數位科技設計學系 學士 (2021) <BR>
-        
+                                <small class="text-black-50">National Taipei University of Education Department of Digital Technology Design</small> <br>
                                 Email: 0304phoebe@gmail.com
                             </p>
                         </div>
@@ -81,18 +79,31 @@
             </div>
         </div>
         
-        
-        
     </div>
 
 
-    <div style="border-top: 1px solid #F2F2F2;">
-        <div class="d-flex justify-content-center">
-            <h2 class="m-5">WORK</h2>
+    <div  id="app"  style="border-top: 1px solid #F2F2F2;">
+        <div class="d-flex justify-content-between header-container">
+            <div class="m-5">
+                <button class="disabled" style="opacity:0">CN</button>
+                <button class="disabled" style="opacity:0">EN</button>        
+            </div>
+
+            <h2 class="m-5 flex-grow-1 text-center">WORK</h2>
+
+            <div class="m-5">
+                <button :class="['btn', 'btn-sm', showEnglish ? 'btn-outline-secondary' : 'btn-secondary']" @click="showEnglish = false">CN</button>
+                <button :class="['btn', 'btn-sm', showEnglish ? 'btn-secondary' : 'btn-outline-secondary']" @click="showEnglish = true" class="ml-2">EN</button>        
+            </div>
         </div>
 
+        <!-- <div class="mb-5">
+            <button :class="['btn', 'btn-sm', showEnglish ? 'btn-outline-secondary' : 'btn-secondary']" @click="showEnglish = false">CN</button>
+            <button :class="['btn', 'btn-sm', showEnglish ? 'btn-secondary' : 'btn-outline-secondary']" @click="showEnglish = true" class="ml-2">EN</button>        
+        </div> -->
+
         <div class="container">
-            <div id="app" class="row justify-content-evenly">
+            <div class="row justify-content-evenly">
                 <div v-for="(card, index) in cards" :key="index" class="card col-5 col-xl-3">
                     <img :src="card.img" class="card-img-top img-fluid img-4-3"
                         :style="{ 'object-position': card.imgPosition }" alt="...">
@@ -105,7 +116,10 @@
                             </div>
                         </div>
                         <h5 class="card-title">{{ card.name }}</h5>
-                        <p class="card-text">{{ card.intro }}</p>
+                        <!-- <p class="card-text">{{ card.intro }}</p> -->
+                        <p class="card-text">
+                            {{ showEnglish ? card.Eintro : card.intro }}
+                        </p>
                     </div>
                 </div>
             </div>
@@ -140,10 +154,12 @@
     </div>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script type="text/javascript">
         var app = new Vue({
             el: '#app',
             data: {
+                showEnglish: false,
                 cards: [
                     {
                         img: 'image/Illusory Eyescape/0.jpg',
@@ -153,7 +169,8 @@
                             { tools: 'HTML' },
                             { tools: 'JS' }
                         ],
-                        intro: '',
+                        intro: '近幾年因生成式AI的覺醒，使得藝術創作的手法變得更多元，也產生了很多人與機之間的對話與議題。因此我們提出了一件互動藝術作品來探討人與機器意識的變換，利用眼動追蹤獲取觀者意識，再將其轉為機器意識後以畫作呈現，希望藉由藝術體驗讓觀眾反思藝術本質。',
+                        Eintro: 'In recent years, the advent of generative AI has diversified artistic creation methods and generated many dialogues and issues between humans and machines. To explore the transformation of human and machine consciousness, we present an interactive artwork that uses eye-tracking technology to capture the participant\'s consciousness, converting it into machine consciousness and then expressing it as visual art. This artistic experience aims to encourage the audience to reflect on the essence of art.',
                         imgPosition: 'center 33%'
                     },
                     {
@@ -165,6 +182,7 @@
                             { tools: 'JS' },
                         ],
                         intro: '獨居或是平日無法與家人相處的長輩們，時常會有孤獨的心理狀態，這會間接的影響他們的身體狀況。我們藉由一系列使用者研究探索台灣長者的社交習慣，提出了讓老者能輕鬆的在Line上與人工智慧聊天並創作屬於自己的長輩圖，同時也協助他們解決各方面的問題。',
+                        Eintro: "Elderly people who live alone or are unable to spend time with their families during the week often experience feelings of loneliness, which can indirectly affect their physical health. Through a series of user studies exploring the social habits of the elderly in Taiwan, we proposed a solution that allows seniors to easily chat with artificial intelligence on Line and create their own personalized elder memes. This also helps them solve various problems they may encounter.",
                         imgPosition: ''
                     },
                     {
@@ -175,6 +193,7 @@
                             { tools: 'UNREAL' },
                         ],
                         intro: '現今的社會型態使得越來越多人必須搬到非成長的都市打拼生活。離開家鄉長年孤單一人在外地，總會想帶一些充滿回憶的物品在新的住處陪伴自己。因此藉由選擇回憶中的物品作為一個契機，發想出一款近似人格測試的遊戲，檢視目前玩家所嚮往的未來與了解玩家努力生活的動力來源。',
+                        Eintro: "In today's society, more and more people are moving to cities different from where they grew up in order to pursue their careers. Living alone in a new place away from their hometown for years often makes them want to bring along items full of memories to keep them company. Inspired by this, we developed a game similar to a personality test that encourages players to choose items from their memories. This serves as an opportunity to examine the future they aspire to and understand the sources of motivation driving their efforts in life.",
                         imgPosition: '65% center'
                     },
                     {
@@ -187,6 +206,7 @@
                             { tools: 'CSS' },
                         ],
                         intro: 'OpenHCI是由學生自治籌備的人機互動工作坊，本活動希望能夠以推廣HCI為主要宗旨，招收工程、設計及跨領域背景的學生，共同學習並進行跨領域的合作，探索人類生活空間中的各種互動模式。此網站為第12屆OpenHCI工作坊之形象網站，內容包括展示講者、主辦者資訊與詳細日程、報名方式等等。',
+                        Eintro: "OpenHCI is a student-organized workshop on human-computer interaction (HCI), aiming to promote HCI as its main mission. The workshop invites students from engineering, design, and interdisciplinary backgrounds to learn and collaborate across fields, exploring various interaction models within human living spaces. This website serves as the official site for the 12th OpenHCI workshop, providing information such as speaker and organizer profiles, detailed schedules, registration methods, and more.",
                         imgPosition: ''
                     },
                     {
@@ -197,6 +217,7 @@
                             { tools: 'FIGMA' },
                         ],
                         intro: '在許多產品開發流程中，材料通常在中、後階段才被納入設計師的思考，「MATELIGHT」希望成為設計師探索材料的最佳平台，幫助設計師挑選材質遇到困難時，透過AI系統提供個人化的搜尋與推薦，同時輔以提供社群交流平台，讓設計師可以輕鬆地從從基本特性、使用方法及製作效果等，一手掌握完整的材料資訊！',
+                        Eintro: 'In many product development processes, materials are typically considered only in the middle or later stages by designers. "MATELIGHT" aims to be the ideal platform for designers to explore materials, assisting them when they encounter difficulties in selecting materials. Through an AI system, it provides personalized search and recommendations, along with a community platform for communication. This allows designers to easily access comprehensive material information, including basic properties, usage methods, and production effects, all at their fingertips!',
                         imgPosition: ''
                     },
                     {
@@ -207,6 +228,7 @@
                             { tools: 'UNITY' },
                         ],
                         intro: '在這個遊戲中，你將扮演一位工廠品管作業員，藉由工作獲取報酬。 然而，工作並不是你生活的一切，每當下班時間來臨，你便可使用薪水探索不同的虛擬世界，享受片刻的放鬆。 但究竟要這樣日復一日地完成枯燥煩悶的工作並到虛擬世界逃避現實到什麼時候呢？',
+                        Eintro: "In this game, you will play the role of a factory quality control worker, earning rewards through your job. However, work is not everything in your life. When it's time to clock out, you can use your salary to explore different virtual worlds and enjoy a moment of relaxation. But how long can you keep completing tedious and monotonous tasks day after day, only to escape reality into the virtual world?",
                         imgPosition: '75% center'
                     },
                     {
@@ -217,16 +239,19 @@
                             { tools: 'Python' },
                         ],
                         intro: '嘗試使用LoRA訓練不同風格的模型。從網路上蒐集了20張漫畫風格肖像畫作品進行訓練。',
+                        Eintro: "I tried using LoRA to train models in different styles. I collected 20 manga-style portrait artworks from the internet for training.",
                         imgPosition: ''
                     },
                     {
                         img: './image/友善地圖/0.png',
                         name: '友善地圖',
+                        Ename: 'Friendly Maps',
                         badge: 'APP & MINI APP',
                         tool: [
                             { tools: 'React Native' },
                         ],
                         intro: '友善地圖App能夠幫助使用者安全順利的抵達目的地、解決使用者的需求。此App建立在Google Map的雛型上，並新增更多對於個人、環境有幫助的功能，如：安全路段導航、即時路段回報、共享定位、錄影、緊急連絡、推播通知、尋找廁所／垃圾桶等等。透過此App，使用者就能了解所在地的資訊。',
+                        Eintro: "The Friendly Maps App helps users reach their destinations safely and smoothly while addressing their needs. Built on the Google Maps platform, this app adds features beneficial to individuals and the environment, such as safe route navigation, real-time route reporting, location sharing, video recording, emergency contacts, push notifications, and finding restrooms or trash bins. Through this app, users can gain insights into their current location.",
                         imgPosition: ''
                     },
                     {
@@ -238,6 +263,7 @@
                             { tools: 'c#' },
                         ],
                         intro: '在後疫情社會中，我們常常要面臨大型活動臨時取消的可能性，現在也有不少音樂團體與虛擬偶像會舉行線上演唱會。為了讓觀眾在家中也可以享有實體演唱會的氣氛，我們使用Arduino、Unity開發，用電腦與3D投影模擬實際舞台，並提供觀眾有互動功能的手燈與發送即時彈幕的平台，提升在家中參與演唱會的互動體驗。',
+                        Eintro: "In a post-pandemic society, we often face the possibility of large events being canceled at the last minute, leading many music groups and virtual idols to hold online concerts. To allow audiences to enjoy the atmosphere of a live concert from home, we used Arduino and Unity to develop a system that simulates an actual stage with computers and 3D projection. Additionally, we provide interactive light sticks and a platform for sending real-time comments, enhancing the interactive experience of attending concerts from home.In a post-pandemic society, we often face the possibility of large events being canceled at the last minute, leading many music groups and virtual idols to hold online concerts. To allow audiences to enjoy the atmosphere of a live concert from home, we used Arduino and Unity to develop a system that simulates an actual stage with computers and 3D projection. Additionally, we provide interactive light sticks and a platform for sending real-time comments, enhancing the interactive experience of attending concerts from home.",
                         imgPosition: ''
                     },
                     {
@@ -249,6 +275,7 @@
                             { tools: 'c#' },
                         ],
                         intro: '使用WiFiBoy開發的掌上型電子寵物。使用者必須隨時注意寵物的狀態，適當清掃他的環境以及適量餵食他。妥善照顧他可以使其進化，但如果疏於照顧他除了會使他不健康，甚至會讓他死掉喔！',
+                        Eintro: "Developed using WiFiBoy, this handheld electronic pet requires users to constantly monitor its status, clean its environment appropriately, and feed it in moderation. Proper care can lead to its evolution, but neglecting it will not only make it unhealthy but could even lead to its demise!",
                         imgPosition: ''
                     },
                     {
@@ -259,6 +286,7 @@
                             { tools: 'Illustrator' },
                         ],
                         intro: '參與 NTUE DTD Game Jam 為期三天與小組共同製作的遊戲。Baboo BEBELU為一款音樂雙人對戰遊戲。玩家需配合音樂控制嬰兒爬去搜集物件，最先搜集到物件的玩家獲勝。',
+                        Eintro: 'Participated in the three-day NTUE DTD Game Jam to create a game with a team. "Baboo BEBELU" is a music-based two-player competitive game. Players must coordinate with the music to control a baby crawling to collect objects, with the first player to gather all the items emerging as the winner.',
                         imgPosition: ''
                     },
                     {
@@ -271,6 +299,7 @@
                             { tools: 'Electronics' },
                         ],
                         intro: '',
+                        Eintro: "",
                         imgPosition: ''
                     },
                     {
@@ -281,6 +310,7 @@
                             { tools: 'Ink' },
                         ],
                         intro: '',
+                        Eintro: "",
                         imgPosition: 'center 86%'
                     },
                     {
@@ -291,6 +321,7 @@
                             { tools: 'Ink' },
                         ],
                         intro: '',
+                        Eintro: "",
                         imgPosition: ''
                     },
                     {
@@ -301,6 +332,7 @@
                             { tools: 'Ink' },
                         ],
                         intro: '',
+                        Eintro: "",
                         imgPosition: 'center 28%'
                     },
                     {
@@ -311,6 +343,7 @@
                             { tools: 'Ink' },
                         ],
                         intro: '',
+                        Eintro: "",
                         imgPosition: 'center 58%'
                     },
                     {
@@ -321,6 +354,7 @@
                             { tools: 'Watercolor' },
                         ],
                         intro: '',
+                        Eintro: "",
                         imgPosition: ''
                     },
                     {
@@ -331,6 +365,7 @@
                             { tools: 'Watercolor' },
                         ],
                         intro: '',
+                        Eintro: "",
                         imgPosition: 'center 32%'
                     },
                     {
@@ -342,6 +377,7 @@
                             { tools: 'Crayon' },
                         ],
                         intro: '',
+                        Eintro: "",
                         imgPosition: 'center 32%'
                     },
                     {
@@ -352,6 +388,7 @@
                             { tools: 'Watercolor' },
                         ],
                         intro: '',
+                        Eintro: "",
                         imgPosition: 'center 30%'
                     },
                     
