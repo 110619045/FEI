@@ -84,14 +84,14 @@
 
     <div  id="app"  style="border-top: 1px solid #F2F2F2;">
         <div class="d-flex justify-content-between header-container">
-            <div class="m-xl-5">
+            <div class="m-xl-5 m-5">
                 <button class="disabled" style="opacity:0">CN</button>
                 <button class="disabled" style="opacity:0">EN</button>        
             </div>
 
-            <h2 class="m-xl-5 mb-5">WORK</h2>
+            <h2 class="m-xl-5 my-5">WORK</h2>
 
-            <div class="m-xl-5 mb-5">
+            <div class="m-xl-5 m-5">
                 <button :class="['btn', 'btn-sm', showEnglish ? 'btn-outline-secondary' : 'btn-secondary']" @click="showEnglish = false">CN</button>
                 <button :class="['btn', 'btn-sm', showEnglish ? 'btn-secondary' : 'btn-outline-secondary']" @click="showEnglish = true" class="ml-2">EN</button>        
             </div>
