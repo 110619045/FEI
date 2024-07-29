@@ -84,14 +84,14 @@
 
     <div  id="app"  style="border-top: 1px solid #F2F2F2;">
         <div class="d-flex justify-content-between header-container">
-            <div class="m-5">
+            <div class="m-xl-5">
                 <button class="disabled" style="opacity:0">CN</button>
                 <button class="disabled" style="opacity:0">EN</button>        
             </div>
 
-            <h2 class="m-5 flex-grow-1 text-center">WORK</h2>
+            <h2 class="m-xl-5 mb-5">WORK</h2>
 
-            <div class="m-5">
+            <div class="m-xl-5 mb-5">
                 <button :class="['btn', 'btn-sm', showEnglish ? 'btn-outline-secondary' : 'btn-secondary']" @click="showEnglish = false">CN</button>
                 <button :class="['btn', 'btn-sm', showEnglish ? 'btn-secondary' : 'btn-outline-secondary']" @click="showEnglish = true" class="ml-2">EN</button>        
             </div>
@@ -116,6 +116,7 @@
                             </div>
                         </div>
                         <h5 class="card-title">{{ card.name }}</h5>
+
                         <!-- <p class="card-text">{{ card.intro }}</p> -->
                         <p class="card-text">
                             {{ showEnglish ? card.Eintro : card.intro }}
