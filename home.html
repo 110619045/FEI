@@ -115,7 +115,8 @@
                                     class="badge rounded-pill b-g text-dark">{{ item.tools }}</span>
                             </div>
                         </div>
-                        <h5 class="card-title">{{ card.name }}</h5>
+                        <h5 class="card-title">{{ (showEnglish ? card.Ename : card.name) || (card.Ename || card.name)}}</h5>
+                        <!-- <h6 class="card-subtitle mb-2 text-muted">{{ (showEnglish ? card.name: card.Ename)}}</h6> -->
 
                         <!-- <p class="card-text">{{ card.intro }}</p> -->
                         <p class="card-text">
@@ -164,7 +165,8 @@
                 cards: [
                     {
                         img: 'image/Illusory Eyescape/0.jpg',
-                        name: 'Illusory Eyescape',
+                        name: '幻異視界',
+                        Ename: 'Illusory Eyescape',
                         badge: 'DIGITAL ART',
                         tool: [
                             { tools: 'HTML' },
@@ -177,6 +179,7 @@
                     {
                         img: 'image/涼拌小秘書/0_工作區域 1.png',
                         name: '涼拌小秘書',
+                        Ename: 'Chill Pal Secretary',
                         badge: 'APP & MINI APP',
                         tool: [
                             { tools: 'Python' },
@@ -188,7 +191,8 @@
                     },
                     {
                         img: './image/Pick Up Memories/0.jpg',
-                        name: 'Pick Up Memories',
+                        name: '打包回憶錄',
+                        Ename: 'Pick Up Memories',
                         badge: 'GAME',
                         tool: [
                             { tools: 'UNREAL' },
@@ -258,6 +262,7 @@
                     {
                         img: 'image/線上演唱會模擬系統/0.png',
                         name: '線上演唱會模擬系統',
+                        Ename: 'Online Concert Simulation System',
                         badge: 'DEVICE & SYSTEM',
                         tool: [   
                             { tools: 'Unity' },
@@ -270,6 +275,7 @@
                     {
                         img: './image/電子雞/0.png',
                         name: '電子寵物雞',
+                        Ename:'Electronic Pet',
                         badge: 'DEVICE & SYSTEM',
                         tool: [
                             { tools: 'Unity' },
