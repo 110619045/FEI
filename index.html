@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>W3.CSS Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+
+  <style>
+    body,
+    html {
+      height: 100%
+    }
+
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Amatic SC", sans-serif
+    }
+
+    .menu {
+      display: none
+    }
+
+    .bgimg {
+      background-repeat: no-repeat;
+      background-size: cover;
+      /* background-size: contain; */
+      /* background-size: 80%; */
+      background-image: url("/IMG_9695.jpg");
+      background-image: url("/IMG_5927.jpg");
+      /* background-image: url("/IMG_3733.jpg"); */
+      min-height: 90%;
+      /* background-position: center; */
+    }
+
+    .noto-sans-tc-200 {
+      font-family: "Noto Sans TC", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 200;
+      font-style: normal;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top w3-hide-small">
+    <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
+      <a href="#" class="w3-bar-item w3-button">HOME</a>
+      <a href="#work" class="w3-bar-item w3-button">WORK</a>
+      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- Header with image -->
+  <header class="bgimg w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-display-bottomleft w3-padding">
+      <!-- <span class="w3-tag w3-xlarge">Open from 10am to 12pm</span> -->
+    </div>
+    <div class="w3-display-middle w3-center">
+      <span class="w3-text-white w3-hide-small" style="font-size:100px">LEE SIN FEI</span>
+      <span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:60px"><b>LEE<br>SIN FEI</b></span>
+      <p><a href="#work" class="w3-button w3-xxlarge w3-black">SEE MY WORK</a></p>
+    </div>
+  </header>
+
+
+  <!-- Menu Container -->
+  <div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="work">
+    <div class="w3-content">
+
+      <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">MY WORK</h1>
+      <div class="w3-row w3-center w3-border w3-border-dark-grey">
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
+          <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Pizza</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
+          <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Salads</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
+          <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Starter</div>
+        </a>
+      </div>
+
+      <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
+        <h1><b>Margherita</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$12.50</span></h1>
+        <p class="w3-text-grey">Fresh tomatoes, fresh mozzarella, fresh basil</p>
+        <hr>
+
+        <h1><b>Formaggio</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$15.50</span></h1>
+        <p class="w3-text-grey">Four cheeses (mozzarella, parmesan, pecorino, jarlsberg)</p>
+        <hr>
+
+        <h1><b>Chicken</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$17.00</span></h1>
+        <p class="w3-text-grey">Fresh tomatoes, mozzarella, chicken, onions</p>
+        <hr>
+
+        <h1><b>Pineapple'o'clock</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$16.50</span></h1>
+        <p class="w3-text-grey">Fresh tomatoes, mozzarella, fresh pineapple, bacon, fresh basil</p>
+        <hr>
+
+        <h1><b>Meat Town</b> <span class="w3-tag w3-red w3-round">Hot!</span><span
+            class="w3-right w3-tag w3-dark-grey w3-round">$20.00</span></h1>
+        <p class="w3-text-grey">Fresh tomatoes, mozzarella, hot pepporoni, hot sausage, beef, chicken</p>
+        <hr>
+
+        <h1><b>Parma</b> <span class="w3-tag w3-grey w3-round">New</span><span
+            class="w3-right w3-tag w3-dark-grey w3-round">$21.50</span></h1>
+        <p class="w3-text-grey">Fresh tomatoes, mozzarella, parma, bacon, fresh arugula</p>
+      </div>
+
+      <div id="Pasta" class="w3-container menu w3-padding-32 w3-white">
+        <h1><b>Lasagna</b> <span class="w3-tag w3-grey w3-round">Popular</span> <span
+            class="w3-right w3-tag w3-dark-grey w3-round">$13.50</span></h1>
+        <p class="w3-text-grey">Special sauce, mozzarella, parmesan, ground beef</p>
+        <hr>
+
+        <h1><b>Ravioli</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$14.50</span></h1>
+        <p class="w3-text-grey">Ravioli filled with cheese</p>
+        <hr>
+
+        <h1><b>Spaghetti Classica</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$11.00</span></h1>
+        <p class="w3-text-grey">Fresh tomatoes, onions, ground beef</p>
+        <hr>
+
+        <h1><b>Seafood pasta</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$25.50</span></h1>
+        <p class="w3-text-grey">Salmon, shrimp, lobster, garlic</p>
+      </div>
+
+
+      <div id="Starter" class="w3-container menu w3-padding-32 w3-white">
+        <h1><b>Today's Soup</b> <span class="w3-tag w3-grey w3-round">Seasonal</span><span
+            class="w3-right w3-tag w3-dark-grey w3-round">$5.50</span></h1>
+        <p class="w3-text-grey">Ask the waiter</p>
+        <hr>
+
+        <h1><b>Bruschetta</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span></h1>
+        <p class="w3-text-grey">Bread with pesto, tomatoes, onion, garlic</p>
+        <hr>
+
+        <h1><b>Garlic bread</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$9.50</span></h1>
+        <p class="w3-text-grey">Grilled ciabatta, garlic butter, onions</p>
+        <hr>
+
+        <h1><b>Tomozzarella</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$10.50</span></h1>
+        <p class="w3-text-grey">Tomatoes and mozzarella</p>
+      </div><br>
+
+    </div>
+  </div>
+
+  <!-- About Container -->
+  <div class="w3-container w3-padding-64 w3-blue-grey  w3-grayscale w3-xlarge" id="about">
+    <div class="w3-content">
+      <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">About</h1>
+
+      <h1><b>EDUCATION</b></h1>
+      <div>
+        <div class="w3-row">
+          <div class="w3-col s12 m4">
+            <h2>Sep. 2021 - Jun. 2024</h2>
+          </div>
+          <div class="w3-col s12 m6">
+            <h2>National Chengchi University, Taipei, Taiwan</h2>
+            <h2>M.S., Digital Content and Technologies</h2>
+          </div>
+        </div>
+
+        <div class="w3-row">
+          <div class="w3-col s12 m4">
+            <h2>Sep. 2018 - Jan. 2021</h2>
+          </div>
+          <div class="w3-col s12 m6">
+            <h2>National Taipei University of Education, Taipei, Taiwan</h2>
+            <h2>B.Des., Digital Technology Design</h2>
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <h1><b>PROFESSIONAL EXPERIENCE</b></h1>
+      <div class="w3-row">
+        <div class="w3-col s12 m4">
+          <h2>Sep. 2024 - Current</h2>
+        </div>
+        <div class="w3-col s12 m6">
+          <h2>Zones Design inc</h2>
+          <h2>Founder & Owner </h2>
+        </div>
+      </div>
+      <div class="w3-row">
+        <div class="w3-col s12 m4">
+          <h2>2020 - 2023</h2>
+        </div>
+        <div class="w3-col s12 m6">
+          <h2>Freelance</h2>
+          <h2>Designer & Producer of Character Plushies and Merchandise</h2>
+        </div>
+      </div>
+
+
+      <!-- <div>
+        <h1><b>SKILL</b></h1>
+
+        <div class="me-2">
+          <h2>CODING</h2>
+          <span class="w3-tag">html</span> <span class="w3-tag">css</span> <span class="w3-tag">js</span>
+          <span class="w3-tag" class="w3-tag">c++</span> <span class="w3-tag">c</span> <span class="w3-tag">c#</span>
+          <span class="w3-tag">python</span>
+        </div>
+
+        <div class="ms-2">
+          <h2>SOFTWARE</h2>
+          <span class="w3-tag">Unity</span> <span class="w3-tag">Unreal</span> <span class="w3-tag">Rhino</span>
+          <span class="w3-tag">Figma</span> <span class="w3-tag">Proto.io</span> <span
+            class="w3-tag">AfterEffects</span>
+          <span class="w3-tag">Illustrator</span> <span class="w3-tag">Photoshop</span>
+          <span class="w3-tag">ClipStudioPaint</span>
+        </div>
+
+      </div> -->
+
+      <br>
+
+      <h1><b>SKILL</b></h1>
+      <div class="w3-row">
+        <div class="w3-col s12 m4">
+          <h2>CODING</h2>
+          <p><span class="w3-tag">html</span> <span class="w3-tag">css</span> <span class="w3-tag">js</span> </p>
+          <p><span class="w3-tag" class="w3-tag">c++</span> <span class="w3-tag">c</span> <span class="w3-tag">c#</span>
+          </p>
+          <p><span class="w3-tag">python</span></p>
+        </div>
+
+        <div class="w3-col s12 m6">
+          <h2>SOFTWARE</h2>
+          <p><span class="w3-tag">Unity</span> <span class="w3-tag">Unreal</span> <span class="w3-tag">Figma</span>
+            <span class="w3-tag">Proto.io</span>
+          </p>
+          <p><span class="w3-tag">Illustrator</span> <span class="w3-tag">Photoshop</span> <span
+              class="w3-tag">AfterEffects</span></p>
+          <p><span class="w3-tag">Rhino</span> <span class="w3-tag">ClipStudioPaint</span></p>
+        </div>
+      </div>
+      <br>
+
+      <h1><b id="contact">CONTACT</b></h1>
+      
+      <a href="0304phoebe@gmail.com"><i class="fa fa-envelope fa-lg w3-margin-right" aria-hidden="true"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=100001758529783"><i class="fa fa-facebook-square fa-lg w3-margin-right" aria-hidden="true"></i></a>
+      <a href="https://www.instagram.com/0304phoebe?igsh=Nnh3bzd5NjluM2xx&utm_source=qr"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
+      <h2>Email: 0304phoebe@gmail.com</h2>
+
+      <!-- <div>
+        <a href="https://www.facebook.com/profile.php?id=100001758529783">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#fff" class="bi bi-facebook"
+            viewBox="0 0 16 16">
+            <path
+              d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+          </svg>
+        </a>
+      </div>
+      <div>
+        <a href="https://www.instagram.com/0304phoebe?igsh=Nnh3bzd5NjluM2xx&utm_source=qr">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#fff" class="bi bi-instagram"
+            viewBox="0 0 16 16">
+            <path
+              d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+          </svg>
+        </a>
+      </div> -->
+
+      
+    </div>
+  </div>
+
+  <!-- Image of location/map -->
+  <!-- <img src="/IMG_9695.jpg" class="w3-image w3-greyscale" style="width:100%;" id="myMap"> -->
+
+  <!-- Contact -->
+  <!-- <div class="w3-container w3-padding-64 w3-red w3-grayscale-min w3-xlarge">
+    <div class="w3-content">
+      <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">SKILL</h1>
+      <p>Find us at some address at some place or call us at 05050515-122330</p>
+      <p><span class="w3-tag">Unity</span> We offer full-service catering for any event, large or small. We understand
+        your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
+      <p class="w3-xxlarge"><strong>Unity</strong> a table, ask for today's special or just send us a message:</p>
+      <form action="/action_page.php" target="_blank">
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required
+            name="People"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required
+            name="date" value="2020-11-16T20:00"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements"
+            required name="Message"></p>
+        <p><button class="w3-button w3-light-grey w3-block" type="submit">SEND MESSAGE</button></p>
+      </form>
+    </div>
+  </div> -->
+
+  <!-- Footer -->
+  <footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
+    <h2>© Phoebe 2025 - All Rights Reserved</h2>
+  </footer>
+
+  <script>
+    // Tabbed Menu
+    function openMenu(evt, menuName) {
+      var i, x, tablinks;
+      x = document.getElementsByClassName("menu");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < x.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+      }
+      document.getElementById(menuName).style.display = "block";
+      evt.currentTarget.firstElementChild.className += " w3-red";
+    }
+    document.getElementById("myLink").click();
+  </script>
+
+</body>
+
+</html>
