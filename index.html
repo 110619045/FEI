@@ -7,51 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
 
-  <style>
-    body,
-    html {
-      height: 100%
-    }
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: "Amatic SC", sans-serif
-    }
-
-    .menu {
-      display: none
-    }
-
-    .bgimg {
-      background-repeat: no-repeat;
-      background-size: cover;
-      /* background-size: contain; */
-      /* background-size: 80%; */
-      background-image: url("/IMG_9695.jpg");
-      background-image: url("/IMG_5927.jpg");
-      /* background-image: url("/IMG_3733.jpg"); */
-      min-height: 90%;
-      /* background-position: center; */
-    }
-
-    .noto-sans-tc-200 {
-      font-family: "Noto Sans TC", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 200;
-      font-style: normal;
-    }
-  </style>
 </head>
 
 <body>
@@ -65,6 +33,7 @@
       <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
     </div>
   </div>
+
 
   <!-- Header with image -->
   <header class="bgimg w3-display-container w3-grayscale-min" id="home">
@@ -84,81 +53,55 @@
     <div class="w3-content">
 
       <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">MY WORK</h1>
-      <div class="w3-row w3-center w3-border w3-border-dark-grey">
-        <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
-          <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Pizza</div>
-        </a>
-        <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
-          <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Salads</div>
-        </a>
-        <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
-          <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Starter</div>
-        </a>
+
+      <div id="app" style="">
+        <div class="d-flex justify-content-between header-container">
+          <div class="m-xl-5 my-5">
+            <button class="disabled" style="opacity:0">CN</button>
+            <button class="disabled" style="opacity:0">EN</button>
+          </div>
+
+          <div class="m-xl-5 my-5 mx-3">
+            <button :class="['btn', 'btn-sm', showEnglish ? 'btn-outline-secondary' : 'btn-secondary']"
+              @click="showEnglish = false">
+              CN
+            </button>
+            <button :class="['btn', 'btn-sm', showEnglish ? 'btn-secondary' : 'btn-outline-secondary']"
+              @click="showEnglish = true" class="ml-2">
+              EN
+            </button>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row justify-content-evenly">
+            <div v-for="(card, index) in cards" :key="index" class="card col-5 col-xl-3">
+              <img :src="card.img" class="card-img-top img-fluid img-4-3"
+                :style="{ 'object-position': card.imgPosition }" alt="..." />
+              <div class="card-body">
+                <div class="card-badges">
+                  <span class="badge rounded-pill bg-g b-g text-dark">
+                    {{ card.badge }}
+                  </span>
+                  <div class="mt-xl-0 mt-2">
+                    <span v-for="(item, idx) in card.tool" :key="idx" class="badge rounded-pill b-g text-dark">
+                      {{ item.tools }}
+                    </span>
+                  </div>
+                </div>
+                <h5 class="card-title">
+                  {{ (showEnglish ? card.Ename : card.name) || (card.Ename || card.name) }}
+                </h5>
+
+                <p class="card-text">
+                  {{ showEnglish ? card.Eintro : card.intro }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
-
-      <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
-        <h1><b>Margherita</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$12.50</span></h1>
-        <p class="w3-text-grey">Fresh tomatoes, fresh mozzarella, fresh basil</p>
-        <hr>
-
-        <h1><b>Formaggio</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$15.50</span></h1>
-        <p class="w3-text-grey">Four cheeses (mozzarella, parmesan, pecorino, jarlsberg)</p>
-        <hr>
-
-        <h1><b>Chicken</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$17.00</span></h1>
-        <p class="w3-text-grey">Fresh tomatoes, mozzarella, chicken, onions</p>
-        <hr>
-
-        <h1><b>Pineapple'o'clock</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$16.50</span></h1>
-        <p class="w3-text-grey">Fresh tomatoes, mozzarella, fresh pineapple, bacon, fresh basil</p>
-        <hr>
-
-        <h1><b>Meat Town</b> <span class="w3-tag w3-red w3-round">Hot!</span><span
-            class="w3-right w3-tag w3-dark-grey w3-round">$20.00</span></h1>
-        <p class="w3-text-grey">Fresh tomatoes, mozzarella, hot pepporoni, hot sausage, beef, chicken</p>
-        <hr>
-
-        <h1><b>Parma</b> <span class="w3-tag w3-grey w3-round">New</span><span
-            class="w3-right w3-tag w3-dark-grey w3-round">$21.50</span></h1>
-        <p class="w3-text-grey">Fresh tomatoes, mozzarella, parma, bacon, fresh arugula</p>
-      </div>
-
-      <div id="Pasta" class="w3-container menu w3-padding-32 w3-white">
-        <h1><b>Lasagna</b> <span class="w3-tag w3-grey w3-round">Popular</span> <span
-            class="w3-right w3-tag w3-dark-grey w3-round">$13.50</span></h1>
-        <p class="w3-text-grey">Special sauce, mozzarella, parmesan, ground beef</p>
-        <hr>
-
-        <h1><b>Ravioli</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$14.50</span></h1>
-        <p class="w3-text-grey">Ravioli filled with cheese</p>
-        <hr>
-
-        <h1><b>Spaghetti Classica</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$11.00</span></h1>
-        <p class="w3-text-grey">Fresh tomatoes, onions, ground beef</p>
-        <hr>
-
-        <h1><b>Seafood pasta</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$25.50</span></h1>
-        <p class="w3-text-grey">Salmon, shrimp, lobster, garlic</p>
-      </div>
-
-
-      <div id="Starter" class="w3-container menu w3-padding-32 w3-white">
-        <h1><b>Today's Soup</b> <span class="w3-tag w3-grey w3-round">Seasonal</span><span
-            class="w3-right w3-tag w3-dark-grey w3-round">$5.50</span></h1>
-        <p class="w3-text-grey">Ask the waiter</p>
-        <hr>
-
-        <h1><b>Bruschetta</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span></h1>
-        <p class="w3-text-grey">Bread with pesto, tomatoes, onion, garlic</p>
-        <hr>
-
-        <h1><b>Garlic bread</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$9.50</span></h1>
-        <p class="w3-text-grey">Grilled ciabatta, garlic butter, onions</p>
-        <hr>
-
-        <h1><b>Tomozzarella</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$10.50</span></h1>
-        <p class="w3-text-grey">Tomatoes and mozzarella</p>
-      </div><br>
 
     </div>
   </div>
@@ -259,10 +202,12 @@
       <br>
 
       <h1><b id="contact">CONTACT</b></h1>
-      
+
       <a href="0304phoebe@gmail.com"><i class="fa fa-envelope fa-lg w3-margin-right" aria-hidden="true"></i></a>
-      <a href="https://www.facebook.com/profile.php?id=100001758529783"><i class="fa fa-facebook-square fa-lg w3-margin-right" aria-hidden="true"></i></a>
-      <a href="https://www.instagram.com/0304phoebe?igsh=Nnh3bzd5NjluM2xx&utm_source=qr"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=100001758529783"><i
+          class="fa fa-facebook-square fa-lg w3-margin-right" aria-hidden="true"></i></a>
+      <a href="https://www.instagram.com/0304phoebe?igsh=Nnh3bzd5NjluM2xx&utm_source=qr"><i
+          class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
       <h2>Email: 0304phoebe@gmail.com</h2>
 
       <!-- <div>
@@ -284,7 +229,7 @@
         </a>
       </div> -->
 
-      
+
     </div>
   </div>
 
@@ -334,6 +279,9 @@
     }
     document.getElementById("myLink").click();
   </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="js/works.js"></script>
 
 </body>
 

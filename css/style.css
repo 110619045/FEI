@@ -1,70 +1,94 @@
-body{
-    padding-inline: 10rem;
+body,
+html {
+    height: 100%
 }
 
-mark {
-    background-color: #F2F2F2 !important;
-    color: black;
-    line-height: 2  !important;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span {
+    font-family: "Amatic SC", sans-serif
 }
 
-.b-g{
-    border:#F2F2F2 1px solid;
+.menu {
+    display: none
 }
 
-.bg-g{
-    background-color: #F2F2F2;
+i{
+    color: white;
 }
+
+.bgimg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/IMG_9695.jpg");
+    background-image: url("/IMG_5927.jpg");
+    min-height: 90%;
+}
+
+.noto-sans-tc-200 {
+    font-family: "Noto Sans TC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+
 
 .row>* {
     padding: 0 !important;
 }
 
-.card{
+.card {
     /* background-color: #fff; */
     margin: 5rem 2rem;
 }
 
-.card-badges{
+.card-badges {
     margin-bottom: 1rem;
-    display: flex; 
+    display: flex;
     justify-content: space-between;
     line-height: 1;
     margin-inline: -0.5rem;
 }
 
-.card-body{
+.card-body {
     padding-inline: 2rem !important;
-    /* padding-right: 1.5rem !important; */
     padding-bottom: 2rem !important;
 }
 
-.card-text{
+.card-text {
     font-size: 0.8rem;
 }
 
-.img-4-3{
-    aspect-ratio: 4 / 3; 
+.img-4-3 {
+    aspect-ratio: 4 / 3;
     width: auto;
     object-fit: cover;
     object-position: center;
 }
 
-@media (max-width: 1140px) { 
-    body{
+@media (max-width: 1140px) {
+    body {
         padding-inline: 0;
     }
 
-    .card{
+    .card {
         margin: 5% 0;
     }
 
-    .card-badges{
-        display: flex; 
+    .card-badges {
+        display: flex;
         flex-direction: column;
     }
 
-    .card-body{
+    .card-body {
         padding-inline: 1rem !important;
         padding-bottom: 1rem !important;
     }
