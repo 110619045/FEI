@@ -75,7 +75,10 @@
 
         <div class="container">
           <div class="row justify-content-evenly">
-            <div v-for="(card, index) in cards" :key="index" class="card col-5 col-xl-3">
+            <div v-for="(card, index) in cards" :key="index"
+              :class="['card', 'col-5', 'col-xl-3', { 'is-link': card.link }]" @click="openCard(card)"
+              :role="card.link ? 'link' : null" :tabindex="card.link ? 0 : null" @keydown.enter="openCard(card)"
+              @keydown.space.prevent="openCard(card)">
               <img :src="card.img" class="card-img-top img-fluid img-4-3"
                 :style="{ 'object-position': card.imgPosition }" alt="..." />
               <div class="card-body">

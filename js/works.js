@@ -6,6 +6,7 @@ var app = new Vue({
             {
                 img: 'image/Illusory Eyescape/0.jpg',
                 name: '幻異視界',
+                link: 'work/IllusoryEyescape.html',
                 Ename: 'Illusory Eyescape',
                 badge: 'DIGITAL ART',
                 tool: [
@@ -14,8 +15,8 @@ var app = new Vue({
                 ],
                 synopsis: '',
                 Esynopsis: '',
-                intro: '近幾年因生成式AI的覺醒，使得藝術創作的手法變得更多元，也產生了很多人與機之間的對話與議題。因此我們提出了一件互動藝術作品來探討人與機器意識的變換，利用眼動追蹤獲取觀者意識，再將其轉為機器意識後以畫作呈現，希望藉由藝術體驗讓觀眾反思藝術本質。',
-                Eintro: 'In recent years, the advent of generative AI has diversified artistic creation methods and generated many dialogues and issues between humans and machines. To explore the transformation of human and machine consciousness, we present an interactive artwork that uses eye-tracking technology to capture the participant\'s consciousness, converting it into machine consciousness and then expressing it as visual art. This artistic experience aims to encourage the audience to reflect on the essence of art.',
+                intro: '近年生成式 AI 的快速發展，讓藝術創作出現更多可能，也引發人與機器在「創作主體」與「意識」上的重新討論。本作品結合眼動追蹤與生成式影像模型：系統即時捕捉觀者的視覺注意力，將其轉化為生成條件，輸出為一幅幅持續變化的影像作品。透過這段人機共構的過程，作品邀請與引導觀眾思考：當機器也能參與創作時，藝術的本質、作者性與感知經驗將如何被重新定義？近年生成式 AI 的快速發展，讓藝術創作出現更多可能，也引發人與機器在「創作主體」與「意識」上的重新討論。本作品結合眼動追蹤與生成式影像模型：系統即時捕捉觀者的視覺注意力，將其轉化為生成條件，輸出為一幅幅持續變化的影像作品。透過這段人機共構的過程，作品邀請與引導觀眾思考：當機器也能參與創作時，藝術的本質、作者性與感知經驗將如何被重新定義？',
+                Eintro: 'In recent years, the rapid development of generative AI has expanded the possibilities of artistic creation and prompted renewed discussions on authorship and consciousness between humans and machines. This work combines eye-tracking technology with generative image models: the system captures the viewer’s visual attention in real time and translates it into generative conditions, producing continuously evolving images. Through this process of human–machine co-creation, the work invites and guides viewers to reflect on how the nature of art, authorship, and perceptual experience may be redefined when machines become active participants in creation.',
                 imgPosition: 'center 33%'
             },
             {
@@ -50,6 +51,7 @@ var app = new Vue({
             {
                 img: './image/openhci/0.png',
                 name: 'OpenHCI',
+                link: 'https://www.2022.openhci.com/',
                 badge: 'WEB',
                 tool: [
                     { tools: 'HTML' },
@@ -186,7 +188,7 @@ var app = new Vue({
             {
                 img: 'image/inkpaint/2016-10-10 13.38.47.jpg',
                 name: '為美好的世界獻上祝福',
-                Ename : 'May this beautiful world be blessed',
+                Ename: 'May this beautiful world be blessed',
                 badge: 'PAINTING',
                 tool: [
                     { tools: 'Ink' },
@@ -281,5 +283,13 @@ var app = new Vue({
             },
 
         ]
+    },
+    methods: {
+        openCard: function (card) {
+            if (!card || !card.link) {
+                return;
+            }
+            window.location.href = card.link;
+        }
     }
 })
