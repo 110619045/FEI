@@ -4,6 +4,34 @@ var app = new Vue({
         showEnglish: true,
         cards: [
             {
+                img: 'image/PG/PG.png',
+                name: 'Pacific Graphics 2025',
+                link: 'work/PG.html',
+                Ename: 'Pacific Graphics 2025',
+                badge: 'CONFERENCE',
+                tool: [
+                    
+                ],
+                synopsis: '',
+                Esynopsis: '',
+                intro: '',
+                Eintro: ''
+            },
+            {
+                img: 'image/UnlockingInnerVision/0.jpg',
+                name: '',
+                link: 'work/UnlockingInnerVision.html',
+                Ename: 'Unlocking Inner Vision',
+                badge: 'DEVICE & SYSTEM',
+                tool: [
+                    { tools: 'Python' }
+                ],
+                synopsis: '',
+                Esynopsis: '',
+                intro: '',
+                Eintro: ''
+            },
+            {
                 img: 'image/Illusory Eyescape/0.jpg',
                 name: '幻異視界',
                 link: 'work/IllusoryEyescape.html',
@@ -202,7 +230,7 @@ var app = new Vue({
             {
                 img: 'image/inkpaint/2015「迢迢新秋夕，亭亭月將圓」.jpg',
                 name: '迢迢新秋夕 亭亭月將圓',
-                Ename: 'In the quiet night of early autumn, the pale moon slowly rounds',
+                Ename: 'The pale moon slowly rounds',
                 badge: 'PAINTING',
                 tool: [
                     { tools: 'Ink' },
