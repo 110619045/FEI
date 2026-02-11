@@ -10,7 +10,6 @@ var app = new Vue({
                 Ename: 'Pacific Graphics 2025',
                 badge: 'CONFERENCE',
                 tool: [
-                    
                 ],
                 synopsis: '',
                 Esynopsis: '',
