@@ -25,8 +25,8 @@ i {
 .bgimg {
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("/IMG_9695.jpg");
-    background-image: url("/IMG_5927.jpg");
+    background-image: url("/image/IMG_9695.jpg");
+    background-image: url("/image/IMG_5927.jpg");
     min-height: 90%;
 }
 
