@@ -62,6 +62,19 @@ var app = new Vue({
                 imgPosition: ''
             },
             {
+                img: './image/play around with LoRA/0.png',
+                name: 'play around with LoRA',
+                badge: 'CREATIVE',
+                tool: [
+                    { tools: 'Python' },
+                ],
+                synopsis: '',
+                Esynopsis: '',
+                intro: '嘗試使用LoRA訓練不同風格的模型。從網路上蒐集了20張漫畫風格肖像畫作品進行訓練。',
+                Eintro: "I tried using LoRA to train models in different styles. I collected 20 manga-style portrait artworks from the internet for training.",
+                imgPosition: ''
+            },
+            {
                 img: './image/Pick Up Memories/0.jpg',
                 name: '打包回憶錄',
                 Ename: 'Pick Up Memories',
@@ -74,6 +87,19 @@ var app = new Vue({
                 intro: '現今的社會型態使得越來越多人必須搬到非成長的都市打拼生活。離開家鄉長年孤單一人在外地，總會想帶一些充滿回憶的物品在新的住處陪伴自己。因此藉由選擇回憶中的物品作為一個契機，發想出一款近似人格測試的遊戲，檢視目前玩家所嚮往的未來與了解玩家努力生活的動力來源。',
                 Eintro: "In today's society, more and more people are moving to cities different from where they grew up in order to pursue their careers. Living alone in a new place away from their hometown for years often makes them want to bring along items full of memories to keep them company. Inspired by this, we developed a game similar to a personality test that encourages players to choose items from their memories. This serves as an opportunity to examine the future they aspire to and understand the sources of motivation driving their efforts in life.",
                 imgPosition: '65% center'
+            },
+            {
+                img: 'image/matelight/0-02.png',
+                name: 'MateLight',
+                badge: 'WEB',
+                tool: [
+                    { tools: 'FIGMA' },
+                ],
+                synopsis: '',
+                Esynopsis: '',
+                intro: '在許多產品開發流程中，材料通常在中、後階段才被納入設計師的思考，「MATELIGHT」希望成為設計師探索材料的最佳平台，幫助設計師挑選材質遇到困難時，透過AI系統提供個人化的搜尋與推薦，同時輔以提供社群交流平台，讓設計師可以輕鬆地從從基本特性、使用方法及製作效果等，一手掌握完整的材料資訊！',
+                Eintro: 'In many product development processes, materials are typically considered only in the middle or later stages by designers. "MATELIGHT" aims to be the ideal platform for designers to explore materials, assisting them when they encounter difficulties in selecting materials. Through an AI system, it provides personalized search and recommendations, along with a community platform for communication. This allows designers to easily access comprehensive material information, including basic properties, usage methods, and production effects, all at their fingertips!',
+                imgPosition: ''
             },
             {
                 img: './image/openhci/0.png',
@@ -92,19 +118,6 @@ var app = new Vue({
                 imgPosition: ''
             },
             {
-                img: 'image/matelight/0-02.png',
-                name: 'MateLight',
-                badge: 'WEB',
-                tool: [
-                    { tools: 'FIGMA' },
-                ],
-                synopsis: '',
-                Esynopsis: '',
-                intro: '在許多產品開發流程中，材料通常在中、後階段才被納入設計師的思考，「MATELIGHT」希望成為設計師探索材料的最佳平台，幫助設計師挑選材質遇到困難時，透過AI系統提供個人化的搜尋與推薦，同時輔以提供社群交流平台，讓設計師可以輕鬆地從從基本特性、使用方法及製作效果等，一手掌握完整的材料資訊！',
-                Eintro: 'In many product development processes, materials are typically considered only in the middle or later stages by designers. "MATELIGHT" aims to be the ideal platform for designers to explore materials, assisting them when they encounter difficulties in selecting materials. Through an AI system, it provides personalized search and recommendations, along with a community platform for communication. This allows designers to easily access comprehensive material information, including basic properties, usage methods, and production effects, all at their fingertips!',
-                imgPosition: ''
-            },
-            {
                 img: './image/Routine/0.jpg',
                 name: 'Routine',
                 badge: 'GAME',
@@ -116,19 +129,6 @@ var app = new Vue({
                 intro: '在這個遊戲中，你將扮演一位工廠品管作業員，藉由工作獲取報酬。 然而，工作並不是你生活的一切，每當下班時間來臨，你便可使用薪水探索不同的虛擬世界，享受片刻的放鬆。 但究竟要這樣日復一日地完成枯燥煩悶的工作並到虛擬世界逃避現實到什麼時候呢？',
                 Eintro: "In this game, you will play the role of a factory quality control worker, earning rewards through your job. However, work is not everything in your life. When it's time to clock out, you can use your salary to explore different virtual worlds and enjoy a moment of relaxation. But how long can you keep completing tedious and monotonous tasks day after day, only to escape reality into the virtual world?",
                 imgPosition: '75% center'
-            },
-            {
-                img: './image/play around with LoRA/0.png',
-                name: 'play around with LoRA',
-                badge: 'CREATIVE',
-                tool: [
-                    { tools: 'Python' },
-                ],
-                synopsis: '',
-                Esynopsis: '',
-                intro: '嘗試使用LoRA訓練不同風格的模型。從網路上蒐集了20張漫畫風格肖像畫作品進行訓練。',
-                Eintro: "I tried using LoRA to train models in different styles. I collected 20 manga-style portrait artworks from the internet for training.",
-                imgPosition: ''
             },
             {
                 img: './image/友善地圖/0.png',
