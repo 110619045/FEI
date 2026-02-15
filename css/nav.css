@@ -1,0 +1,25 @@
+/* 導覽設計：非線性 */
+nav {
+    position: fixed;
+    bottom: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    z-index: 3;
+    font-size: 0.8rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    opacity: 1;
+    color: var(--accent);
+    cursor: crosshair;
+}

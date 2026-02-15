@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>LEE SIN FEI</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="./css/style_main.css">
+  <link rel="stylesheet" href="./css/nav.css">
+  <link rel="stylesheet" href="./css/card.css">
+</head>
+
+<body>
+
+  <div id="cursor-blur"></div>
+  <div class="instruction">// Move slowly to reveal intention</div>
+
+  <nav>
+    <a href="/core.html">Core Work</a>
+    <a href="/practice.html">Practice</a>
+    <a href="/sandbox.html">Sandbox</a>
+    <a href="/whoami.html">whoami</a>
+  </nav>
+
+  <script>
+    const blur = document.getElementById('cursor-blur');
+    const title = document.getElementById('main-title');
+    const subtext = document.getElementById('subtext');
+
+    document.addEventListener('mousemove', (e) => {
+      // 移動模糊圓環
+      blur.style.left = e.clientX + 'px';
+      blur.style.top = e.clientY + 'px';
+
+      // 計算距離中心點的距離
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
+      const distance = Math.sqrt(Math.pow(e.clientX - centerX, 2) + Math.pow(e.clientY - centerY, 2));
+
+      // 如果靠近中心，則文字變清晰 (慢感知的體現)
+      if (distance < 200) {
+        title.classList.add('reveal');
+        subtext.classList.add('reveal');
+      } else {
+        // 離開後慢慢消失，不讓資訊被「輕易擁有」
+        title.classList.remove('reveal');
+        subtext.classList.remove('reveal');
+      }
+    });
+  </script>
+
+<div id="app" class="w3-black mono-font">
+  
+  <div class="core-layout-container">
+    
+    <div class="title-area">
+      <h1 class="w3-text-white w3-xxlarge" style="letter-spacing: 3px; font-weight: bold; margin:0;">SELECTED_CORE</h1>
+      <p class="w3-text-teal w3-small" style="margin-top: 5px;">// {{ cards.length }} Projects Found</p>
+    </div>
+
+    <div class="horizontal-scroll-container">
+      <div v-for="(card, index) in cards" :key="index" class="gallery-card-large" @click="openCard(card)">
+         <div class="card-header-v2">
+           <span class="card-badge">{{ card.badge }}</span>
+           <span class="card-arrow">→</span>
+         </div>
+         <hr class="card-line-separator" style="border-top: 1px solid #333;">
+         <div class="card-image-wrapper">
+           <img :src="card.img" :style="{ objectPosition: card.imgPosition || 'center' }">
+         </div>
+         <h2 class="card-display-name">{{ card.Ename }}</h2>
+         <div class="card-tech-footer">
+           <div v-for="t in card.tool" class="tech-item-row">
+             <span class="w3-opacity">//</span> {{ t.tools }}
+           </div>
+         </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+  <script src="js/sandbox.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="js/card.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+/* 1. 最外層：維持你設定的 18vh */
+#app {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #000;
+    overflow: hidden;
+    margin: 0;
+    padding-top: 18vh;        
+}
+
+/* 2. 核心佈局容器 */
+.core-layout-container {
+    width: 90%;               
+    max-width: 1400px;        
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  
+}
+
+/* 3. 標題區 */
+.title-area {
+    margin-bottom: 40px;
+    text-align: left;
+    padding-left: 0;          
+}
+
+/* 4. 卡片捲動區 */
+.horizontal-scroll-container {
+    display: flex;
+    justify-content: flex-start; 
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow-x: auto;
+    gap: 60px;                
+    padding: 20px 0;          
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.horizontal-scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* 5. 卡片細節 */
+.gallery-card-large {
+    flex: 0 0 450px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.gallery-card-large:hover {
+    transform: translateY(-10px);
+}
+
+.card-header-v2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+}
+
+.card-badge {
+    font-size: 1rem;
+    color: #fff;
+    /* font-weight: bold; */
+    letter-spacing: 1px;
+}
+
+.card-arrow {
+    color: #00ffcc;           
+    font-size: 1.4rem;
+}
+
+.card-line-separator {
+    border: 0;
+    border-top: 1px solid #333;
+    margin: 0 0 25px 0;
+}
+
+/* 5. 卡片細節：圖片外層容器加上邊框設定 */
+.card-image-wrapper {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background: #111;
+    /* 加入預設邊框：深灰色，讓它平常隱藏在背景裡 */
+    border: 1px solid #333; 
+    transition: all 0.4s ease;
+}
+
+/* 預設狀態：純黑白 */
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) brightness(0.6) contrast(1.1);
+    transition: 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* 滑鼠移入狀態：恢復原色 + 邊框變亮 */
+.gallery-card-large:hover .card-image-wrapper {
+    /* 這裡可以改成你喜歡的顏色，例如你標題用的藍綠色 #00ffcc 或純白 #fff */
+    border: 1px solid #00ffcc; 
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.2); /* 淡淡的發光感 */
+}
+
+.gallery-card-large:hover img {
+    filter: grayscale(0%) brightness(1) contrast(1);
+    transform: scale(1.05);
+}
+
+.card-display-name {
+    font-size: 1.4rem;
+    color: #fff;
+    margin: 20px 0 10px 0;
+    font-weight: bold;
+}
+
+.tech-item-row {
+    font-size: 0.8rem;
+    color: #888;
+    text-transform: uppercase;
+    margin-top: 5px;
+    letter-spacing: 1px;
+}

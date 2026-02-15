@@ -1,0 +1,74 @@
+        :root {
+            --bg: #0a0a0a;
+            --text: #ffffff;
+            --accent: #00ffcc;
+        }
+
+        body, html {
+            margin: 0; padding: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+/* 核心理念背景：隨滑鼠移動的模糊光暈 */
+#cursor-blur {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0, 255, 204, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    transition: width 0.5s, height 0.5s;
+}
+
+/* 主標題：抗拒扁平化 */
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 200;
+    letter-spacing: 0.2rem;
+    opacity: 0.3;
+    transition: opacity 2s ease;
+}
+
+/* 當滑鼠靠近時，文字才會變清晰 */
+.reveal {
+    opacity: 1 !important;
+    filter: blur(0) !important;
+}
+
+.subtext {
+    font-style: italic;
+    font-size: 1rem;
+    margin-top: 20px;
+    color: #888;
+    filter: blur(5px);
+    transition: filter 1.5s ease, opacity 1.5s ease;
+    opacity: 0;
+}
+
+
+
+/* 互動提示 */
+.instruction {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 0.7rem;
+    color: var(--accent);
+    letter-spacing: 1px;
+}

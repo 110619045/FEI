@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>LEE SIN FEI</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="./css/style_main.css">
+  <link rel="stylesheet" href="./css/nav.css">
+</head>
+
+<body>
+
+  <div id="cursor-blur"></div>
+  <div class="instruction">// Move slowly to reveal intention</div>
+
+  <nav>
+    <a href="/core.html">Core Work</a>
+    <a href="#">Practice</a>
+    <a href="#">Sandbox</a>
+    <a href="/whoami.html">whoami</a>
+  </nav>
+
+  <script>
+    const blur = document.getElementById('cursor-blur');
+    const title = document.getElementById('main-title');
+    const subtext = document.getElementById('subtext');
+
+    document.addEventListener('mousemove', (e) => {
+      // 移動模糊圓環
+      blur.style.left = e.clientX + 'px';
+      blur.style.top = e.clientY + 'px';
+
+      // 計算距離中心點的距離
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
+      const distance = Math.sqrt(Math.pow(e.clientX - centerX, 2) + Math.pow(e.clientY - centerY, 2));
+
+      // 如果靠近中心，則文字變清晰 (慢感知的體現)
+      if (distance < 200) {
+        title.classList.add('reveal');
+        subtext.classList.add('reveal');
+      } else {
+        // 離開後慢慢消失，不讓資訊被「輕易擁有」
+        title.classList.remove('reveal');
+        subtext.classList.remove('reveal');
+      }
+    });
+  </script>
+
+
+  <!-- About Container -->
+  <div class="w3-container">
+    <div class="w3-row"
+      style="display: flex; justify-content: center; align-items: flex-start; min-height: 100vh; flex-wrap: wrap; padding-top: 10vh; padding-bottom: 10vh;">
+
+      <div class="w3-col m5 w3-margin" style="max-width: 450px;">
+        <h1 style="margin-top: 0; letter-spacing: 2px;">LEE, SIN-FEI</h1><br>
+        
+        <p style="font-size: 1.4em; color: #00ffcc;">I build to think.</p>
+        <p style="line-height: 1.8;">
+          Defining the boundary between Design and Engineering.<br>
+          Exploring new possibilities is how I experience the world.
+        </p>
+        <br>
+        <div>
+          <p class="w3-opacity">SOFTWARE</p>
+          <p>Unity / Unreal / Figma / Proto.io / Rhino / Adobe Suite</p>
+        </div>
+
+        <div class="">
+          <p class="w3-opacity">CODING</p>
+          <p>HTML / CSS / JS / C++ / C# / Python</p>
+        </div>
+
+        <p class="w3-opacity">Email: 0304phoebe@gmail.com</p>
+      </div>
+
+      <div class="w3-col m5 w3-margin" style="max-width: 550px;">
+        <h1 style="margin-top: 0;">EDUCATION</h1>
+        <div>
+          <div class="w3-row w3-margin-bottom">
+            <div class="w3-col s12 m5">
+              <p class="w3-opacity">Sep. 2021 - Jun. 2024</p>
+            </div>
+            <div class="w3-col s12 m7">
+              <p>National Chengchi University</p>
+              <p>M.S., Digital Content and Technologies</p>
+            </div>
+          </div>
+
+          <div class="w3-row w3-margin-bottom">
+            <div class="w3-col s12 m5">
+              <p class="w3-opacity">Sep. 2018 - Jan. 2021</p>
+            </div>
+            <div class="w3-col s12 m7">
+              <p>National Taipei University of Education</p>
+              <p>B.Des., Digital Technology Design</p>
+            </div>
+          </div>
+        </div>
+
+        <br>
+
+        <h1>PROFESSIONAL EXPERIENCE</h1>
+        <div class="w3-row w3-margin-bottom">
+          <div class="w3-col s12 m5">
+            <p class="w3-opacity">Sep. 2024 - Current</p>
+          </div>
+          <div class="w3-col s12 m7">
+            <p>Zones Design inc</p>
+            <p>Founder & Owner</p>
+          </div>
+        </div>
+        <div class="w3-row w3-margin-bottom">
+          <div class="w3-col s12 m5">
+            <p class="w3-opacity">2020 - 2023</p>
+          </div>
+          <div class="w3-col s12 m7">
+            <p>Freelance</p>
+            <p>Designer & Producer</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <!-- <footer class="w3-center w3-black w3-padding-48">
+    <p>© Phoebe 2025 - All Rights Reserved</p>
+  </footer> -->
+
+  <script>
+    // Tabbed Menu
+    function openMenu(evt, menuName) {
+      var i, x, tablinks;
+      x = document.getElementsByClassName("menu");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < x.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+      }
+      document.getElementById(menuName).style.display = "block";
+      evt.currentTarget.firstElementChild.className += " w3-red";
+    }
+    document.getElementById("myLink").click();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="js/works.js"></script>
+
+</body>
+
+</html>
