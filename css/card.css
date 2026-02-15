@@ -79,37 +79,36 @@
     margin: 0 0 25px 0;
 }
 
-/* 5. 卡片細節：圖片外層容器加上邊框設定 */
 .card-image-wrapper {
     width: 100%;
     height: 280px;
     overflow: hidden;
     background: #111;
-    /* 加入預設邊框：深灰色，讓它平常隱藏在背景裡 */
-    border: 1px solid #333; 
-    transition: all 0.4s ease;
+    border: 0.5px solid #888;
 }
 
-/* 預設狀態：純黑白 */
 .card-image-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    /* 透過 sepia 轉為暖色，再用 hue-rotate 轉向藍綠色 (約 140-160度) */
+    /* 調整 saturate 可以讓顏色更濃郁或更清淡 */
+    /* filter: sepia(100%) hue-rotate(140deg) saturate(1) brightness(0.5); */
     filter: grayscale(100%) brightness(0.6) contrast(1.1);
-    transition: 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
+    transition: 0.6s ease;
 
-/* 滑鼠移入狀態：恢復原色 + 邊框變亮 */
+}
 .gallery-card-large:hover .card-image-wrapper {
     /* 這裡可以改成你喜歡的顏色，例如你標題用的藍綠色 #00ffcc 或純白 #fff */
     border: 1px solid #00ffcc; 
     box-shadow: 0 0 15px rgba(0, 255, 204, 0.2); /* 淡淡的發光感 */
 }
-
 .gallery-card-large:hover img {
-    filter: grayscale(0%) brightness(1) contrast(1);
+    /* 滑鼠移入時恢復原色，或降低藍綠色濾鏡 */
+    filter: sepia(0%) hue-rotate(0deg) saturate(1) brightness(1);
     transform: scale(1.05);
 }
+/* ------------------------------------ */
 
 .card-display-name {
     font-size: 1.4rem;
