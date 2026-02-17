@@ -14,8 +14,7 @@ body {
   height: 100vh;
   position: relative;
   /* 請確保圖片路徑相對於此 CSS 檔案是正確的 */
-  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)), 
-              url('../image/Illusory%20Eyescape/0.jpg') center/cover no-repeat;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
