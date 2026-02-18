@@ -1,6 +1,6 @@
 const WORKS_DATA = [
     {
-        img: 'image/UnlockingInnerVision/0.jpg',
+        img: 'image/UnlockingInnerVision/ganzin.png',
         link: 'work/UnlockingInnerVision.html',
         Ename: 'Unlocking Inner Vision',
         badge: 'DEVICE & SYSTEM',
