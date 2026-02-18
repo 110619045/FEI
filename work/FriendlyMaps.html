@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <title>Friendly Map | LEE SIN FEI</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+  <link rel="stylesheet" href="../css/page.css">
+</head>
+
+<body>
+
+  <div class="w3-top">
+    <div class="w3-bar w3-black w3-opacity-min w3-hover-opacity-off" style="padding: 10px 5%;">
+      <a href="../core.html" class="w3-bar-item w3-button">BACK TO CORE</a>
+      <div class="w3-right">
+        <a href="#design" class="w3-bar-item w3-button">DESIGN</a>
+        <a href="#demo" class="w3-bar-item w3-button">DEMO</a>
+        <a href="#reflect" class="w3-bar-item w3-button">REFLECTIONS</a>
+      </div>
+    </div>
+  </div>
+
+
+  <header class="hero-section" style="  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)), 
+              url('../image/友善地圖/01.png') center/cover no-repeat;">
+    <div class="hero-subtitle">// Let us guide you toward a path of light and warmth</div>
+    <h1 class="hero-title">Friendly Maps</h1>
+    <div style="display: flex; gap: 30px; margin-top: 20px;">
+      <!-- <a href="https://youtu.be/6fc9Asr5d2U" target="_blank" style="color:#fff; text-decoration:none;">[ WATCH VIDEO
+        ]</a>
+      <a href="https://dl.acm.org/doi/abs/10.1145/3641234.3671068" target="_blank"
+        style="color:var(--accent-color); text-decoration:none;">[ ACADEMIC PAPER ]</a>
+      <a href="../image/Illusory Eyescape/Poster_Siggraph.jpg" target="_blank"
+        style="color:#fff; text-decoration:none;">[ Poster ]
+      </a> -->
+    </div>
+  </header>
+
+  <section class="meta-info-grid">
+    <div class="meta-item">
+      <h4>YEAR / VENUE</h4>
+      <p>2021 - Young Designers' Exhibition <br> 2020 - Mobile Application Innovation Contest</p>
+    </div>
+    <div class="meta-item">
+      <h4>TECHNOLOGIES</h4>
+      <p>React Native<br> Google Maps API</p>
+    </div>
+    <div class="meta-item">
+      <h4>MY ROLE</h4>
+      <p>User Research&emsp;/&emsp;UI/UX Design&emsp;/&emsp;Data Collection<br>Interactive Prototyping and
+        Testing<br>Front-end Implementation</p>
+    </div>
+  </section>
+
+  <section class="section-content">
+    <p class="w3-xlarge" style="color: var(--accent-color); font-weight: 200;">
+      Built upon the foundation of Google Maps, Friendly Map integrates enhanced features tailored for personal and
+      environmental well-being. It empowers users to reach their destinations safely and seamlessly, while fostering a
+      spirit of social mutual aid through a real-time reporting system.
+    </p>
+    <p>
+      Built upon the robust technological foundation of Google
+      Maps, our system deeply integrates 13 key safety factors—including streetlight distribution, surveillance camera
+      locations, and police patrol boxes. This allows users to customize their safety priorities and generate a
+      personalized "Friendly Route" that provides the highest level of security. Beyond static data application, the app
+      emphasizes the dynamic energy of social mutual aid. Through a real-time
+      reporting and reward mechanism, every user becomes an active guardian of community safety.
+      <br><br>
+      From personalized safe
+      navigation and real-time location sharing to emergency SOS recording support, this project does more than just
+      alleviate the anxiety of those walking home late at night. It demonstrates how technology, through the power of
+      data sharing, can infuse urban navigation with a deeper sense of warmth, inclusivity, and security.
+    </p>
+
+    <!-- <h2 class="section-title" style="margin-top: 50px; ">Core Features</h2>
+    <h2 class="">Personalized Safe Routing</h2>
+    <h2 class="">Social Mutual Aid & Real-time Updates</h2>
+    <h2 class="">Personal Guardian</h2>
+    <h2 class="">Urban Convenience Services</h2> -->
+  </section>
+
+  <section id="design" class="section-content" style="background: #050505;">
+    <h2 class="section-title">Design Objectives and Core Values</h2>
+    <div>
+      <div class="w3-third w3-padding">
+        <h2>Safety First</h2>
+        <p style="text-align:justify">
+          The core objective is to help users avoid emergencies and potential hazards by providing multiple channels for
+          real-time information on critical road conditions, ensuring a safe arrival at their destination.
+        </p>
+      </div>
+      <div class="w3-third w3-padding">
+        <h2>Social Mutual Aid</h2>
+        <p style="text-align:justify">
+          Through a real-time road reporting mechanism, we encourage users to share information—protecting themselves
+          while assisting others—to realize a vision of community support and social mutual aid.
+        </p>
+      </div>
+      <div class="w3-third w3-padding">
+        <h2>Need Fulfillment</h2>
+        <p style="text-align:justify">
+          Beyond navigation and safety, the app addresses the finer details of daily life, such as locating public
+          restrooms and trash cans, providing a comprehensive suite of environmental information services.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-content" style="background: #050505; margin-top: 50px; clear: both;">
+    <h2 class="section-title">Interface</h2>
+    <div class="feature-row">
+      <div class="feature-text">
+        <p>The system operates in four key stages:</p>
+        <ul style="list-style: none; padding: 0;" class="w3-margin-top">
+
+          <li><b style="color:var(--accent-color)"> 1. Search Bar </b></li>
+          <p class=" w3-opacity ">Enter the destination to initiate seamless route planning.</p>
+          <li><b style="color:var(--accent-color)"> 2. User Profile</b></li>
+          <p class=" w3-opacity ">
+            Access the personal dashboard to view user level, and contribution history.</p>
+          <li><b style="color:var(--accent-color)">3. Safety Factor Filter </b></li>
+          <p class=" w3-opacity ">Customize and prioritize safety elements (e.g., streetlights, surveillance) to
+            generate a personalized secure route.</p>
+          <li><b style="color:var(--accent-color)"> 4. Current Location Indicator </b></li>
+          <!-- <p class=" w3-opacity ">Real-time GPS positioning to ensure navigation accuracy and situational awareness.</p> -->
+          <li><b style="color:var(--accent-color)"> 5. Navigation System</b></li>
+          <p class=" w3-opacity ">
+            Activates visual route guidance, directing users through optimized paths while avoiding high-risk areas.</p>
+          <li><b style="color:var(--accent-color)">6. Navigation Bar </b></li>
+          <!-- <p class=" w3-opacity ">Quick-access menu for switching between the main map, safety reporting, and account settings.</p> -->
+        </ul>
+      </div>
+      <div class="feature-image">
+        <img style="width: 55%;" src="../image/友善地圖/02.png" class="n-glow-img">
+      </div>
+    </div>
+  </section>
+
+  <section id="demo" class="section-content" style="background: #050505; clear: both;">
+    <h2 class="section-title">Project Demo</h2>
+    <video style="width: 100%;" src="../image/友善地圖/1_友善地圖_影片.mp4" autoplay controls></video>
+  </section>
+
+
+  <section id="reflect" class="reflection-box" style="clear: both;">
+    <h2 style="text-align: center; color: var(--accent-color); margin-bottom: 40px;">// Reflections </h2>
+
+    <div class="reflection-text" style="text-align: center;">
+      "Technology is not neutral —<br> it reflects whose experiences are considered and whose are overlooked."
+    </div>
+    <div style="width: 75%; margin: 0 auto;">
+      <br>
+      <p>
+        Through this project, I realized that design begins with listening. What seemed like a simple navigation problem
+        was, in fact, about fear, trust, and lived experience. Friendly Map taught me that meaningful technology does
+        not only optimize efficiency—it acknowledges vulnerability. By translating personal concern into a data-driven
+        system, I learned how design can bridge individual emotion and collective infrastructure. This insight continues
+        to shape my approach to human-centered technology.
+      </p>
+    </div>
+  </section>
+
+  <footer class="w3-center w3-black">
+    <p class="w3-opacity">© Phoebe 2025</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('.ie-carousel').slick({
+        dots: true,
+        infinite: true,
+        speed: 800,
+        slidesToShow: 1,
+        autoplay: true,
+        arrows: false
+      });
+    });
+
+    function openLightbox(img) {
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      lightboxImg.src = img.src;
+      lightbox.classList.add("active");
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightbox").classList.remove("active");
+    }
+  </script>
+
+</body>
+
+</html>
