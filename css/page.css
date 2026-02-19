@@ -181,6 +181,18 @@ body {
   display: flex;
 }
 
+.video-wrap {
+    width: 100%;
+    aspect-ratio: 16 / 9;  /* 讓高度跟著寬度等比 */
+}
+
+.video-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
 /* 響應式微調 */
 @media (max-width: 768px) {
   .meta-info-grid {
