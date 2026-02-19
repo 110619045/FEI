@@ -41,19 +41,6 @@ const WORKS_DATA = [
         Eintro: "In today's society, more and more people are moving to cities different from where they grew up in order to pursue their careers. Living alone in a new place away from their hometown for years often makes them want to bring along items full of memories to keep them company. Inspired by this, we developed a game similar to a personality test that encourages players to choose items from their memories. This serves as an opportunity to examine the future they aspire to and understand the sources of motivation driving their efforts in life.",
     },
     {
-        img: 'image/matelight/0-02.png',
-        name: 'MateLight',
-        badge: 'WEB',
-        tool: [
-            { tools: 'FIGMA' },
-        ],
-        synopsis: '',
-        Esynopsis: '',
-        intro: '在許多產品開發流程中，材料通常在中、後階段才被納入設計師的思考，「MATELIGHT」希望成為設計師探索材料的最佳平台，幫助設計師挑選材質遇到困難時，透過AI系統提供個人化的搜尋與推薦，同時輔以提供社群交流平台，讓設計師可以輕鬆地從從基本特性、使用方法及製作效果等，一手掌握完整的材料資訊！',
-        Eintro: 'In many product development processes, materials are typically considered only in the middle or later stages by designers. "MATELIGHT" aims to be the ideal platform for designers to explore materials, assisting them when they encounter difficulties in selecting materials. Through an AI system, it provides personalized search and recommendations, along with a community platform for communication. This allows designers to easily access comprehensive material information, including basic properties, usage methods, and production effects, all at their fingertips!',
-        imgPosition: ''
-    },
-    {
         img: './image/openhci/0.png',
         name: 'OpenHCI',
         link: 'https://www.2022.openhci.com/',

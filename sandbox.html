@@ -23,6 +23,7 @@
     <a href="core.html">Core Work</a>
     <a href="practice.html">Practice</a>
     <a href="sandbox.html">Sandbox</a>
+    <a href="creative.html">Creative</a>
     <a href="whoami.html">whoami</a>
   </nav>
 
@@ -53,37 +54,38 @@
     });
   </script>
 
-<div id="app" class="w3-black mono-font">
-  
-  <div class="core-layout-container">
-    
-    <div class="title-area">
-      <h1 class="w3-text-white w3-xxlarge" style="letter-spacing: 3px; font-weight: bold; margin:0;">SELECTED_PRACTICE</h1>
-      <p class="w3-text-teal w3-small" style="margin-top: 5px;">// {{ cards.length }} Projects Found</p>
-    </div>
+  <div id="app" class="w3-black mono-font">
 
-    <div class="horizontal-scroll-container">
-      <div v-for="(card, index) in cards" :key="index" class="gallery-card-large" @click="openCard(card)">
-         <div class="card-header-v2">
-           <span class="card-badge">{{ card.badge }}</span>
-           <span class="card-arrow">→</span>
-         </div>
-         <hr class="card-line-separator" style="border-top: 1px solid #333;">
-         <div class="card-image-wrapper">
-           <img :src="card.img" :style="{ objectPosition: card.imgPosition || 'center' }">
-         </div>
-         <h2 class="card-display-name">{{ card.Ename }}</h2>
-         <div class="card-tech-footer">
-           <div v-for="t in card.tool" class="tech-item-row">
-             <span class="w3-opacity">//</span> {{ t.tools }}
-           </div>
-         </div>
+    <div class="core-layout-container">
+
+      <div class="title-area">
+        <h1 class="w3-text-white w3-xxlarge" style="letter-spacing: 3px; font-weight: bold; margin:0;">SELECTED_PRACTICE
+        </h1>
+        <p class="w3-text-teal w3-small" style="margin-top: 5px;">// {{ cards.length }} Projects Found</p>
       </div>
+
+      <div class="horizontal-scroll-container">
+        <div v-for="(card, index) in cards" :key="index" class="gallery-card-large" @click="openCard(card)">
+          <div class="card-header-v2">
+            <span class="card-badge">{{ card.badge }}</span>
+            <span class="card-arrow">→</span>
+          </div>
+          <hr class="card-line-separator" style="border-top: 1px solid #333;">
+          <div class="card-image-wrapper">
+            <img :src="card.img" :style="{ objectPosition: card.imgPosition || 'center' }">
+          </div>
+          <h2 class="card-display-name">{{ card.Ename }}</h2>
+          <div class="card-tech-footer">
+            <div v-for="t in card.tool" class="tech-item-row">
+              <span class="w3-opacity">//</span> {{ t.tools }}
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
   </div>
-
-</div>
 
 
   <script src="js/sandbox.js"></script>

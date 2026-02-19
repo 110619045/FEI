@@ -1,18 +1,5 @@
 const WORKS_DATA = [
     {
-        img: './image/play around with LoRA/0.png',
-        name: 'play around with LoRA',
-        badge: 'CREATIVE',
-        tool: [
-            { tools: 'Python' },
-        ],
-        synopsis: '',
-        Esynopsis: '',
-        intro: '嘗試使用LoRA訓練不同風格的模型。從網路上蒐集了20張漫畫風格肖像畫作品進行訓練。',
-        Eintro: "I tried using LoRA to train models in different styles. I collected 20 manga-style portrait artworks from the internet for training.",
-        imgPosition: ''
-    },
-    {
         img: 'image/線上演唱會模擬系統/0.png',
         name: '線上演唱會模擬系統',
         Ename: 'Online Concert Simulation System',
@@ -24,6 +11,19 @@ const WORKS_DATA = [
         Esynopsis: '',
         intro: '在後疫情社會中，我們常常要面臨大型活動臨時取消的可能性，現在也有不少音樂團體與虛擬偶像會舉行線上演唱會。為了讓觀眾在家中也可以享有實體演唱會的氣氛，我們使用Arduino、Unity開發，用電腦與3D投影模擬實際舞台，並提供觀眾有互動功能的手燈與發送即時彈幕的平台，提升在家中參與演唱會的互動體驗。',
         Eintro: "In a post-pandemic society, we often face the possibility of large events being canceled at the last minute, leading many music groups and virtual idols to hold online concerts. To allow audiences to enjoy the atmosphere of a live concert from home, we used Arduino and Unity to develop a system that simulates an actual stage with computers and 3D projection. Additionally, we provide interactive light sticks and a platform for sending real-time comments, enhancing the interactive experience of attending concerts from home.In a post-pandemic society, we often face the possibility of large events being canceled at the last minute, leading many music groups and virtual idols to hold online concerts. To allow audiences to enjoy the atmosphere of a live concert from home, we used Arduino and Unity to develop a system that simulates an actual stage with computers and 3D projection. Additionally, we provide interactive light sticks and a platform for sending real-time comments, enhancing the interactive experience of attending concerts from home.",
+        imgPosition: ''
+    },
+    {
+        img: 'image/matelight/0-02.png',
+        name: 'MateLight',
+        badge: 'WEB',
+        tool: [
+            { tools: 'FIGMA' },
+        ],
+        synopsis: '',
+        Esynopsis: '',
+        intro: '在許多產品開發流程中，材料通常在中、後階段才被納入設計師的思考，「MATELIGHT」希望成為設計師探索材料的最佳平台，幫助設計師挑選材質遇到困難時，透過AI系統提供個人化的搜尋與推薦，同時輔以提供社群交流平台，讓設計師可以輕鬆地從從基本特性、使用方法及製作效果等，一手掌握完整的材料資訊！',
+        Eintro: 'In many product development processes, materials are typically considered only in the middle or later stages by designers. "MATELIGHT" aims to be the ideal platform for designers to explore materials, assisting them when they encounter difficulties in selecting materials. Through an AI system, it provides personalized search and recommendations, along with a community platform for communication. This allows designers to easily access comprehensive material information, including basic properties, usage methods, and production effects, all at their fingertips!',
         imgPosition: ''
     },
     {
@@ -53,129 +53,5 @@ const WORKS_DATA = [
         Eintro: 'Participated in the three-day NTUE DTD Game Jam to create a game with a team. "Baboo BEBELU" is a music-based two-player competitive game. Players must coordinate with the music to control a baby crawling to collect objects, with the first player to gather all the items emerging as the winner.',
         imgPosition: ''
     },
-    {
-        img: 'image/故事盒/0.png',
-        name: '"?"',
-        badge: 'CREATIVE',
-        tool: [
-            { tools: 'AI' },
-            { tools: 'Electronics' },
-        ],
-        synopsis: '',
-        Esynopsis: '',
-        intro: '',
-        Eintro: "",
-        imgPosition: ''
-    },
-    {
-        img: 'image/inkpaint/2019-10-25 11.06.24.jpg',
-        name: '',
-        badge: 'PAINTING',
-        tool: [
-            { tools: 'Ink' },
-        ],
-        synopsis: '',
-        Esynopsis: '',
-        intro: '',
-        Eintro: "",
-        imgPosition: 'center 86%'
-    },
-    {
-        img: 'image/inkpaint/2016-10-10 13.38.47.jpg',
-        name: '為美好的世界獻上祝福',
-        Ename: 'May this beautiful world be blessed',
-        badge: 'PAINTING',
-        tool: [
-            { tools: 'Ink' },
-        ],
-        synopsis: '',
-        Esynopsis: '',
-        intro: '',
-        Eintro: "",
-        imgPosition: ''
-    },
-    {
-        img: 'image/inkpaint/2015「迢迢新秋夕，亭亭月將圓」.jpg',
-        name: '迢迢新秋夕 亭亭月將圓',
-        Ename: 'The pale moon slowly rounds',
-        badge: 'PAINTING',
-        tool: [
-            { tools: 'Ink' },
-        ],
-        synopsis: '',
-        Esynopsis: '',
-        intro: '',
-        Eintro: "",
-        imgPosition: 'center 28%'
-    },
-    {
-        img: 'image/inkpaint/2014相望相忘.jpg',
-        name: '相望相忘',
-        Ename: 'A glance into forgetting',
-        badge: 'PAINTING',
-        tool: [
-            { tools: 'Ink' },
-        ],
-        synopsis: '',
-        Esynopsis: '',
-        intro: '',
-        Eintro: "",
-        imgPosition: 'center 58%'
-    },
-    {
-        img: 'image/watercolor/20180604.jpg',
-        name: '九份',
-        Ename: 'Jiufen',
-        badge: 'PAINTING',
-        tool: [
-            { tools: 'Watercolor' },
-        ],
-        synopsis: '',
-        Esynopsis: '',
-        intro: '',
-        Eintro: "",
-        imgPosition: ''
-    },
-    {
-        img: 'image/watercolor/作品集_畫_181120_0028.jpg',
-        name: '靜',
-        Ename: 'Tranquil',
-        badge: 'PAINTING',
-        tool: [
-            { tools: 'Watercolor' },
-        ],
-        synopsis: '',
-        Esynopsis: '',
-        intro: '',
-        Eintro: "",
-        imgPosition: 'center 32%'
-    },
-    {
-        img: 'image/watercolor/作品集_畫_181120_0029.jpg',
-        name: '',
-        badge: 'PAINTING',
-        tool: [
-            { tools: 'Mixed Media' }
-        ],
-        synopsis: '',
-        Esynopsis: '',
-        intro: '',
-        Eintro: "",
-        imgPosition: 'center 32%'
-    },
-    {
-        img: 'image/watercolor/作品集_畫_181120_0035.jpg',
-        name: '',
-        badge: 'PAINTING',
-        tool: [
-            { tools: 'Watercolor' },
-        ],
-        synopsis: '',
-        Esynopsis: '',
-        intro: '',
-        Eintro: "",
-        imgPosition: 'center 30%'
-    },
-
 
 ];
