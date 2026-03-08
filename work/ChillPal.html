@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Chill Pal Secretary | LEE SIN FEI</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+
+  <link rel="stylesheet" href="../css/page.css">
+
+</head>
+
+<body>
+
+  <div class="w3-top">
+    <div class="w3-bar w3-black w3-opacity-min w3-hover-opacity-off" style="padding: 10px 5%;">
+      <a href="../core.html" class="w3-bar-item w3-button">BACK TO PRACTICE</a>
+      <div class="w3-right">
+        <a href="#Motivation" class="w3-bar-item w3-button">MOTIVATION</a>
+        <a href="#Research" class="w3-bar-item w3-button">RESEARCH</a>
+        <a href="#SystemConcept" class="w3-bar-item w3-button">SYSTEM CONCEPT</a>
+        
+        <a href="#documentation" class="w3-bar-item w3-button">DOCUMENTATION</a>
+        <a href="#reflect" class="w3-bar-item w3-button">REFLECTIONS</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="hero-section" style="  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)), 
+              url('../image/涼拌小秘書/G1.png') center/cover no-repeat;">
+    <div class="hero-subtitle">// Socially Situated AI Companion System for Older Adults</div>
+    <h1 class="hero-title">Chill Pal Secretary</h1>
+    <div style="display: flex; gap: 30px; margin-top: 20px;">
+    </div>
+  </header>
+
+  <section class="meta-info-grid">
+    <div class="meta-item">
+      <h4>YEAR</h4>
+      <p>2023</p>
+    </div>
+    <div class="meta-item">
+      <h4>TECHNOLOGIES</h4>
+      <p>Python&emsp;/&emsp;DALL·E <br> HTML&emsp;/&emsp;CSS&emsp;/&emsp;JS</p>
+    </div>
+    <div class="meta-item">
+      <h4>MY ROLE</h4>
+      <p>User Research&emsp;/&emsp;UI/UX Design&emsp;/&emsp;Data Collection<br>Interactive Prototyping and
+        Testing<br>Front-end Implementation</p>
+    </div>
+  </section>
+
+  <section class="section-content">
+    <p class="w3-xlarge" style="color: var(--accent-color); font-weight: 200;">
+      How generative AI might become a familiar and emotionally accessible interface for care and companionship in later
+      life?
+    </p>
+    <p>Chill Pal Secretary is a LINE-based conversational system designed to support older adults who experience
+      loneliness, limited social interaction, and difficulty accessing trustworthy information. Grounded in empathy
+      mapping, persona building, and user journey analysis, the project explores how generative AI can function not only
+      as a utility, but also as a form of everyday companionship.
+
+    </p>
+    <p>
+      Rather than focusing solely on chat, the system combines emotional support with practical services, including
+      weather and news updates, scam phone verification, health information, fact-checking resources, and AI-generated
+      "elder memes." By choosing LINE—the platform most familiar to our target users—we aimed to lower barriers to
+      adoption and integrate the experience into existing daily routines.
+      <!-- The project reflects my broader interest in designing human-centered technologies that respond to underrepresented emotional and social needs. -->
+    </p>
+  </section>
+
+  <section id="Motivation" class="section-content">
+    <h2 class="section-title">Motivation</h2>
+    <p>
+      In our family group chat, my grandmother often shares news articles, messages, and images, hoping to start a
+      conversation. However, because everyone is busy with their own schedules, her messages often go unanswered. Beyond
+      my own family experience, increasing research and news reports indicate that many elderly people living alone turn
+      to messaging apps to alleviate loneliness. However, this reliance also exposes them to new social risks, such as
+      misinformation and online scams.
+      <br><br>
+      Another important cultural context in Taiwan is the phenomenon of "elder memes" (長輩圖)—images with greetings or
+      inspirational messages that older adults frequently share in chat groups. Rather than dismissing this as trivial
+      or outdated, we saw it as a meaningful form of expression and social participation.
+      <br><br>
+      Through this project, we ask: How might generative AI become a socially and culturally embedded companion for
+      aging communities?
+    </p>
+  </section>
+
+  <section id="Research" class="section-content" style="clear: both;">
+    <h2 class="section-title">Research</h2>
+    <div>
+      <h2>Empathy Map: Social Experiences of Older Adults</h2>
+      <div style="margin: 0 5%;">
+        <div class="w3-half w3-padding w3-border-bottom w3-border-right">
+          <div style="margin-left:10%">
+            <h3 style="color: var(--accent-color);">HEAR</h3>
+            <ul>
+              <li>Health rumors and alternative remedies</li>
+              <li>Family discussions about nursing homes</li>
+              <li>Comparisons between families and children</li>
+              <li>News shared through messaging apps</li>
+              <li>Silence in group chats</li>
+            </ul>
+          </div>
+        </div>
+        <div class="w3-half w3-padding w3-border-bottom">
+          <div style="margin-left: 10%;">
+            <h3 style="color: var(--accent-color);">SAY & DO</h3>
+            <ul>
+              <li>Share news articles or messages in family chat groups</li>
+              <li>Forward "elder memes" or greetings</li>
+              <li>Rely on personal experience when making decisions</li>
+              <li>Frequently discuss health and daily life topics</li>
+              <li>Prefer being cared for by family rather than caregivers</li>
+            </ul>
+          </div>
+        </div>
+        <div class="w3-half w3-padding w3-border-right w3-border-bottom">
+          <div style="margin-left: 10%;">
+            <h3 style="color: var(--accent-color);">SEE?</h3>
+            <ul>
+              <li>Many elderly people living alone</li>
+              <li>Limited mobility due to aging or illness</li>
+              <li>Small and repetitive daily environments</li>
+              <li>Smartphones becoming their main connection to others</li>
+              <li>Loneliness and financial difficulties among elderly peers</li>
+            </ul>
+          </div>
+        </div>
+        <div class="w3-half w3-padding w3-border-bottom">
+          <div style="margin-left: 10%;">
+            <h3 style="color: var(--accent-color);">THINK & FEEL</h3>
+            <ul>
+              <li>Loneliness and boredom in daily routines</li>
+              <li>Fear of becoming a burden to family</li>
+              <li>Desire for companionship and conversation</li>
+              <li>Sensitivity to social relationships</li>
+              <li>A wish to remain socially connected</li>
+            </ul>
+          </div>
+        </div>
+        <div class="w3-half w3-padding w3-border-right"
+          style="background-color: color-mix(in srgb, var(--accent-color) 18%, transparent);">
+          <div style="margin-left: 10%;">
+            <h3>PAIN</h3>
+            <ul>
+              <li>Share news articles or messages in family chat groups</li>
+              <li>Exposure to misinformation or scams</li>
+              <li>Social isolation</li>
+              <li>Difficulty verifying online information</li>
+              <li>Limited opportunities for meaningful conversation</li>
+            </ul>
+          </div>
+        </div>
+        <div class="w3-half w3-padding"
+          style="background-color: color-mix(in srgb, var(--accent-color) 18%, transparent);">
+          <div style="margin-left: 10%;">
+            <h3>GAIN</h3>
+            <ul>
+              <li>Someone to talk to at any time</li>
+              <li>Reliable information and guidance</li>
+              <li>Feeling cared for and acknowledged</li>
+              <li>Easy ways to share messages or images with others</li>
+              <li>A sense of participation in social communication</li>
+            </ul>
+          </div>
+        </div>
+        <div style="clear: both;"></div>
+      </div>
+    </div>
+
+    <div style="margin-top: 50px; clear: both;">
+      <h2>Persona</h2>
+      <div style="margin: 5% 5%;">
+        <div class="w3-quarter">
+          <img style="width: 100%;" src="../image/涼拌小秘書/LIN LI-HUA.png">
+          <h3>LIN, LI-HUA
+            <br>Age: 72
+            <!-- <br>Female -->
+          </h3>
+        </div>
+        <div class="w3-threequarter">
+          <ul style="list-style: none; margin: 0 3%;">
+            <li><b style="color:var(--accent-color)">Living Situation : </b></li>
+            <p>Lives alone in Taipei. Her children live in other cities and communicate mainly through family group
+              chats.</p>
+            <li><b style="color:var(--accent-color)">Background : </b></li>
+            <p>Mrs. Lin is a retired elementary school teacher who now spends most of her days at home. She enjoys
+              chatting with neighbors and discovering new information through messages, which she often shares in her
+              family LINE groups. Sending elder memes has become her daily way of greeting others and maintaining social
+              connection. Yet when her messages go unanswered, she is often left with a quiet sense of loneliness.</p>
+            <li><b style="color:var(--accent-color)">Digital Behavior : </b></li>
+            <p>- Uses LINE every day to communicate with family and friends<br>
+              - Frequently shares news articles and forwarded messages in family chat groups<br>
+              - Saves and forwards elder memes as a way of greeting others<br>
+              - Sometimes struggles to determine whether online information is trustworthy
+            </p>
+          </ul>
+        </div>
+
+        <div style="clear: both;"></div>
+        <h3 style="text-align: center; color: var(--accent-color); margin: 50px;">"When someone finally replies
+          in the family chat, it's often to say,
+          <br>'This is fake news,' or 'We've seen this meme many times already.' <br>
+          I only wanted to talk with them, but instead I feel embarrassed and confused.
+          <br> I don't know where to verify information, and I'm not good with technology."
+        </h3>
+
+        <div style="clear: both;"></div>
+        <div class="w3-third">
+          <b style="color:var(--accent-color)">Frustrations : </b>
+          <ul>
+            <li>Feeling ignored in family chat groups</li>
+            <li>Difficulty verifying online information</li>
+            <li>Fear of being deceived by scams or misinformation</li>
+            <li>Difficulty finding simple tools to create elder memes</li>
+          </ul>
+        </div>
+        <div class="w3-third ">
+          <b style="color:var(--accent-color)">Needs : </b>
+          <ul>
+            <li>Someone to talk to when family members are busy</li>
+            <li>Simple tools to verify whether information is trustworthy</li>
+            <li>An easy way to create and share elder memes</li>
+            <li>An interface that feels simple, familiar, and easy to understand</li>
+          </ul>
+        </div>
+        <div class="w3-third">
+          <b style="color:var(--accent-color)">Goals : </b>
+          <ul>
+            <li>Stay socially connected</li>
+            <li>Share messages and images with others</li>
+            <li>Feel accompanied in daily life</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="clear: both;"></div>
+    </div>
+
+    <div>
+      <h2 style="text-align: center; color: var(--accent-color); margin-top:50px; ">// Insight</h2>
+      <h3></h3>
+      <h3 style="text-align: center; margin: 0 50px; ">
+        "Older adults often use messaging platforms not only to exchange information,<br> but to maintain emotional
+        connections with others."
+      </h3>
+    </div>
+  </section>
+
+  <section id="DesignResponse" class="section-content">
+    <h2 class="section-title">System Concept</h2>
+    <div class="feature-text">
+        <p>To respond to these insights, we designed Chill Pal Secretary, an AI companion system integrated with LINE that integrates three key features:</p>
+        <ul style="list-style: none; padding: 0;" class="w3-margin-top">
+
+          <li><b style="color:var(--accent-color)">Generative AI Companion</b></li>
+          <p >
+            Leveraging generative AI, the system provides continuous conversational feedback, allowing older adults to chat anytime they feel lonely and receive immediate responses.
+          </p>
+          <li><b style="color:var(--accent-color)">Fact-checking and Reliable Information Access </b> </li>
+          <p>
+            By integrating existing fact-checking platforms and trusted news sources, the system helps users quickly verify information and avoid misinformation.  
+          </p>
+          <li><b style="color:var(--accent-color)">Elder Meme Generator</b> </li>
+          <p>
+            A simple image editor embedded directly within the chat interface enables older adults to easily create and share elder memes. The system can also automatically generate new meme images for users.
+          </p>
+        </ul>
+      </div>
+  </section>
+
+
+
+
+  <section id="reflect" class="reflection-box">
+    <h2 style="text-align: center; color: var(--accent-color); margin-bottom: 40px;">// Reflections </h2>
+
+    <div class="reflection-text" style=" text-align: center;">
+      "Comparing different devices wasn't just a technical exercise; it was an exploration of how we capture a 'gaze.'"
+    </div>
+    <div style="width: 75%; margin: 0 auto;">
+      <br>
+      <p>This exploration deepened my understanding of how consciousness can be visualized through interactive systems.
+        By implementing the project with two different eye-tracking devices, I was able to compare their respective
+        strengths, limitations, and potential application contexts. This hands-on process sharpened my awareness of how
+        hardware choices impact both the design and conceptual outcomes of consciousness-centered interaction.</p>
+    </div>
+
+  </section>
+
+  <footer class="w3-center w3-black ">
+    <p class="w3-opacity">© Phoebe 2025</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+
+  <script>
+    $(document).ready(function () {
+      $('.ie-carousel').slick({
+        dots: true,
+        infinite: true,
+        speed: 800,
+        slidesToShow: 1,
+        autoplay: true,
+        arrows: false
+      });
+    });
+  </script>
+  <script>
+    function openLightbox(img) {
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      lightboxImg.src = img.src;
+      lightbox.classList.add("active");
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightbox").classList.remove("active");
+    }
+  </script>
+
+</body>
+
+</html>

@@ -15,6 +15,7 @@ const WORKS_DATA = [
     {
         img: 'image/涼拌小秘書/0_工作區域 1.png',
         name: '涼拌小秘書',
+        link: 'work/ChillPal.html',
         Ename: 'Chill Pal Secretary',
         badge: 'APP & MINI APP',
         tool: [
