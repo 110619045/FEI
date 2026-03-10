@@ -9,13 +9,17 @@ const WORKS_DATA = [
         imgPosition: 'center 33%'
     },
     {
-        img: 'image/UnlockingInnerVision/ganzin.png',
-        link: 'work/UnlockingInnerVision.html',
-        Ename: 'Unlocking Inner Vision',
-        badge: 'DEVICE & SYSTEM',
-        tool: [{ tools: 'Python' }],
-        Esynopsis: 'Development of an assistive system...',
-        imgPosition: 'center center'
+        img: 'image/PG/PG.png',
+        name: 'Pacific Graphics 2025',
+        link: 'work/PG.html',
+        Ename: 'Pacific Graphics 2025',
+        badge: 'CONFERENCE',
+        tool: [
+        ],
+        synopsis: '',
+        Esynopsis: '',
+        intro: '',
+        Eintro: ''
     },
     {
         img: './image/友善地圖/0.png',
