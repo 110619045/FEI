@@ -62,7 +62,6 @@
 }
 
 .card-insights{
-    width: 30%;
     background-color: color-mix(in srgb, var(--accent-color) 25%, transparent);
     border-radius: 6px;
     padding: 0 20px;
