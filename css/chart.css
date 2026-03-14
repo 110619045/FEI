@@ -1,0 +1,73 @@
+.chart {
+    width: 60%;
+    /* background-color: white; */
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid;
+    /* margin-top: 30px; */
+}
+
+.chart-header {
+    margin-bottom: 25px;
+    border-left: 5px solid var(--accent-color);
+    padding-left: 15px;
+}
+
+.chart-header h2 {
+    margin: 0;
+    font-size: 22px;
+    color: var(--accent-color);
+    letter-spacing: -0.5px;
+}
+
+.chart-label {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.chart-label-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chart-label-name{
+    font-size: x-small;
+    width: 23%;
+}
+
+.chart-fill {
+    height: 12px;
+    width: 55%;
+    border-radius: 6px;
+    background-color: color-mix(in srgb, var(--accent-color) 30%, transparent);
+}
+
+.chart-label-fill {
+    height: 100%;
+    background: color-mix(in srgb, var(--accent-color) 50%, transparent);
+    border-radius: 6px;
+}
+
+.chart-label-num{
+    font-size: x-small;
+}
+
+.footer-note {
+    margin-top: 25px;
+    font-size: 12px;
+    color: #999;
+    text-align: right;
+    font-style: italic;
+}
+
+.card-insights{
+    width: 30%;
+    background-color: color-mix(in srgb, var(--accent-color) 25%, transparent);
+    border-radius: 6px;
+    padding: 0 20px;
+}
+
+.card-insights h4{
+    color: var(--accent-color);
+}
