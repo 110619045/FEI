@@ -23,8 +23,10 @@
       <div class="w3-right">
         <a href="#Problem" class="w3-bar-item w3-button">PROBLEM</a>
         <a href="#Research" class="w3-bar-item w3-button">RESEARCH</a>
+        <a href="#DesignConcept" class="w3-bar-item w3-button">DESIGN CONCEPT</a>
+        <a href="#DesignImplementation" class="w3-bar-item w3-button">DESIGN IMPLEMENTATION</a>
 
-        <a href="#design" class="w3-bar-item w3-button">DESIGN</a>
+
         <a href="#demo" class="w3-bar-item w3-button">DEMO</a>
         <a href="#reflect" class="w3-bar-item w3-button">REFLECTIONS</a>
       </div>
@@ -82,12 +84,6 @@
       alleviate the anxiety of those walking home late at night. It demonstrates how technology, through the power of
       data sharing, can infuse urban navigation with a deeper sense of warmth, inclusivity, and security.
     </p>
-
-    <!-- <h2 class="section-title" style="margin-top: 50px; ">Core Features</h2>
-    <h2 class="">Personalized Safe Routing</h2>
-    <h2 class="">Social Mutual Aid & Real-time Updates</h2>
-    <h2 class="">Personal Guardian</h2>
-    <h2 class="">Urban Convenience Services</h2> -->
   </section>
 
   <section id="Problem" class="section-content" style="background: #050505;">
@@ -116,607 +112,977 @@
     <p>To understand how people perceive safety in urban environments and what features a safety navigation tool should
       provide, we conducted user interviews, online surveys, and a competitive analysis of existing navigation
       applications.</p>
-
     <br>
-    <h2>User Interviews</h2>
-    <p>
-      To understand users' needs regarding safety-oriented navigation, we conducted interviews with participants of
-      different ages and backgrounds.
-      <br>
-      The interviews revealed several patterns in how people perceive safety when navigating the city.
-    </p><br>
-    <div style="display: flex; justify-content:flex-start; margin-bottom: 30px;">
 
-      <div
-        style="width: 40%; background-color: color-mix(in srgb, var(--accent-color) 20%, transparent); margin-right: 30px;">
-        <h4 class="w3-padding"
-          style="background-color: color-mix(in srgb, var(--accent-color) 20%, transparent); margin: 0; ">
-          Safety is situational</h4>
-        <p class="w3-padding">
-          Users expressed stronger concerns about safety when walking home late at night or navigating unfamiliar areas.
-        </p>
+    <!-- User Interviews -->
+    <div>
+      <h2>User Interviews</h2>
+      <p>
+        To understand users' needs regarding safety-oriented navigation, we conducted interviews with participants of
+        different ages and backgrounds.
+        <br>
+        The interviews revealed several patterns in how people perceive safety when navigating the city.
+      </p><br>
+      <div style="display: flex; justify-content:flex-start; margin-bottom: 30px;">
+
+        <div
+          style="width: 40%; background-color: color-mix(in srgb, var(--accent-color) 20%, transparent); margin-right: 30px;">
+          <h4 class="w3-padding"
+            style="background-color: color-mix(in srgb, var(--accent-color) 20%, transparent); margin: 0; ">
+            Safety is situational</h4>
+          <p class="w3-padding">
+            Users expressed stronger concerns about safety when walking home late at night or navigating unfamiliar
+            areas.
+          </p>
+        </div>
+
+        <div style="width: 40%; background-color: color-mix(in srgb, var(--accent-color) 20%, transparent);">
+          <h4 class="w3-padding"
+            style="background-color: color-mix(in srgb, var(--accent-color) 20%, transparent); margin: 0; ">
+            Safety perception is multi-factor</h4>
+          <p class="w3-padding">
+            Users associate safety with multiple environmental indicators such as lighting, nearby facilities, and
+            crime-related factors.
+          </p>
+        </div>
       </div>
 
-      <div style="width: 40%; background-color: color-mix(in srgb, var(--accent-color) 20%, transparent);">
-        <h4 class="w3-padding"
-          style="background-color: color-mix(in srgb, var(--accent-color) 20%, transparent); margin: 0; ">
-          Safety perception is multi-factor</h4>
-        <p class="w3-padding">
-          Users associate safety with multiple environmental indicators such as lighting, nearby facilities, and
-          crime-related factors.
-        </p>
+      <div style="display: flex; justify-content: flex-end; ">
+
+        <div
+          style="width: 40%; background-color: color-mix(in srgb, var(--accent-color) 20%, transparent); margin-right: 30px;">
+          <h4 class="w3-padding"
+            style="background-color: color-mix(in srgb, var(--accent-color) 20%, transparent); margin: 0; ">
+            Users want to understand how safety is defined</h4>
+          <p class="w3-padding">
+            Participants were interested in knowing what factors determine whether a place is considered safe.
+          </p>
+        </div>
+
+        <div style="width: 40%; background-color: color-mix(in srgb, var(--accent-color) 20%, transparent);">
+          <h4 class="w3-padding"
+            style="background-color: color-mix(in srgb, var(--accent-color) 20%, transparent); margin: 0; ">
+            Potential users include both pedestrians and drivers</h4>
+          <p class="w3-padding">
+            While the project initially focused on pedestrians walking home at night, some participants suggested that
+            drivers could also benefit from safety-related information.
+          </p>
+        </div>
       </div>
     </div>
-
-    <div style="display: flex; justify-content: flex-end; ">
-
-      <div
-        style="width: 40%; background-color: color-mix(in srgb, var(--accent-color) 20%, transparent); margin-right: 30px;">
-        <h4 class="w3-padding"
-          style="background-color: color-mix(in srgb, var(--accent-color) 20%, transparent); margin: 0; ">
-          Users want to understand how safety is defined</h4>
-        <p class="w3-padding">
-          Participants were interested in knowing what factors determine whether a place is considered safe.
-        </p>
-      </div>
-
-      <div style="width: 40%; background-color: color-mix(in srgb, var(--accent-color) 20%, transparent);">
-        <h4 class="w3-padding"
-          style="background-color: color-mix(in srgb, var(--accent-color) 20%, transparent); margin: 0; ">
-          Potential users include both pedestrians and drivers</h4>
-        <p class="w3-padding">
-          While the project initially focused on pedestrians walking home at night, some participants suggested that
-          drivers could also benefit from safety-related information.
-        </p>
-      </div>
-    </div>
-
-
     <br><br>
-    <h2>Competitive Analysis</h2>
-    <p>To understand how safety information is currently represented in map services, we analyzed two types of
-      platforms: widely used navigation tools such as Google Maps, and safety-oriented map projects such as Taiwan
-      Midnight Map and Taiwan Risky Road.
-      <!-- <br><br>
+
+    <!-- Competitive Analysis -->
+    <div>
+      <h2>Competitive Analysis</h2>
+      <p>To understand how safety information is currently represented in map services, we analyzed two types of
+        platforms: widely used navigation tools such as Google Maps, and safety-oriented map projects such as Taiwan
+        Midnight Map and Taiwan Risky Road.
+        <!-- <br><br>
       Navigation applications like Google Maps provide efficient route planning and real-time traffic information, but
       they rarely include safety-related indicators when suggesting routes.
       On the other hand, safety-oriented maps visualize crime data or risky locations. However, most of these platforms
       function primarily as information maps rather than full navigation tools. -->
-    </p>
-    <br>
-    <div>
-      <table>
-        <thead>
-          <tr>
-            <th style="width: 18%;"></th>
-            <th style="width: 15%;"><img height="60px"
-                src="https://www.google.com/maps/about/images/icons/maps_512dp.png"></th>
-            <th style="width: 20%;"><img src="https://map.richitech.com.tw/RiskyRoad/img/AccidentMap_banner.svg"></th>
-            <th style="width: 20%;"><img height="50px" style="background-color:whitesmoke;"
-                src="https://map.richitech.com.tw/midnight/img/MidnightMap_logo-40.png"></th>
-            <th style="width: 18%;"><img height="70px"
-                src="https://play-lh.googleusercontent.com/BIrFpJb045DNHCslxwJ63N9l-MjIfZIAjF34xBBuLvbZ2v2a-grF2uZxToqJ9mTh2e0=w240-h480-rw">
-            </th>
-            <th style="width: 18%;"><img height="100px" src="../image/友善地圖/友善地圖icon.png"></th>
-          </tr>
-          <tr>
-            <th>Feature</th>
-            <th>Google Maps</th>
-            <th>Taiwan Risky Road</th>
-            <th>Taiwan Midnight Map</th>
-            <th>Police Taipei</th>
-            <th>Friendly Map</th>
-          </tr>
-          <tr>
-        </thead>
-        <tbody>
-          <tr style="text-align: center; vertical-align: middle;">
-            <td>Route navigation</td>
-            <td>✓</td>
-            <td>✗</td>
-            <td>✗</td>
-            <td>✗</td>
-            <td>✓</td>
-          </tr>
-          <tr style="text-align: center; vertical-align: middle;">
-            <td>Safety / risk map</td>
-            <td>△</td>
-            <td>△</td>
-            <td>✓</td>
-            <td>✓</td>
-            <td>✓</td>
-          </tr>
-          <tr style="text-align: center; vertical-align: middle;">
-            <td>Data filtering</td>
-            <td>✓</td>
-            <td>✗</td>
-            <td>✗</td>
-            <td>✓</td>
-            <td>✓</td>
-          </tr>
-          <tr style="text-align: center; vertical-align: middle;">
-            <td>Community reporting</td>
-            <td>✓</td>
-            <td>✗</td>
-            <td>✗</td>
-            <td>✓</td>
-            <td>✓</td>
-          </tr>
-          <tr style="text-align: center; vertical-align: middle;">
-            <td>Safety alerts</td>
-            <td>△</td>
-            <td>✗</td>
-            <td>✗</td>
-            <td>✗</td>
-            <td>✓</td>
-          </tr>
-        </tbody>
-      </table>
-      <br>
-      <p>
-        Our analysis revealed a gap between navigation efficiency and safety awareness in existing map services.
-      <ul>
-        <li>
-          Navigation apps such as Google Maps prioritize efficiency and traffic conditions but rarely provide safety
-          indicators.
-        </li>
-        <li>
-          Safety-oriented maps visualize crime or risk data, yet they usually function as information maps rather than
-          navigation tools.
-        </li>
-        <li>
-          Users who care about safety often need to switch between multiple platforms to evaluate their routes.
-        </li>
-      </ul>
       </p>
-    </div>
-
-    <br><br>
-    <h2>User Survey</h2>
-    <h3>► Survey Overview</h3>
-    <p>
-      To better understand how people define safety in urban environments, we conducted an online survey with 159
-      participants.<br>
-      The survey explored three aspects:
-    <ol>
-      <li>How people perceive safety factors?</li>
-      <li>How they obtain safety information?</li>
-      <li>What features they expect from a safety-oriented navigation app?</li>
-    </ol>
-    <br>
-
-    <h3>► Participants</h3>
-    <p>159 survey responses</p>
-    <ul>
-      <li>Largest group: female 21–25</li>
-      <li>Main commuting: MRT / bus / walking</li>
-      <li>80% feel unsafe during late-night travel or in unfamiliar areas</li>
-    </ul>
-    <br>
-
-    <h3>► Safety Factors</h3>
-    <p>The survey explored both the factors users consider important for personal safety and how they prioritize those
-      factors when choosing a route or evaluating an environment.</p>
-    <br>
-
-    <div style="display: flex; justify-content: space-between;">
-      <div style="width: 33%;">
-        <h4 style="border-left: 5px solid white; padding-left: 10px;">Safety Factors Considered Important by Users</h4>
-        <p><strong>Broad Agreement Across Factors:</strong> While visibility and connectivity were among the most
-          frequently selected factors, more than 60% of the safety indicators were chosen by over half of the
-          respondents.
-        </p>
-        <p>This suggests that people do not rely on a single signal when evaluating safety. Instead, they consider a
-          combination of environmental conditions, surrounding facilities, and institutional support when deciding
-          whether a place feels safe.
-        </p>
-
-        <h3 style="text-align: center; color: var(--accent-color); margin: 50px;">
-          <!-- "Safety perception is shaped by a combination of environmental and social cues rather than a single factor." -->
-          "People rely on multiple signals when evaluating urban safety."
-        </h3>
+      <br>
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 18%;"></th>
+              <th style="width: 15%;"><img height="60px"
+                  src="https://www.google.com/maps/about/images/icons/maps_512dp.png"></th>
+              <th style="width: 20%;"><img src="https://map.richitech.com.tw/RiskyRoad/img/AccidentMap_banner.svg"></th>
+              <th style="width: 20%;"><img height="50px" style="background-color:whitesmoke;"
+                  src="https://map.richitech.com.tw/midnight/img/MidnightMap_logo-40.png"></th>
+              <th style="width: 18%;"><img height="70px"
+                  src="https://play-lh.googleusercontent.com/BIrFpJb045DNHCslxwJ63N9l-MjIfZIAjF34xBBuLvbZ2v2a-grF2uZxToqJ9mTh2e0=w240-h480-rw">
+              </th>
+              <th style="width: 18%;"><img height="100px" src="../image/友善地圖/友善地圖icon.png"></th>
+            </tr>
+            <tr>
+              <th>Feature</th>
+              <th>Google Maps</th>
+              <th>Taiwan Risky Road</th>
+              <th>Taiwan Midnight Map</th>
+              <th>Police Taipei</th>
+              <th>Friendly Map</th>
+            </tr>
+            <tr>
+          </thead>
+          <tbody>
+            <tr style="text-align: center; vertical-align: middle;">
+              <td>Route navigation</td>
+              <td>✓</td>
+              <td>✗</td>
+              <td>✗</td>
+              <td>✗</td>
+              <td>✓</td>
+            </tr>
+            <tr style="text-align: center; vertical-align: middle;">
+              <td>Safety / risk map</td>
+              <td>△</td>
+              <td>△</td>
+              <td>✓</td>
+              <td>✓</td>
+              <td>✓</td>
+            </tr>
+            <tr style="text-align: center; vertical-align: middle;">
+              <td>Data filtering</td>
+              <td>✓</td>
+              <td>✗</td>
+              <td>✗</td>
+              <td>✓</td>
+              <td>✓</td>
+            </tr>
+            <tr style="text-align: center; vertical-align: middle;">
+              <td>Community reporting</td>
+              <td>✓</td>
+              <td>✗</td>
+              <td>✗</td>
+              <td>✓</td>
+              <td>✓</td>
+            </tr>
+            <tr style="text-align: center; vertical-align: middle;">
+              <td>Safety alerts</td>
+              <td>△</td>
+              <td>✗</td>
+              <td>✗</td>
+              <td>✗</td>
+              <td>✓</td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
         <p>
-          <!-- However, knowing that multiple factors influence safety perception does not explain how users prioritize
+          Our analysis revealed a gap between navigation efficiency and safety awareness in existing map services.
+        <ul>
+          <li>
+            Navigation apps such as Google Maps prioritize efficiency and traffic conditions but rarely provide safety
+            indicators.
+          </li>
+          <li>
+            Safety-oriented maps visualize crime or risk data, yet they usually function as information maps rather than
+            navigation tools.
+          </li>
+          <li>
+            Users who care about safety often need to switch between multiple platforms to evaluate their routes.
+          </li>
+        </ul>
+        </p>
+      </div>
+    </div>
+    <br><br>
+
+    <!-- User Survey -->
+    <div>
+      <h2>User Survey</h2>
+
+      <!-- Survey Overview -->
+      <div>
+        <h3>► Survey Overview</h3>
+        <p>
+          To better understand how people define safety in urban environments, we conducted an online survey with 159
+          participants.<br>
+          The survey explored three aspects:
+        <ol>
+          <li>How people perceive safety factors?</li>
+          <li>How they obtain safety information?</li>
+          <li>What features they expect from a safety-oriented navigation app?</li>
+        </ol>
+      </div>
+      <br>
+
+      <!-- Participants -->
+      <div>
+        <h3>► Participants</h3>
+        <p>159 survey responses</p>
+        <ul>
+          <li>Largest group: female 21–25</li>
+          <li>Main commuting: MRT / bus / walking</li>
+          <li>80% feel unsafe during late-night travel or in unfamiliar areas</li>
+        </ul>
+      </div>
+      <br>
+
+      <!-- Safety Factors -->
+      <div>
+        <h3>► Safety Factors</h3>
+        <p>The survey explored both the factors users consider important for personal safety and how they prioritize
+          those
+          factors when choosing a route or evaluating an environment.</p>
+        <br>
+
+        <div style="display: flex; justify-content: space-between;">
+          <div style="width: 33%;">
+            <h4 style="border-left: 5px solid white; padding-left: 10px;">Safety Factors Considered Important by Users
+            </h4>
+            <p><strong>Broad Agreement Across Factors:</strong> While visibility and connectivity were among the most
+              frequently selected factors, more than 60% of the safety indicators were chosen by over half of the
+              respondents.
+            </p>
+            <p>This suggests that people do not rely on a single signal when evaluating safety. Instead, they consider a
+              combination of environmental conditions, surrounding facilities, and institutional support when deciding
+              whether a place feels safe.
+            </p>
+
+            <h3 style="text-align: center; color: var(--accent-color); margin: 50px;">
+              <!-- "Safety perception is shaped by a combination of environmental and social cues rather than a single factor." -->
+              "People rely on multiple signals when evaluating urban safety."
+            </h3>
+            <p>
+              <!-- However, knowing that multiple factors influence safety perception does not explain how users prioritize
           them. -->
-          To better understand this complexity, the 13 safety factors were further grouped into four broader safety
-          dimensions.
-          <!-- To better understand this, the 13 factors were grouped into four broader safety dimensions and analyzed based
+              To better understand this complexity, the 13 safety factors were further grouped into four broader safety
+              dimensions.
+              <!-- To better understand this, the 13 factors were grouped into four broader safety dimensions and analyzed based
           on users' top priority. -->
-        </p>
+            </p>
+          </div>
+          <div class="chart">
+            <div class="chart-header">
+              <h2>Safety Factors Identified by Users</h2>
+              <!-- <h2>Safety Factors Considered Important by Users</h2> -->
+              <!-- <h2>Key Safety Factors: </h2> -->
+              <!-- <h2>Factors People Consider Important for Personal Safety:</h2> -->
+              <p style="font-size: x-small;">Which of the following factors do you consider essential for urban safety?
+                (Multiple Choice)</p>
+            </div>
+            <div class="chart-label">
+              <div class="chart-label-item">
+                <span class="chart-label-name">Streetlights</span>
+                <div class="chart-fill">
+                  <div class="chart-label-fill" style="width: 74.2%;"></div>
+                </div>
+                <span class="chart-label-num">118 votes (74.2%)</span>
+              </div>
+            </div>
+            <div class="chart-label">
+              <div class="chart-label-item">
+                <span class="chart-label-name">Environmental Conditions</span>
+                <div class="chart-fill">
+                  <div class="chart-label-fill" style="width: 72.3%;"></div>
+                </div>
+                <span class="chart-label-num">115 votes (72.3%)</span>
+              </div>
+            </div>
+            <div class="chart-label">
+              <div class="chart-label-item">
+                <span class="chart-label-name">Police Stations</span>
+                <div class="chart-fill">
+                  <div class="chart-label-fill" style="width: 71.7%;"></div>
+                </div>
+                <span class="chart-label-num">114 votes (71.7%)</span>
+              </div>
+            </div>
+            <div class="chart-label">
+              <div class="chart-label-item">
+                <span class="chart-label-name">Crime Rate</span>
+                <div class="chart-fill">
+                  <div class="chart-label-fill" style="width: 71.7%;"></div>
+                </div>
+                <span class="chart-label-num">114 votes (71.7%)</span>
+              </div>
+            </div>
+            <div class="chart-label">
+              <div class="chart-label-item">
+                <span class="chart-label-name">Mobile Signal</span>
+                <div class="chart-fill">
+                  <div class="chart-label-fill" style="width: 66.0%;"></div>
+                </div>
+                <span class="chart-label-num">105 votes (66.0%)</span>
+              </div>
+            </div>
+            <div class="chart-label">
+              <div class="chart-label-item">
+                <span class="chart-label-name">CCTV</span>
+                <div class="chart-fill">
+                  <div class="chart-label-fill" style="width: 65.4%;"></div>
+                </div>
+                <span class="chart-label-num">104 votes (65.4%)</span>
+              </div>
+            </div>
+            <div class="chart-label">
+              <div class="chart-label-item">
+                <span class="chart-label-name">24H Convenience Stores</span>
+                <div class="chart-fill">
+                  <div class="chart-label-fill" style="width: 59.7%;"></div>
+                </div>
+                <span class="chart-label-num">95 votes (59.7%)</span>
+              </div>
+            </div>
+            <div class="chart-label">
+              <div class="chart-label-item">
+                <span class="chart-label-name">Road Conditions</span>
+                <div class="chart-fill">
+                  <div class="chart-label-fill" style="width: 51.6%;"></div>
+                </div>
+                <span class="chart-label-num">82 votes (51.6%)</span>
+              </div>
+            </div>
+            <div class="chart-label">
+              <div class="chart-label-item">
+                <span class="chart-label-name">MRT / Subway Stations</span>
+                <div class="chart-fill">
+                  <div class="chart-label-fill" style="width: 44.7%;"></div>
+                </div>
+                <span class="chart-label-num">71 votes (44.7%)</span>
+              </div>
+            </div>
+            <div class="chart-label">
+              <div class="chart-label-item">
+                <span class="chart-label-name">24H Fast Food Stores</span>
+                <div class="chart-fill">
+                  <div class="chart-label-fill" style="width: 19.5%;"></div>
+                </div>
+                <span class="chart-label-num">31 votes (19.5%)</span>
+              </div>
+            </div>
+            <div class="chart-label">
+              <div class="chart-label-item">
+                <span class="chart-label-name">Police Patrol Boxes</span>
+                <div class="chart-fill">
+                  <div class="chart-label-fill" style="width: 18.9%;"></div>
+                </div>
+                <span class="chart-label-num">30 votes (18.9%)</span>
+              </div>
+            </div>
+            <div class="chart-label">
+              <div class="chart-label-item">
+                <span class="chart-label-name">Pharmacies / Clinics</span>
+                <div class="chart-fill">
+                  <div class="chart-label-fill" style="width: 17.6%;"></div>
+                </div>
+                <span class="chart-label-num">28 votes (17.6%)</span>
+              </div>
+            </div>
+            <div class="chart-label">
+              <div class="chart-label-item">
+                <span class="chart-label-name">Gas Stations</span>
+                <div class="chart-fill">
+                  <div class="chart-label-fill" style="width: 12.6%;"></div>
+                </div>
+                <span class="chart-label-num">20 votes (12.6%)</span>
+              </div>
+            </div>
+            <div class="footer-note">Sample Size n = 159 | Analysis of Selection Rates for Multiple Choice Data</div>
+          </div>
+        </div>
+        <br>
+
+        <br>
+        <div style="display: flex; justify-content: space-between;">
+          <div style="width: 55%;">
+            <h4 style="border-left: 5px solid white; padding-left: 10px;">Primary Dimensions of Safety Perception</h4>
+            <p>However, knowing that multiple factors influence safety perception does not explain how users prioritize
+              them. To better understand this, the 13 factors were grouped into four broader safety dimensions and
+              analyzed
+              based on users' top priority.
+            </p>
+            <div class="feature-text">
+              <ul style="list-style: none; padding: 0;" class="w3-margin-top">
+                <li><b style="color:var(--accent-color)"> Environmental Visibility:</b>
+                  Streetlights, Environmental Conditions, Road Conditions
+                </li>
+                <p class=" w3-opacity" style="font-size: x-small;">
+                  The ability to see and be seen in an environment.<br>
+                  <b>Insight:</b> Visibility increases perceived safety.
+                </p>
+
+                <li><b style="color:var(--accent-color)"> Environmental Risk: </b>
+                  Crime Rate, Mobile Signal Coverage
+                </li>
+                <p class=" w3-opacity" style="font-size: x-small;">
+                  Indicators of potential danger or limited access to assistance.<br>
+                  <b>Insight:</b>
+                  High risk signals increase perceived vulnerability.
+                </p>
+
+                <li><b style="color:var(--accent-color)"> Institutional Safety: </b>
+                  Police Stations, CCTV, Police Patrol Boxes
+                </li>
+                <p class=" w3-opacity" style="font-size: x-small;">
+                  Signals of formal protection and surveillance.<br>
+                  <b>Insight:</b>
+                  Institutional presence provides deterrence and reassurance.
+                </p>
+
+                <li><b style="color:var(--accent-color)"> Social Presence: </b>
+                  24H Convenience Stores, MRT Stations, 24H Fast Food Restaurants, Pharmacies
+                </li>
+                <p class="w3-opacity" style="font-size: x-small;">
+                  The presence of people and active businesses in the environment.<br>
+                  <b>Insight:</b>
+                  Social activity increases perceived safety and potential help.
+                </p>
+              </ul>
+            </div>
+            <p>The results show a relatively balanced distribution across the four dimensions. Environmental visibility
+              leads slightly, but the differences between categories remain small.
+              <br>
+              This suggests that no single dimension dominates users' perception of safety. Instead, people evaluate
+              safety
+              through a combination of visibility, institutional protection, social presence, and potential risk.
+            </p>
+          </div>
+
+          <div style="padding: 30px; border-radius: 12px; border: 1px solid; width: 40%;">
+            <div class="chart-header">
+              <h2>How Users Prioritize Safety Dimensions</h2>
+              <p style="font-size: x-small;">Which single factor do you consider the most important for personal safety?
+              </p>
+            </div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:18px; margin:18px 0 10px;">
+              <svg viewBox="0 0 42 42" width="280" height="280" aria-label="Safety dimensions donut chart" role="img">
+                <!-- <circle cx="21" cy="21" r="15.915" fill="transparent" stroke="color-mix(in srgb, var(--accent-color) 30%, transparent)" stroke-width="6"></circle> -->
+                <circle cx="21" cy="21" r="15.915" fill="transparent"
+                  stroke="color-mix(in srgb, var(--accent-color) 25%, transparent)" stroke-width="6"
+                  stroke-dasharray="29.4 70.6" stroke-dashoffset="25"></circle>
+                <circle cx="21" cy="21" r="15.915" fill="transparent"
+                  stroke="color-mix(in srgb, var(--accent-color) 50%, transparent)" stroke-width="6"
+                  stroke-dasharray="25.5 74.5" stroke-dashoffset="-4.4"></circle>
+                <circle cx="21" cy="21" r="15.915" fill="transparent"
+                  stroke="color-mix(in srgb, var(--accent-color) 75%, transparent)" stroke-width="6"
+                  stroke-dasharray="23.5 76.5" stroke-dashoffset="-29.9"></circle>
+                <circle cx="21" cy="21" r="15.915" fill="transparent"
+                  stroke="color-mix(in srgb, var(--accent-color) 100%, transparent)" stroke-width="6"
+                  stroke-dasharray="21.8 78.2" stroke-dashoffset="-53.4"></circle>
+              </svg>
+
+              <div style="width:100%; display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+                <div
+                  style="display:flex; align-items:flex-start; gap:10px; padding:12px 14px; border:1px solid var(--line); border-radius:16px; background:#fafafa; color: #050505;">
+                  <span
+                    style="width:12px; height:12px; border-radius:50%; background:color-mix(in srgb, var(--accent-color) 25%, transparent); margin-top:6px;"></span>
+                  <div><strong style="display:block; color:var(--text);">Environmental Visibility</strong><span
+                      style="color:var(--muted);">29.4%</span></div>
+                </div>
+                <div
+                  style="display:flex; align-items:flex-start; gap:10px; padding:12px 14px; border:1px solid var(--line); border-radius:16px; background:#fafafa; color: #050505;">
+                  <span
+                    style="width:12px; height:12px; border-radius:50%; background:color-mix(in srgb, var(--accent-color) 50%, transparent); margin-top:6px;"></span>
+                  <div><strong style="display:block; color:var(--text);">Environmental Risk</strong><span
+                      style="color:var(--muted);">25.5%</span></div>
+                </div>
+                <div
+                  style="display:flex; align-items:flex-start; gap:10px; padding:12px 14px; border:1px solid var(--line); border-radius:16px; background:#fafafa; color: #050505;">
+                  <span
+                    style="width:12px; height:12px; border-radius:50%; background:color-mix(in srgb, var(--accent-color) 75%, transparent); margin-top:6px;"></span>
+                  <div><strong style="display:block; color:var(--text);">Institutional Safety</strong><span
+                      style="color:var(--muted);">23.5%</span></div>
+                </div>
+                <div
+                  style="display:flex; align-items:flex-start; gap:10px; padding:12px 14px; border:1px solid var(--line); border-radius:16px; background:#fafafa; color: #050505;">
+                  <span
+                    style="width:12px; height:12px; border-radius:50%; background:color-mix(in srgb, var(--accent-color) 100%, transparent); margin-top:6px;"></span>
+                  <div><strong style="display:block; color:var(--text);">Social Presence</strong><span
+                      style="color:var(--muted);">21.8%</span></div>
+                </div>
+              </div>
+            </div>
+            <p class="footer-note">Grouped from 13 original safety factors into 4 broader safety dimensions</p>
+          </div>
+        </div>
+        <br>
+        <!-- Research Insights -->
+        <div>
+          <h4 style="border-left: 5px solid white; padding-left: 10px;">Research Insights</h4>
+          <br>
+          <div style="display: flex; justify-content: space-around;">
+            <div class="card-insights" style="width: 30%;">
+              <h4>Safety perception is multi-dimensional</h4>
+              <p>
+                Users evaluate safety through a combination of environmental visibility, surrounding activity,
+                institutional
+                presence, and environmental risk.
+              </p>
+            </div>
+
+            <div class="card-insights" style="width: 30%;">
+              <h4>
+                No universal "safe" route exists
+              </h4>
+              <p>
+                The relatively balanced distribution across the four safety dimensions suggests that what one person
+                considers a safe path may not feel safe to another, depending on context and individual priorities.
+              </p>
+            </div>
+
+            <div class="card-insights" style="width: 30%;">
+              <h4>
+                Safety recommendations should be personalized
+              </h4>
+              <p>
+                Because users rely on different signals when assessing safety, route recommendations should adapt to
+                individual safety preferences rather than rely on fixed rules — leading to the design of a customizable
+                safety filter.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="chart">
-        <div class="chart-header">
-          <h2>Safety Factors Identified by Users</h2>
-          <!-- <h2>Safety Factors Considered Important by Users</h2> -->
-          <!-- <h2>Key Safety Factors: </h2> -->
-          <!-- <h2>Factors People Consider Important for Personal Safety:</h2> -->
-          <p style="font-size: x-small;">Which of the following factors do you consider essential for urban safety?
-            (Multiple Choice)</p>
-        </div>
-        <div class="chart-label">
-          <div class="chart-label-item">
-            <span class="chart-label-name">Streetlights</span>
-            <div class="chart-fill">
-              <div class="chart-label-fill" style="width: 74.2%;"></div>
-            </div>
-            <span class="chart-label-num">118 votes (74.2%)</span>
+      <br>
+      <br>
+
+      <!-- Safety Information Sources -->
+      <div>
+        <h3>► Safety Information Sources</h3>
+        <div style="display: flex; justify-content: space-between;">
+          <div style="width: 60%;">
+            <p>
+              Most participants obtain safety information through <b style="color: var(--accent-color);">news media
+                (46.2%)</b>, followed by <b style="color: var(--accent-color);">personal experience (26.9%)</b>
+              and <b style="color: var(--accent-color);">word-of-mouth (25.6%)</b> from friends or acquaintances.
+
+              This suggests that people often rely on curated or socially shared information rather than actively
+              searching
+              for
+              location-specific safety data.
+              <br><br>
+              Because personal experience and social networks are typically limited to familiar areas, users may
+              struggle to
+              quickly assess safety conditions when navigating unfamiliar environments.
+            </p>
+          </div>
+          <div style="width: 35%; display: flex; justify-content: space-between;">
+            <svg style="width: 30%; height: auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"
+              fill="#fafafa">
+              <path
+                d="M64 480L64 184C64 170.7 74.7 160 88 160C101.3 160 112 170.7 112 184L112 472C112 485.3 122.7 496 136 496C149.3 496 160 485.3 160 472L160 160C160 124.7 188.7 96 224 96L512 96C547.3 96 576 124.7 576 160L576 480C576 515.3 547.3 544 512 544L128 544C92.7 544 64 515.3 64 480zM224 192L224 256C224 273.7 238.3 288 256 288L320 288C337.7 288 352 273.7 352 256L352 192C352 174.3 337.7 160 320 160L256 160C238.3 160 224 174.3 224 192zM248 432C234.7 432 224 442.7 224 456C224 469.3 234.7 480 248 480L488 480C501.3 480 512 469.3 512 456C512 442.7 501.3 432 488 432L248 432zM224 360C224 373.3 234.7 384 248 384L488 384C501.3 384 512 373.3 512 360C512 346.7 501.3 336 488 336L248 336C234.7 336 224 346.7 224 360zM424 240C410.7 240 400 250.7 400 264C400 277.3 410.7 288 424 288L488 288C501.3 288 512 277.3 512 264C512 250.7 501.3 240 488 240L424 240z" />
+            </svg>
+            <svg style="width: 30%; height: auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"
+              fill="#fafafa">
+              <path
+                d="M204 104.1C190.7 104.1 180 93.4 180 80.1L180 32.1C180 18.8 190.7 8.1 204 8.1C217.3 8.1 228 18.8 228 32.1L228 80.1C228 93.4 217.3 104.1 204 104.1zM4 208.1C4 194.8 14.7 184.1 28 184.1L76 184.1C89.3 184.1 100 194.8 100 208.1C100 221.4 89.3 232.1 76 232.1L28 232.1C14.7 232.1 4 221.4 4 208.1zM96.5 349.5C87.1 358.9 71.9 358.9 62.6 349.5C53.3 340.1 53.2 324.9 62.6 315.6L96.5 281.7C105.9 272.3 121.1 272.3 130.4 281.7C139.7 291.1 139.8 306.3 130.4 315.6L96.5 349.5zM62.6 66.7C72 57.3 87.2 57.3 96.5 66.7L130.4 100.6C139.8 110 139.8 125.2 130.4 134.5C121 143.8 105.8 143.9 96.5 134.5L62.6 100.6C53.2 91.2 53.2 76 62.6 66.7zM352.4 32C383.3 32 408.4 57.1 408.4 88C408.4 118.9 383.3 144 352.4 144C321.5 144 296.4 118.9 296.4 88C296.4 57.1 321.5 32 352.4 32zM478.7 363.1L432.4 300.7L432.4 576C432.4 593.7 418.1 608 400.4 608C382.7 608 368.4 593.7 368.4 576L368.4 416C368.4 407.2 361.2 400 352.4 400C343.6 400 336.4 407.2 336.4 416L336.4 576C336.4 593.7 322.1 608 304.4 608C286.7 608 272.4 593.7 272.4 576L272.4 300.7L226.1 363.1C215.6 377.3 195.5 380.3 181.3 369.7C167.1 359.1 164.1 339.1 174.7 324.9L245.2 229.9C270.4 196 310.2 176 352.4 176C394.6 176 434.4 196 459.6 229.9L530.1 324.9C540.6 339.1 537.7 359.1 523.5 369.7C509.3 380.3 489.3 377.3 478.7 363.1z" />
+            </svg>
+            <svg style="width: 30%; height: auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"
+              fill="#fafafa">
+              <path
+                d="M96 128C96 92.7 124.7 64 160 64C195.3 64 224 92.7 224 128C224 163.3 195.3 192 160 192C124.7 192 96 163.3 96 128zM64 288C64 252.7 92.7 224 128 224L192 224C195.2 224 198.4 224.2 201.5 224.7L157.1 269.1C129 297.2 129 342.8 157.1 370.9L213.1 426.9C216.5 430.3 220.1 433.3 224 435.9L224 528C224 554.5 202.5 576 176 576L144 576C117.5 576 96 554.5 96 528L96 407.4C76.9 396.4 64 375.7 64 352L64 288zM416 128C416 92.7 444.7 64 480 64C515.3 64 544 92.7 544 128C544 163.3 515.3 192 480 192C444.7 192 416 163.3 416 128zM482.9 269.1L438.5 224.7C441.6 224.2 444.8 224 448 224L512 224C547.3 224 576 252.7 576 288L576 352C576 375.7 563.1 396.4 544 407.4L544 528C544 554.5 522.5 576 496 576L464 576C437.5 576 416 554.5 416 528L416 435.9C419.9 433.3 423.5 430.3 426.9 426.9L482.9 370.9C511 342.8 511 297.2 482.9 269.1zM366.8 241.8C375.8 238.1 386.1 240.1 393 247L449 303C458.4 312.4 458.4 327.6 449 336.9L393 392.9C386.1 399.8 375.8 401.8 366.8 398.1C357.8 394.4 352 385.7 352 376L352 352L288 352L288 376C288 385.7 282.2 394.5 273.2 398.2C264.2 401.9 253.9 399.9 247 393L191 337C181.6 327.6 181.6 312.4 191 303.1L247 247.1C253.9 240.2 264.2 238.2 273.2 241.9C282.2 245.6 288 254.3 288 264L288 288L352 288L352 264C352 254.3 357.8 245.5 366.8 241.8z" />
+            </svg>
           </div>
         </div>
-        <div class="chart-label">
-          <div class="chart-label-item">
-            <span class="chart-label-name">Environmental Conditions</span>
-            <div class="chart-fill">
-              <div class="chart-label-fill" style="width: 72.3%;"></div>
+        <br>
+        <div>
+          <h4 style="border-left: 5px solid white; padding-left: 10px;">Research Insights</h4>
+          <br>
+          <div style="display: flex; justify-content: space-around;">
+            <div class="card-insights" style="width: 45%;">
+              <h4>Safety knowledge is local</h4>
+              <p>
+                People rely heavily on personal experience and social networks to evaluate safety. When entering
+                unfamiliar
+                environments, this knowledge disappears.
+              </p>
             </div>
-            <span class="chart-label-num">115 votes (72.3%)</span>
+            <div class="card-insights" style="width: 45%;">
+              <h4>Safety Information is Hard to Access</h4>
+              <p>
+                Users primarily rely on news media, personal experience, and word-of-mouth to understand safety
+                conditions.
+                This indicates a lack of accessible, location-based tools that help people quickly evaluate safety in
+                unfamiliar areas.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="chart-label">
-          <div class="chart-label-item">
-            <span class="chart-label-name">Police Stations</span>
-            <div class="chart-fill">
-              <div class="chart-label-fill" style="width: 71.7%;"></div>
-            </div>
-            <span class="chart-label-num">114 votes (71.7%)</span>
-          </div>
-        </div>
-        <div class="chart-label">
-          <div class="chart-label-item">
-            <span class="chart-label-name">Crime Rate</span>
-            <div class="chart-fill">
-              <div class="chart-label-fill" style="width: 71.7%;"></div>
-            </div>
-            <span class="chart-label-num">114 votes (71.7%)</span>
-          </div>
-        </div>
-        <div class="chart-label">
-          <div class="chart-label-item">
-            <span class="chart-label-name">Mobile Signal</span>
-            <div class="chart-fill">
-              <div class="chart-label-fill" style="width: 66.0%;"></div>
-            </div>
-            <span class="chart-label-num">105 votes (66.0%)</span>
-          </div>
-        </div>
-        <div class="chart-label">
-          <div class="chart-label-item">
-            <span class="chart-label-name">CCTV</span>
-            <div class="chart-fill">
-              <div class="chart-label-fill" style="width: 65.4%;"></div>
-            </div>
-            <span class="chart-label-num">104 votes (65.4%)</span>
-          </div>
-        </div>
-        <div class="chart-label">
-          <div class="chart-label-item">
-            <span class="chart-label-name">24H Convenience Stores</span>
-            <div class="chart-fill">
-              <div class="chart-label-fill" style="width: 59.7%;"></div>
-            </div>
-            <span class="chart-label-num">95 votes (59.7%)</span>
-          </div>
-        </div>
-        <div class="chart-label">
-          <div class="chart-label-item">
-            <span class="chart-label-name">Road Conditions</span>
-            <div class="chart-fill">
-              <div class="chart-label-fill" style="width: 51.6%;"></div>
-            </div>
-            <span class="chart-label-num">82 votes (51.6%)</span>
-          </div>
-        </div>
-        <div class="chart-label">
-          <div class="chart-label-item">
-            <span class="chart-label-name">MRT / Subway Stations</span>
-            <div class="chart-fill">
-              <div class="chart-label-fill" style="width: 44.7%;"></div>
-            </div>
-            <span class="chart-label-num">71 votes (44.7%)</span>
-          </div>
-        </div>
-        <div class="chart-label">
-          <div class="chart-label-item">
-            <span class="chart-label-name">24H Fast Food Stores</span>
-            <div class="chart-fill">
-              <div class="chart-label-fill" style="width: 19.5%;"></div>
-            </div>
-            <span class="chart-label-num">31 votes (19.5%)</span>
-          </div>
-        </div>
-        <div class="chart-label">
-          <div class="chart-label-item">
-            <span class="chart-label-name">Police Patrol Boxes</span>
-            <div class="chart-fill">
-              <div class="chart-label-fill" style="width: 18.9%;"></div>
-            </div>
-            <span class="chart-label-num">30 votes (18.9%)</span>
-          </div>
-        </div>
-        <div class="chart-label">
-          <div class="chart-label-item">
-            <span class="chart-label-name">Pharmacies / Clinics</span>
-            <div class="chart-fill">
-              <div class="chart-label-fill" style="width: 17.6%;"></div>
-            </div>
-            <span class="chart-label-num">28 votes (17.6%)</span>
-          </div>
-        </div>
-        <div class="chart-label">
-          <div class="chart-label-item">
-            <span class="chart-label-name">Gas Stations</span>
-            <div class="chart-fill">
-              <div class="chart-label-fill" style="width: 12.6%;"></div>
-            </div>
-            <span class="chart-label-num">20 votes (12.6%)</span>
-          </div>
-        </div>
-        <div class="footer-note">Sample Size n = 159 | Analysis of Selection Rates for Multiple Choice Data</div>
       </div>
-    </div>
-    <br>
+      <br>
+      <br>
 
-    <br>
-    <div style="display: flex; justify-content: space-between;">
-      <div style="width: 55%;">
-        <h4 style="border-left: 5px solid white; padding-left: 10px;">Primary Dimensions of Safety Perception</h4>
-        <p>However, knowing that multiple factors influence safety perception does not explain how users prioritize
-          them. To better understand this, the 13 factors were grouped into four broader safety dimensions and analyzed
-          based on users' top priority.
-        </p>
-        <div class="feature-text">
-          <ul style="list-style: none; padding: 0;" class="w3-margin-top">
-            <li><b style="color:var(--accent-color)"> Environmental Visibility:</b>
-              Streetlights, Environmental Conditions, Road Conditions
-            </li>
-            <p class=" w3-opacity" style="font-size: x-small;">
-              The ability to see and be seen in an environment.<br>
-              <b>Insight:</b> Visibility increases perceived safety.
-            </p>
-
-            <li><b style="color:var(--accent-color)"> Environmental Risk: </b>
-              Crime Rate, Mobile Signal Coverage
-            </li>
-            <p class=" w3-opacity" style="font-size: x-small;">
-              Indicators of potential danger or limited access to assistance.<br>
-              <b>Insight:</b>
-              High risk signals increase perceived vulnerability.
-            </p>
-
-            <li><b style="color:var(--accent-color)"> Institutional Safety: </b>
-              Police Stations, CCTV, Police Patrol Boxes
-            </li>
-            <p class=" w3-opacity" style="font-size: x-small;">
-              Signals of formal protection and surveillance.<br>
-              <b>Insight:</b>
-              Institutional presence provides deterrence and reassurance.
-            </p>
-
-            <li><b style="color:var(--accent-color)"> Social Presence: </b>
-              24H Convenience Stores, MRT Stations, 24H Fast Food Restaurants, Pharmacies
-            </li>
-            <p class="w3-opacity" style="font-size: x-small;">
-              The presence of people and active businesses in the environment.<br>
-              <b>Insight:</b>
-              Social activity increases perceived safety and potential help.
-            </p>
+      <!-- Expected App Features -->
+      <div>
+        <h3>► Expected App Features</h3>
+        <div>
+          <br>
+          <h4 style="border-left: 5px solid white; padding-left: 10px;">Most Expected Features</h4>
+          <p>Across responses, four feature types appeared most consistently:</p>
+          <ul>
+            <li>Safe route filtering and navigation</li>
+            <li>Real-time safety notifications</li>
+            <li>User-generated safety reports</li>
+            <li>Route / live location sharing</li>
           </ul>
-        </div>
-        <p>The results show a relatively balanced distribution across the four dimensions. Environmental visibility
-          leads slightly, but the differences between categories remain small.
+          <p>
+            These responses suggest that users wanted a tool that could help them make safer decisions in real time,
+            rather
+            than simply display safety-related information.
+          </p>
           <br>
-          This suggests that no single dimension dominates users' perception of safety. Instead, people evaluate safety
-          through a combination of visibility, institutional protection, social presence, and potential risk.
-        </p>
-      </div>
-
-      <div style="padding: 30px; border-radius: 12px; border: 1px solid; width: 40%;">
-        <div class="chart-header">
-          <h2>How Users Prioritize Safety Dimensions</h2>
-          <p style="font-size: x-small;">Which single factor do you consider the most important for personal safety?</p>
-        </div>
-        <div style="display:flex; flex-direction:column; align-items:center; gap:18px; margin:18px 0 10px;">
-          <svg viewBox="0 0 42 42" width="280" height="280" aria-label="Safety dimensions donut chart" role="img">
-            <!-- <circle cx="21" cy="21" r="15.915" fill="transparent" stroke="color-mix(in srgb, var(--accent-color) 30%, transparent)" stroke-width="6"></circle> -->
-            <circle cx="21" cy="21" r="15.915" fill="transparent"
-              stroke="color-mix(in srgb, var(--accent-color) 25%, transparent)" stroke-width="6"
-              stroke-dasharray="29.4 70.6" stroke-dashoffset="25"></circle>
-            <circle cx="21" cy="21" r="15.915" fill="transparent"
-              stroke="color-mix(in srgb, var(--accent-color) 50%, transparent)" stroke-width="6"
-              stroke-dasharray="25.5 74.5" stroke-dashoffset="-4.4"></circle>
-            <circle cx="21" cy="21" r="15.915" fill="transparent"
-              stroke="color-mix(in srgb, var(--accent-color) 75%, transparent)" stroke-width="6"
-              stroke-dasharray="23.5 76.5" stroke-dashoffset="-29.9"></circle>
-            <circle cx="21" cy="21" r="15.915" fill="transparent"
-              stroke="color-mix(in srgb, var(--accent-color) 100%, transparent)" stroke-width="6"
-              stroke-dasharray="21.8 78.2" stroke-dashoffset="-53.4"></circle>
-          </svg>
-
-          <div style="width:100%; display:grid; grid-template-columns:1fr 1fr; gap:12px;">
-            <div
-              style="display:flex; align-items:flex-start; gap:10px; padding:12px 14px; border:1px solid var(--line); border-radius:16px; background:#fafafa; color: #050505;">
-              <span
-                style="width:12px; height:12px; border-radius:50%; background:color-mix(in srgb, var(--accent-color) 25%, transparent); margin-top:6px;"></span>
-              <div><strong style="display:block; color:var(--text);">Environmental Visibility</strong><span
-                  style="color:var(--muted);">29.4%</span></div>
-            </div>
-            <div
-              style="display:flex; align-items:flex-start; gap:10px; padding:12px 14px; border:1px solid var(--line); border-radius:16px; background:#fafafa; color: #050505;">
-              <span
-                style="width:12px; height:12px; border-radius:50%; background:color-mix(in srgb, var(--accent-color) 50%, transparent); margin-top:6px;"></span>
-              <div><strong style="display:block; color:var(--text);">Environmental Risk</strong><span
-                  style="color:var(--muted);">25.5%</span></div>
-            </div>
-            <div
-              style="display:flex; align-items:flex-start; gap:10px; padding:12px 14px; border:1px solid var(--line); border-radius:16px; background:#fafafa; color: #050505;">
-              <span
-                style="width:12px; height:12px; border-radius:50%; background:color-mix(in srgb, var(--accent-color) 75%, transparent); margin-top:6px;"></span>
-              <div><strong style="display:block; color:var(--text);">Institutional Safety</strong><span
-                  style="color:var(--muted);">23.5%</span></div>
-            </div>
-            <div
-              style="display:flex; align-items:flex-start; gap:10px; padding:12px 14px; border:1px solid var(--line); border-radius:16px; background:#fafafa; color: #050505;">
-              <span
-                style="width:12px; height:12px; border-radius:50%; background:color-mix(in srgb, var(--accent-color) 100%, transparent); margin-top:6px;"></span>
-              <div><strong style="display:block; color:var(--text);">Social Presence</strong><span
-                  style="color:var(--muted);">21.8%</span></div>
+          <h4 style="border-left: 5px solid white; padding-left: 10px;">Participation Motivation</h4>
+          <p>
+            Because several of these features rely on community input, users' willingness to contribute information
+            became an
+            important design consideration.
+            <br><br>
+            Responses revealed both intrinsic and extrinsic motivations. Some participants were motivated by the idea of
+            helping others and improving society, while others responded positively to reward systems, points, prizes,
+            and
+            gamified interaction. At the same time, several responses also raised concerns about privacy and personal
+            data
+            protection.
+          </p>
+          <br>
+          <div>
+            <h4 style="border-left: 5px solid white; padding-left: 10px;">Research Insights</h4>
+            <br>
+            <div style="display: flex; justify-content: space-around;">
+              <div class="card-insights" style="width: 45%;">
+                <h4>Safety Support Must Be Action-Oriented</h4>
+                <p>
+                  Users prioritized features such as safe route navigation, real-time alerts, and live location sharing,
+                  indicating that safety tools should support immediate decision-making, not just display information.
+                </p>
+              </div>
+              <div class="card-insights" style="width: 45%;">
+                <h4>Safety Systems Depend on Community Participation</h4>
+                <p>
+                  Many expected features rely on user-generated safety information.
+                  This suggests that effective safety platforms must encourage community contributions while protecting
+                  user
+                  privacy.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-        <p class="footer-note">Grouped from 13 original safety factors into 4 broader safety dimensions</p>
       </div>
-    </div>
-
-    <br>
-    <div>
-      <h4 style="border-left: 5px solid white; padding-left: 10px;">Key Insights</h4>
       <br>
-      <div style="display: flex; justify-content: space-around;">
-        <div class="card-insights" style="width: 30%;">
+      <br>
+    </div>
+    <br>
+    <br>
+
+    <!-- Design Implications -->
+    <h2>Design Implications</h2>
+    <div>
+      <p>
+        Based on findings from user interviews, competitive analysis, and surveys, we identified five key design
+        implications that guide the development of the Friendly Map.
+      </p>
+      <br>
+
+      <div style="display: flex; border-bottom: 1px solid #999; justify-content: space-around; padding: 20px 0;">
+        <div style="align-items: center; color: var(--accent-color);">
+          <h1>#1</h1>
+        </div>
+        <div style="width: 35%;">
           <h4>Safety perception is multi-dimensional</h4>
-          <p>
-            Users evaluate safety through a combination of environmental visibility, surrounding activity, institutional
-            presence, and environmental risk.
+          <p class="w3-opacity">Users rely on multiple environmental and social cues</p>
+        </div>
+        <div style="width: 50%;">
+          <h4 style="color: var(--accent-color);">➜ Integrate Multiple Safety Indicators</h4>
+          <p class="w3-opacity">
+            Combine multiple safety indicators into a unified model for holistic safety understanding.
           </p>
         </div>
+      </div>
 
-        <div class="card-insights" style="width: 30%;">
-          <h4>
-            No universal "safe" route exists
-          </h4>
-          <p>
-            The relatively balanced distribution across the four safety dimensions suggests that what one person
-            considers a safe path may not feel safe to another, depending on context and individual priorities.
+      <div style="display: flex; border-bottom: 1px solid #999; justify-content: space-around; padding: 20px 0;">
+        <div style="align-items: center; color: var(--accent-color);">
+          <h1>#2</h1>
+        </div>
+        <div style="width: 35%;">
+          <h4>No single route is universally safe</h4>
+          <p class="w3-opacity">
+            Safety varies across individuals and situations.
           </p>
         </div>
+        <div style="width: 50%;">
+          <h4 style="color: var(--accent-color);">➜ Customizable Safety Preferences</h4>
+          <p class="w3-opacity">
+            Allow users to adjust safety preferences.
+          </p>
+        </div>
+      </div>
 
-        <div class="card-insights" style="width: 30%;">
-          <h4>
-            Safety recommendations should be personalized
-          </h4>
-          <p>
-            Because users rely on different signals when assessing safety, route recommendations should adapt to
-            individual safety preferences rather than rely on fixed rules — leading to the design of a customizable
-            safety filter.
+      <div style="display: flex; border-bottom: 1px solid #999; justify-content: space-around; padding: 20px 0;">
+        <div style="align-items: center; color: var(--accent-color);">
+          <h1>#3</h1>
+        </div>
+        <div style="width: 35%;">
+          <h4>Safety is contextual and time-sensitive</h4>
+          <p class="w3-opacity">
+            Perception shifts in unfamiliar or late-night contexts.
+          </p>
+        </div>
+        <div style="width: 50%;">
+          <h4 style="color: var(--accent-color);">➜ Provide Real-time, Context-aware Safety Support</h4>
+          <p class="w3-opacity">
+            Deliver real-time, context-aware safety support that adapts to changing environments.
+          </p>
+        </div>
+      </div>
+
+      <div style="display: flex; border-bottom: 1px solid #999; justify-content: space-around; padding: 20px 0;">
+        <div style="align-items: center; color: var(--accent-color);">
+          <h1>#4</h1>
+        </div>
+        <div style="width: 35%;">
+          <h4>Navigation and safety are currently disconnected</h4>
+          <p class="w3-opacity">
+            Users must interpret risks and switch between separate tools.
+          </p>
+        </div>
+        <div style="width: 50%;">
+          <h4 style="color: var(--accent-color);">➜ Integrating Safety into Navigation</h4>
+          <p class="w3-opacity">
+            Embed safety factors directly into route planning to enable actionable navigation.
+          </p>
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: space-around; padding: 20px 0;">
+        <div style="align-items: center; color: var(--accent-color);">
+          <h1>#5</h1>
+        </div>
+        <div style="width: 35%;">
+          <h4>Safety knowledge is fragmented and localized</h4>
+          <p class="w3-opacity">
+            Information is limited to familiar contexts and personal experience.
+          </p>
+        </div>
+        <div style="width: 50%;">
+          <h4 style="color: var(--accent-color);">➜ Aggregating Safety Knowledge</h4>
+          <p class="w3-opacity">
+            Aggregate and contextualize localized safety knowledge into accessible, location-aware insights.
           </p>
         </div>
       </div>
     </div>
-
-    <br>
-    <br>
-    <h3>► Safety Information Sources</h3>
-    <div style="display: flex; justify-content: space-between;">
-      <div style="width: 60%;">
-        <p>
-          Most participants obtain safety information through <b style="color: var(--accent-color);">news media
-            (46.2%)</b>, followed by <b style="color: var(--accent-color);">personal experience (26.9%)</b>
-          and <b style="color: var(--accent-color);">word-of-mouth (25.6%)</b> from friends or acquaintances.
-
-          This suggests that people often rely on curated or socially shared information rather than actively searching
-          for
-          location-specific safety data.
-          <br><br>
-          Because personal experience and social networks are typically limited to familiar areas, users may struggle to
-          quickly assess safety conditions when navigating unfamiliar environments.
-        </p>
-      </div>
-      <div style="width: 35%; display: flex; justify-content: space-between;">
-        <svg style="width: 30%; height: auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="#fafafa">
-          <path
-            d="M64 480L64 184C64 170.7 74.7 160 88 160C101.3 160 112 170.7 112 184L112 472C112 485.3 122.7 496 136 496C149.3 496 160 485.3 160 472L160 160C160 124.7 188.7 96 224 96L512 96C547.3 96 576 124.7 576 160L576 480C576 515.3 547.3 544 512 544L128 544C92.7 544 64 515.3 64 480zM224 192L224 256C224 273.7 238.3 288 256 288L320 288C337.7 288 352 273.7 352 256L352 192C352 174.3 337.7 160 320 160L256 160C238.3 160 224 174.3 224 192zM248 432C234.7 432 224 442.7 224 456C224 469.3 234.7 480 248 480L488 480C501.3 480 512 469.3 512 456C512 442.7 501.3 432 488 432L248 432zM224 360C224 373.3 234.7 384 248 384L488 384C501.3 384 512 373.3 512 360C512 346.7 501.3 336 488 336L248 336C234.7 336 224 346.7 224 360zM424 240C410.7 240 400 250.7 400 264C400 277.3 410.7 288 424 288L488 288C501.3 288 512 277.3 512 264C512 250.7 501.3 240 488 240L424 240z" />
-        </svg>
-        <svg style="width: 30%; height: auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="#fafafa">
-          <path
-            d="M204 104.1C190.7 104.1 180 93.4 180 80.1L180 32.1C180 18.8 190.7 8.1 204 8.1C217.3 8.1 228 18.8 228 32.1L228 80.1C228 93.4 217.3 104.1 204 104.1zM4 208.1C4 194.8 14.7 184.1 28 184.1L76 184.1C89.3 184.1 100 194.8 100 208.1C100 221.4 89.3 232.1 76 232.1L28 232.1C14.7 232.1 4 221.4 4 208.1zM96.5 349.5C87.1 358.9 71.9 358.9 62.6 349.5C53.3 340.1 53.2 324.9 62.6 315.6L96.5 281.7C105.9 272.3 121.1 272.3 130.4 281.7C139.7 291.1 139.8 306.3 130.4 315.6L96.5 349.5zM62.6 66.7C72 57.3 87.2 57.3 96.5 66.7L130.4 100.6C139.8 110 139.8 125.2 130.4 134.5C121 143.8 105.8 143.9 96.5 134.5L62.6 100.6C53.2 91.2 53.2 76 62.6 66.7zM352.4 32C383.3 32 408.4 57.1 408.4 88C408.4 118.9 383.3 144 352.4 144C321.5 144 296.4 118.9 296.4 88C296.4 57.1 321.5 32 352.4 32zM478.7 363.1L432.4 300.7L432.4 576C432.4 593.7 418.1 608 400.4 608C382.7 608 368.4 593.7 368.4 576L368.4 416C368.4 407.2 361.2 400 352.4 400C343.6 400 336.4 407.2 336.4 416L336.4 576C336.4 593.7 322.1 608 304.4 608C286.7 608 272.4 593.7 272.4 576L272.4 300.7L226.1 363.1C215.6 377.3 195.5 380.3 181.3 369.7C167.1 359.1 164.1 339.1 174.7 324.9L245.2 229.9C270.4 196 310.2 176 352.4 176C394.6 176 434.4 196 459.6 229.9L530.1 324.9C540.6 339.1 537.7 359.1 523.5 369.7C509.3 380.3 489.3 377.3 478.7 363.1z" />
-        </svg>
-        <svg style="width: 30%; height: auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="#fafafa">
-          <path
-            d="M96 128C96 92.7 124.7 64 160 64C195.3 64 224 92.7 224 128C224 163.3 195.3 192 160 192C124.7 192 96 163.3 96 128zM64 288C64 252.7 92.7 224 128 224L192 224C195.2 224 198.4 224.2 201.5 224.7L157.1 269.1C129 297.2 129 342.8 157.1 370.9L213.1 426.9C216.5 430.3 220.1 433.3 224 435.9L224 528C224 554.5 202.5 576 176 576L144 576C117.5 576 96 554.5 96 528L96 407.4C76.9 396.4 64 375.7 64 352L64 288zM416 128C416 92.7 444.7 64 480 64C515.3 64 544 92.7 544 128C544 163.3 515.3 192 480 192C444.7 192 416 163.3 416 128zM482.9 269.1L438.5 224.7C441.6 224.2 444.8 224 448 224L512 224C547.3 224 576 252.7 576 288L576 352C576 375.7 563.1 396.4 544 407.4L544 528C544 554.5 522.5 576 496 576L464 576C437.5 576 416 554.5 416 528L416 435.9C419.9 433.3 423.5 430.3 426.9 426.9L482.9 370.9C511 342.8 511 297.2 482.9 269.1zM366.8 241.8C375.8 238.1 386.1 240.1 393 247L449 303C458.4 312.4 458.4 327.6 449 336.9L393 392.9C386.1 399.8 375.8 401.8 366.8 398.1C357.8 394.4 352 385.7 352 376L352 352L288 352L288 376C288 385.7 282.2 394.5 273.2 398.2C264.2 401.9 253.9 399.9 247 393L191 337C181.6 327.6 181.6 312.4 191 303.1L247 247.1C253.9 240.2 264.2 238.2 273.2 241.9C282.2 245.6 288 254.3 288 264L288 288L352 288L352 264C352 254.3 357.8 245.5 366.8 241.8z" />
-        </svg>
-      </div>
-    </div>
-    <br>
-    <div>
-      <h4 style="border-left: 5px solid white; padding-left: 10px;">Key Insights</h4>
-      <br>
-      <div style="display: flex; justify-content: space-around;">
-        <div class="card-insights" style="width: 45%;">
-          <h4>Safety knowledge is local</h4>
-          <p>
-            People rely heavily on personal experience and social networks to evaluate safety. When entering unfamiliar
-            environments, this knowledge disappears.
-          </p>
-        </div>
-        <div class="card-insights" style="width: 45%;">
-          <h4>Safety Information is Hard to Access</h4>
-          <p>
-            Users primarily rely on news media, personal experience, and word-of-mouth to understand safety conditions.
-            This indicates a lack of accessible, location-based tools that help people quickly evaluate safety in
-            unfamiliar areas.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <br>
-    <br>
-    <h3>► Expected App Features</h3>
-    <br>
-    <h4 style="border-left: 5px solid white; padding-left: 10px;">Most Expected Features</h4>
-    <p>Across responses, four feature types appeared most consistently:</p>
-    <ul>
-      <li>Safe route filtering and navigation</li>
-      <li>Real-time safety notifications</li>
-      <li>User-generated safety reports</li>
-      <li>Route / live location sharing</li>
-    </ul>
-    <p>
-      These responses suggest that users wanted a tool that could help them make safer decisions in real time, rather
-      than simply display safety-related information.
-    </p>
-    <br>
-
-    <h4 style="border-left: 5px solid white; padding-left: 10px;">Participation Motivation</h4>
-    <p>
-      Because several of these features rely on community input, users' willingness to contribute information became an
-      important design consideration.
-      <br><br>
-      Responses revealed both intrinsic and extrinsic motivations. Some participants were motivated by the idea of
-      helping others and improving society, while others responded positively to reward systems, points, prizes, and
-      gamified interaction. At the same time, several responses also raised concerns about privacy and personal data
-      protection.
-    </p>
-    <br>
-
-    <div>
-      <h4 style="border-left: 5px solid white; padding-left: 10px;">Key Insights</h4>
-      <br>
-      <div style="display: flex; justify-content: space-around;">
-        <div class="card-insights" style="width: 45%;">
-          <h4>Safety Support Must Be Action-Oriented</h4>
-          <p>
-            Users prioritized features such as safe route navigation, real-time alerts, and live location sharing,
-            indicating that safety tools should support immediate decision-making, not just display information.</p>
-          <br>
-        </div>
-        <div class="card-insights" style="width: 45%;">
-          <h4>Safety Systems Depend on Community Participation</h4>
-          <p>
-            Many expected features rely on user-generated safety information.
-            This suggests that effective safety platforms must encourage community contributions while protecting user
-            privacy.
-          </p>
-        </div>
-      </div>
-    </div>
-
-
-    <br><br>
-    <h2>Persona</h2>
   </section>
 
+  <section id="DesignConcept" class="section-content" style="background: #050505;">
+    <h2 class="section-title">Design Concept</h2>
+    <div style="display: flex;">
 
-  <section id="design" class="section-content" style="background: #050505;">
+      <h1 style="color: var(--accent-color); text-transform: uppercase;">Making invisible <br> perceptions of
+        safety<br>
+      </h1>
+      <div style="width: 45%; margin-left: 10%;">
+        <h1 style="color: var(--accent-color); text-transform: uppercase;">Visible</h1>
+        <p>
+          Integrating multiple safety signals—visibility, social presence, and institutional support—into a unified
+          model that reflects actual human perception.
+        </p>
+        <br>
+
+        <h1 style="color: var(--accent-color); text-transform: uppercase;">Actionable</h1>
+        <p>
+          Embedding this model directly into navigation, allowing users to personalize and respond to safety conditions
+          in real time.
+        </p>
+        <br>
+
+        <h1 style="color: var(--accent-color); text-transform: uppercase;">Shared</h1>
+        <p>
+          Transforming individual experiences into collective knowledge through real-time reporting, creating a
+          community-driven safety network.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="DesignImplementation" class="section-content" style="background: #050505;">
+    <h2 class="section-title">Design Implementation</h2>
+
+    <!-- Key Features -->
+    <div>
+      <div>
+        <h2>Key Features</h2>
+        <p>
+          Based on the design implications and concept, we developed a set of features that translate safety perception
+          into
+          actionable navigation.
+        </p>
+        <br>
+      </div>
+
+      <div>
+        <div style="display: flex; justify-content: space-between;">
+          <div style="border:1px solid white; border-radius: 20px; padding: 20px 50px; width: 38%;">
+            <div style="border-bottom: 1px solid #999;">
+              <br>
+              <svg style="height: 95px; width: auto;" fill="#fafafa" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 640">
+                <path
+                  d="M576 112C576 100.9 570.3 90.6 560.8 84.8C551.3 79 539.6 78.4 529.7 83.4L413.5 141.5L234.1 81.6C226 78.9 217.3 79.5 209.7 83.3L81.7 147.3C70.8 152.8 64 163.9 64 176L64 528C64 539.1 69.7 549.4 79.2 555.2C88.7 561 100.4 561.6 110.3 556.6L226.4 498.5L399.7 556.3C395.4 549.9 391.2 543.2 387.1 536.4C376.1 518.1 365.2 497.1 357.1 474.6L255.9 440.9L255.9 156.4L383.9 199.1L383.9 298.4C414.9 262.6 460.9 240 511.9 240C534.5 240 556.1 244.4 575.9 252.5L576 112zM512 288C445.7 288 392 340.8 392 405.9C392 474.8 456.1 556.3 490.6 595.2C502.2 608.2 521.9 608.2 533.5 595.2C568 556.3 632.1 474.8 632.1 405.9C632.1 340.8 578.4 288 512.1 288zM472 408C472 385.9 489.9 368 512 368C534.1 368 552 385.9 552 408C552 430.1 534.1 448 512 448C489.9 448 472 430.1 472 408z" />
+              </svg>
+              <h3 style="color: var(--accent-color);  margin-right: 5%;">Customizable Map Layers</h3>
+              <p>
+                <strong>
+                  Allow users to filter and visualize safety and environmental information based on their needs.
+                </strong>
+              </p>
+              <br>
+            </div>
+            <br>
+            <div>
+              <p>
+                Users can select which elements to display on the map, including 13 safety indicators and practical
+                information such as public restrooms and trash bins.
+              </p>
+              <p>
+                Expands safety from risk awareness to everyday usability.
+              </p>
+              <br>
+            </div>
+          </div>
+
+          <div style="border:1px solid white; border-radius: 20px; padding: 20px 50px; width: 38%;">
+            <div style="border-bottom: 1px solid #999;">
+              <br>
+              <svg style="height: 100px; width: auto;" fill="#fafafa" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 640">
+                <path
+                  d="M279 81L81 279C70.1 289.9 64 304.6 64 320C64 335.4 70.1 350.1 81 361L279 559C289.9 569.9 304.6 576 320 576C335.4 576 350.1 569.9 361 559L559 361C569.9 350.1 576 335.4 576 320C576 304.6 569.9 289.9 559 279L361 81C350.1 70.1 335.4 64 320 64C304.6 64 289.9 70.1 279 81zM449 321L377 393C367.6 402.4 352.4 402.4 343.1 393C333.8 383.6 333.7 368.4 343.1 359.1L374.1 328.1L296 328.1C282.7 328.1 272 338.8 272 352.1L272 392.1C272 405.4 261.3 416.1 248 416.1C234.7 416.1 224 405.4 224 392.1L224 352.1C224 312.3 256.2 280.1 296 280.1L374.1 280.1L343.1 249.1C333.7 239.7 333.7 224.5 343.1 215.2C352.5 205.9 367.7 205.8 377 215.2L449 287.2C458.4 296.6 458.4 311.8 449 321.1z" />
+              </svg>
+              <h3 style="color: var(--accent-color);">Personalized Safe Route Navigation</h3>
+              <p>
+                <strong>Routes adapt to each user's definition of safety.</strong>
+              </p>
+              <br>
+            </div>
+            <div>
+              <br>
+              <p>
+                Users can prioritize different safety factors, allowing the system to generate routes that reflect
+                personal preferences instead of a fixed standard.
+              </p>
+              <p>
+                This enables context-aware and personalized navigation, balancing efficiency with safety and embedding
+                multi-dimensional safety directly into the routing process.
+              </p>
+            </div>
+          </div>
+
+          <div
+            style="width: 18%; border-radius: 20px 0 0px 20px; background-color: color-mix(in srgb, var(--accent-color) 20%, transparent);">
+          </div>
+        </div>
+        <br><br>
+
+        <div style="display: flex; justify-content: space-between;">
+          <div
+            style="width: 18%; border-radius: 0 20px 20px 0px; background-color: color-mix(in srgb, var(--accent-color) 20%, transparent);">
+          </div>
+          <div style="width: 38%; border:1px solid white; border-radius: 20px; padding: 20px 50px;">
+            <div style="border-bottom: 1px solid #999;">
+              <br>
+              <svg style="height: 100px; width: auto;" fill="#fafafa" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 640">
+                <path
+                  d="M320 544C461.4 544 576 436.5 576 304C576 171.5 461.4 64 320 64C178.6 64 64 171.5 64 304C64 358.3 83.2 408.3 115.6 448.5L66.8 540.8C62 549.8 63.5 560.8 70.4 568.3C77.3 575.8 88.2 578.1 97.5 574.1L215.9 523.4C247.7 536.6 282.9 544 320 544zM281.6 217.6C281.6 207 290.2 198.4 300.8 198.4L339.2 198.4C349.8 198.4 358.4 207 358.4 217.6L358.4 265.6L406.4 265.6C417 265.6 425.6 274.2 425.6 284.8L425.6 323.2C425.6 333.8 417 342.4 406.4 342.4L358.4 342.4L358.4 390.4C358.4 401 349.8 409.6 339.2 409.6L300.8 409.6C290.2 409.6 281.6 401 281.6 390.4L281.6 342.4L233.6 342.4C223 342.4 214.4 333.8 214.4 323.2L214.4 284.8C214.4 274.2 223 265.6 233.6 265.6L281.6 265.6L281.6 217.6z" />
+              </svg>
+              <h3 style="color: var(--accent-color);  margin-right: 5%;">Community Safety Reporting</h3>
+              <p>
+                <strong>Enable users to share and access real-time safety information.</strong>
+              </p>
+              <br>
+            </div>
+            <div>
+              <br>
+              <p>
+                Users can add reports to specific locations, describing safety conditions or incidents, and view reports
+                shared by others.
+              </p>
+              <p>
+                This transforms individual experiences into collective knowledge, making localized safety information
+                visible
+                and accessible.
+              </p>
+              <br>
+            </div>
+          </div>
+          <div
+            style="width: 38%; border-radius: 20px; background-color: color-mix(in srgb, var(--accent-color) 20%, transparent); ">
+          </div>
+        </div>
+        <br><br>
+
+        <div style="display: flex; justify-content: space-between;">
+          <div
+            style="width: 5%; border-radius: 0 20px 20px 0px; background-color: color-mix(in srgb, var(--accent-color) 20%, transparent);">
+          </div>
+          <div style="border:1px solid white; border-radius: 20px; padding: 20px 50px; width: 40%;">
+            <div style="border-bottom: 1px solid #999;">
+              <br>
+              <svg style="height: 90px; width: auto;" fill="#fafafa" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 640">
+                <path
+                  d="M448 256C501 256 544 213 544 160C544 107 501 64 448 64C395 64 352 107 352 160C352 165.4 352.5 170.8 353.3 176L223.6 248.1C206.7 233.1 184.4 224 160 224C107 224 64 267 64 320C64 373 107 416 160 416C184.4 416 206.6 406.9 223.6 391.9L353.3 464C352.4 469.2 352 474.5 352 480C352 533 395 576 448 576C501 576 544 533 544 480C544 427 501 384 448 384C423.6 384 401.4 393.1 384.4 408.1L254.7 336C255.6 330.8 256 325.5 256 320C256 314.5 255.5 309.2 254.7 304L384.4 231.9C401.3 246.9 423.6 256 448 256z" />
+              </svg>
+              <!-- <svg style="height: 90px; width: auto;" fill="#fafafa" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 640 640">
+            <path
+              d="M160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 160C544 124.7 515.3 96 480 96L160 96zM464 224C464 259.3 435.3 288 400 288C384.6 288 370.5 282.6 359.4 273.5L274.1 320L359.4 366.5C370.4 357.4 384.6 352 400 352C435.3 352 464 380.7 464 416C464 451.3 435.3 480 400 480C364.7 480 336 451.3 336 416C336 413.5 336.1 411.1 336.4 408.7L254.5 364C242.8 376.3 226.3 384 208 384C172.7 384 144 355.3 144 320C144 284.7 172.7 256 208 256C226.3 256 242.8 263.7 254.5 276L336.4 231.3C336.1 228.9 336 226.4 336 224C336 188.7 364.7 160 400 160C435.3 160 464 188.7 464 224z" />
+          </svg> -->
+              <h3 style=" color: var(--accent-color); margin-right: 5%;">Live Location Sharing</h3>
+              <p>
+                <strong>Support real-time safety through shared location tracking.</strong>
+              </p>
+              <br>
+            </div>
+            <div>
+              <br>
+              <p>
+                Users can share their live location during navigation, allowing selected contacts to monitor their
+                journey
+                in
+                real time and respond if necessary.
+              </p>
+              <p>
+                Enhances perceived safety by extending situational awareness beyond the individual, especially in
+                unfamiliar
+                or high-risk contexts.
+              </p>
+              <br>
+            </div>
+          </div>
+
+          <div style="border:1px solid white; border-radius: 20px; padding: 20px 50px; width: 40%; ">
+            <div style="border-bottom: 1px solid #999;">
+              <br>
+              <svg style="height: 95px; width: auto;" fill="#fafafa" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 640">
+                <path
+                  d="M259.1 73.5C262.1 58.7 275.2 48 290.4 48L350.2 48C365.4 48 378.5 58.7 381.5 73.5L396 143.5C410.1 149.5 423.3 157.2 435.3 166.3L503.1 143.8C517.5 139 533.3 145 540.9 158.2L570.8 210C578.4 223.2 575.7 239.8 564.3 249.9L511 297.3C511.9 304.7 512.3 312.3 512.3 320C512.3 327.7 511.8 335.3 511 342.7L564.4 390.2C575.8 400.3 578.4 417 570.9 430.1L541 481.9C533.4 495 517.6 501.1 503.2 496.3L435.4 473.8C423.3 482.9 410.1 490.5 396.1 496.6L381.7 566.5C378.6 581.4 365.5 592 350.4 592L290.6 592C275.4 592 262.3 581.3 259.3 566.5L244.9 496.6C230.8 490.6 217.7 482.9 205.6 473.8L137.5 496.3C123.1 501.1 107.3 495.1 99.7 481.9L69.8 430.1C62.2 416.9 64.9 400.3 76.3 390.2L129.7 342.7C128.8 335.3 128.4 327.7 128.4 320C128.4 312.3 128.9 304.7 129.7 297.3L76.3 249.8C64.9 239.7 62.3 223 69.8 209.9L99.7 158.1C107.3 144.9 123.1 138.9 137.5 143.7L205.3 166.2C217.4 157.1 230.6 149.5 244.6 143.4L259.1 73.5zM320.3 400C364.5 399.8 400.2 363.9 400 319.7C399.8 275.5 363.9 239.8 319.7 240C275.5 240.2 239.8 276.1 240 320.3C240.2 364.5 276.1 400.2 320.3 400z" />
+              </svg>
+              <!-- <svg style="height: 95px; width: auto;" fill="#fafafa" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 640 640">
+            <path
+              d="M415.9 274.5C428.1 271.2 440.9 277 446.4 288.3L465 325.9C475.3 327.3 485.4 330.1 494.9 334L529.9 310.7C540.4 303.7 554.3 305.1 563.2 314L582.4 333.2C591.3 342.1 592.7 356.1 585.7 366.5L562.4 401.4C564.3 406.1 566 411 567.4 416.1C568.8 421.2 569.7 426.2 570.4 431.3L608.1 449.9C619.4 455.5 625.2 468.3 621.9 480.4L614.9 506.6C611.6 518.7 600.3 526.9 587.7 526.1L545.7 523.4C539.4 531.5 532.1 539 523.8 545.4L526.5 587.3C527.3 599.9 519.1 611.3 507 614.5L480.8 621.5C468.6 624.8 455.9 619 450.3 607.7L431.7 570.1C421.4 568.7 411.3 565.9 401.8 562L366.8 585.3C356.3 592.3 342.4 590.9 333.5 582L314.3 562.8C305.4 553.9 304 540 311 529.5L334.3 494.5C332.4 489.8 330.7 484.9 329.3 479.8C327.9 474.7 327 469.6 326.3 464.6L288.6 446C277.3 440.4 271.6 427.6 274.8 415.5L281.8 389.3C285.1 377.2 296.4 369 309 369.8L350.9 372.5C357.2 364.4 364.5 356.9 372.8 350.5L370.1 308.7C369.3 296.1 377.5 284.7 389.6 281.5L415.8 274.5zM448.4 404C424.1 404 404.4 423.7 404.5 448.1C404.5 472.4 424.2 492 448.5 492C472.8 492 492.5 472.3 492.5 448C492.4 423.6 472.7 404 448.4 404zM224.9 18.5L251.1 25.5C263.2 28.8 271.4 40.2 270.6 52.7L267.9 94.5C276.2 100.9 283.5 108.3 289.8 116.5L331.8 113.8C344.3 113 355.7 121.2 359 133.3L366 159.5C369.2 171.6 363.5 184.4 352.2 190L314.5 208.6C313.8 213.7 312.8 218.8 311.5 223.8C310.2 228.8 308.4 233.8 306.5 238.5L329.8 273.5C336.8 284 335.4 297.9 326.5 306.8L307.3 326C298.4 334.9 284.5 336.3 274 329.3L239 306C229.5 309.9 219.4 312.7 209.1 314.1L190.5 351.7C184.9 363 172.1 368.7 160 365.5L133.8 358.5C121.6 355.2 113.5 343.8 114.3 331.3L117 289.4C108.7 283 101.4 275.6 95.1 267.4L53.1 270.1C40.6 270.9 29.2 262.7 25.9 250.6L18.9 224.4C15.7 212.3 21.4 199.5 32.7 193.9L70.4 175.3C71.1 170.2 72.1 165.2 73.4 160.1C74.8 155 76.4 150.1 78.4 145.4L55.1 110.5C48.1 100 49.5 86.1 58.4 77.2L77.6 58C86.5 49.1 100.4 47.7 110.9 54.7L145.9 78C155.4 74.1 165.5 71.3 175.8 69.9L194.4 32.3C200 21 212.7 15.3 224.9 18.5zM192.4 148C168.1 148 148.4 167.7 148.4 192C148.4 216.3 168.1 236 192.4 236C216.7 236 236.4 216.3 236.4 192C236.4 167.7 216.7 148 192.4 148z" />
+          </svg> -->
+              <h3 style=" color: var(--accent-color); margin-right: 5%;">Personalized Settings & Preferences</h3>
+              <p>
+                <strong>Adapt the system to individual habits and usage contexts.</strong>
+              </p>
+              <br>
+            </div>
+            <div>
+              <br>
+              <p>
+                Users can customize settings such as frequently used routes, notification preferences, and offline map
+                access.
+              </p>
+              <p>
+                These configurations allow the system to better align with users' daily behaviors and situational needs.
+              </p>
+            </div>
+          </div>
+
+          <div
+            style="width: 5%; border-radius: 20px 0 0px 20px; background-color: color-mix(in srgb, var(--accent-color) 20%, transparent);">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- <section id="design" class="section-content" style="background: #050505;">
     <h2 class="section-title">Design Objectives and Core Values</h2>
     <div>
       <div class="w3-third w3-padding">
@@ -741,13 +1107,13 @@
         </p>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section class="section-content" style="background: #050505; margin-top: 50px; clear: both;">
     <h2 class="section-title">Interface</h2>
     <div class="feature-row">
       <div class="feature-text">
-        <p>The system operates in four key stages:</p>
+        <!-- <p>The system operates in four key stages:</p> -->
         <ul style="list-style: none; padding: 0;" class="w3-margin-top">
 
           <li><b style="color:var(--accent-color)"> 1. Search Bar </b></li>
