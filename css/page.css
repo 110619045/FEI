@@ -1,5 +1,6 @@
 :root {
-  --accent-color: #00ffcc; /* 你標誌性的藍綠色 */
+  --accent: #00ffcc;
+  --accent30: rgba(0, 255, 204, 0.3);
 }
 
 body {
@@ -29,7 +30,7 @@ body {
 }
 
 .hero-subtitle {
-  color: var(--accent-color);
+  color: var(--accent);
   font-size: 1.2rem;
   letter-spacing: 3px;
 }
@@ -44,7 +45,7 @@ body {
 }
 
 .meta-item h4 {
-  color: var(--accent-color);
+  color: var(--accent);
   font-size: 0.8rem;
   letter-spacing: 2px;
   margin-bottom: 15px;
@@ -59,7 +60,7 @@ body {
 .section-title {
   font-size: 2.5rem;
   margin-bottom: 40px;
-  border-left: 4px solid var(--accent-color);
+  border-left: 4px solid var(--accent);
   padding-left: 20px;
 }
 
@@ -71,12 +72,17 @@ body {
   margin-bottom: 100px;
 }
 
-.feature-row.reverse { 
-  flex-direction: row-reverse; 
+.feature-row.reverse {
+  flex-direction: row-reverse;
 }
 
-.feature-image { flex: 1; }
-.feature-text { flex: 1; }
+.feature-image {
+  flex: 1;
+}
+
+.feature-text {
+  flex: 1;
+}
 
 /* 5. 圖片發光效果 */
 .n-glow-img {
@@ -92,7 +98,7 @@ body {
 }
 
 .glow-img:hover {
-  border-color: var(--accent-color);
+  border-color: var(--accent);
   box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
 }
 
@@ -118,47 +124,54 @@ body {
 
 /* 讓輪播容器變成定位參考點 */
 .ie-carousel {
-    position: relative;
+  position: relative;
 }
 
 /* 將圓點容器移至圖片上方 */
 .slick-dots {
-    position: absolute;
-    bottom: 20px; /* 距離圖片底部 20px */
-    list-style: none !important;
-    display: flex !important;
-    justify-content: center;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    z-index: 10; /* 確保在圖片層級之上 */
+  position: absolute;
+  bottom: 20px;
+  /* 距離圖片底部 20px */
+  list-style: none !important;
+  display: flex !important;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+  /* 確保在圖片層級之上 */
 }
 
 .slick-dots li {
-    margin: 0 6px;
+  margin: 0 6px;
 }
 
 .slick-dots li button {
-    font-size: 0;
-    line-height: 0;
-    display: block;
-    width: 10px;
-    height: 10px;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    background: rgba(255, 255, 255, 0.4); /* 半透明白色，讓它在暗圖上也看得到 */
-    border-radius: 50%;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 5px rgba(0,0,0,0.5); /* 增加陰影防止在亮圖上看不見 */
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.4);
+  /* 半透明白色，讓它在暗圖上也看得到 */
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  /* 增加陰影防止在亮圖上看不見 */
 }
 
 /* 當圓點被選中或滑過時的樣式 */
 .slick-dots li.slick-active button {
-    background: var(--accent-color); /* 變成你標誌性的藍綠色 */
-    transform: scale(1.3);
-    box-shadow: 0 0 5px var(--accent-color); /* 增加一點發光感 */
+  background: var(--accent);
+  /* 變成你標誌性的藍綠色 */
+  transform: scale(1.3);
+  box-shadow: 0 0 5px var(--accent);
+  /* 增加一點發光感 */
 }
+
 .lightbox {
   display: none;
   position: fixed;
@@ -182,15 +195,16 @@ body {
 }
 
 .video-wrap {
-    width: 100%;
-    aspect-ratio: 16 / 9;  /* 讓高度跟著寬度等比 */
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  /* 讓高度跟著寬度等比 */
 }
 
 .video-wrap iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-    display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
 }
 
 /* 響應式微調 */
@@ -198,9 +212,11 @@ body {
   .meta-info-grid {
     grid-template-columns: 1fr;
   }
+
   .feature-row {
     flex-direction: column !important;
   }
+
   .section-content {
     padding: 60px 10%;
   }
