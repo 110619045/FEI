@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <link rel="stylesheet" href="../css/page.css">
-
+  <link rel="stylesheet" href="../css/chart.css">
 </head>
 
 <body>
@@ -28,6 +28,7 @@
           System</a>
         <a href="#System" class="w3-bar-item w3-button" style="text-transform: uppercase;">System</a>
         <a href="#DesignDecisions" class="w3-bar-item w3-button" style="text-transform: uppercase;">Design Decisions</a>
+        <a href="#Implementation" class="w3-bar-item w3-button" style="text-transform: uppercase;">Implementation</a>
 
 
         <a href="#doc" class="w3-bar-item w3-button">DOCUMENTATION</a>
@@ -295,130 +296,191 @@
 
   <section id="DesignDecisions" class="section-content" style="background: #050505;">
     <h2 class="section-title">Design Decisions</h2>
-    <h2>Reading Material</h2>
-    <div style="display: flex; justify-content: space-between;">
-      <div style="width: 50%;">
+    <div style="margin: 10vh 0px;">
+      <h2>Reading Material</h2>
+      <div style="display: flex; justify-content: space-between;">
+        <div style="width: 50%;">
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <b style="color: var(--accent);">Designing words as a system of contextual meaning</b>
+            <p>
+              Due to the constraints of the text-to-image model, English was chosen as the primary language.
+              <br>
+              Words were selected from educational vocabulary to ensure familiarity, but more importantly, they were
+              manually curated and structured to support semantic relationships.
+            </p>
+            <p>
+              Rather than functioning as isolated units, each word exists within a network of associations.
+              <br>
+              Its meaning shifts depending on context—emerging through its relation to surrounding words.
+            </p>
+            <p>
+              For example:<br>
+              <span style="margin-left: 30px;">
+                "Apple" with "Fruit" → a fruit<br>
+              </span>
+              <span style="margin-left: 30px;">
+                "Apple" with "Computer" → a brand
+              </span>
+            </p>
+            <p>
+              This design reflects the idea that language does not carry fixed meaning, but is continuously
+              reinterpreted
+              through context.
+            </p>
+          </div>
+        </div>
+        <img style="width: 45%; object-fit: contain;" src="../image/Illusory Eyescape/RelatedWords.png">
+      </div>
+    </div>
+
+    <div style="margin: 10vh 0px;">
+      <h2>Reading Interface</h2>
+      <div style="display: flex; justify-content: space-between;">
         <div style="display: flex; flex-direction: column; gap: 8px;">
-          <b style="color: var(--accent);">Designing words as a system of contextual meaning</b>
+          <b style="color: var(--accent);">The reading interface is designed to guide how participants engage with the
+            text.
+          </b>
           <p>
-            Due to the constraints of the text-to-image model, English was chosen as the primary language.
+            In the initial layout, all words were presented evenly.
             <br>
-            Words were selected from educational vocabulary to ensure familiarity, but more importantly, they were
-            manually curated and structured to support semantic relationships.
+            User testing revealed that participants struggled to identify where to begin, often leading to confusion
+            during
+            the reading process.
           </p>
           <p>
-            Rather than functioning as isolated units, each word exists within a network of associations.
+            To address this, the interface was redesigned with a clear visual hierarchy.
             <br>
-            Its meaning shifts depending on context—emerging through its relation to surrounding words.
+            Larger words act as entry points, while smaller words form supporting connections.
           </p>
           <p>
-            For example:<br>
-            <span style="margin-left: 30px;">
-              "Apple" with "Fruit" → a fruit<br>
-            </span>
-            <span style="margin-left: 30px;">
-              "Apple" with "Computer" → a brand
-            </span>
-          </p>
-          <p>
-            This design reflects the idea that language does not carry fixed meaning, but is continuously reinterpreted
-            through context.
+            This shift improves both readability and visual attraction, while also reframing language as something to be
+            interpreted rather than passively consumed.
+            <br>
+            The layout draws from the structure of a newspaper, subtly suggesting that meaning is not fixed, but
+            constructed
+            through reading.
           </p>
         </div>
       </div>
-      <img style="width: 45%; object-fit: contain;" src="../image/Illusory Eyescape/RelatedWords.png">
-    </div>
+      <div
+        style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 40px; margin-top: 64px;">
+        <img style="width: 40%; object-fit: contain;" src="../image/Illusory Eyescape/photo-1.png">
 
-    <h2 style="margin-top: 80px; ">Reading Interface</h2>
-    <div style="display: flex; justify-content: space-between;">
-      <div style="display: flex; flex-direction: column; gap: 8px;">
-        <b style="color: var(--accent);">The reading interface is designed to guide how participants engage with the
-          text.
-        </b>
-        <p>
-          In the initial layout, all words were presented evenly.
-          <br>
-          User testing revealed that participants struggled to identify where to begin, often leading to confusion
-          during
-          the reading process.
-        </p>
-        <p>
-          To address this, the interface was redesigned with a clear visual hierarchy.
-          <br>
-          Larger words act as entry points, while smaller words form supporting connections.
-        </p>
-        <p>
-          This shift improves both readability and visual attraction, while also reframing language as something to be
-          interpreted rather than passively consumed.
-          <br>
-          The layout draws from the structure of a newspaper, subtly suggesting that meaning is not fixed, but
-          constructed
-          through reading.
-        </p>
-      </div>
-    </div>
-    <div
-      style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 40px; margin-top: 64px;">
-      <img style="width: 40%; object-fit: contain;" src="../image/Illusory Eyescape/photo-1.png">
-
-      <div style="display: flex; flex-direction: column; align-items: center; min-width: 120px;">
-        <div style="width: 1px; height: 100px; background: rgba(255,255,255,0.3);"></div>
-        <div style="font-size: 12px; color: #999;text-align: center; margin: 12px 0;line-height: 1.6;">
-          From passive reading<br>
-          to active interpretation
+        <div style="display: flex; flex-direction: column; align-items: center; min-width: 120px;">
+          <div style="width: 1px; height: 100px; background: rgba(255,255,255,0.3);"></div>
+          <div style="font-size: 12px; color: #999;text-align: center; margin: 12px 0;line-height: 1.6;">
+            From passive reading<br>
+            to active interpretation
+          </div>
+          <div style="width: 1px; height: 100px; background: rgba(255,255,255,0.3);"></div>
         </div>
-        <div style="width: 1px; height: 100px; background: rgba(255,255,255,0.3);"></div>
-      </div>
-      <img style="width: 40%; object-fit: contain;" src="../image/Illusory Eyescape/photo0.png">
-    </div>
-
-    <h2 style="margin-top: 80px; ">Data Extraction</h2>
-    <div style="width: 100%; display: flex; justify-content: space-between;">
-      <div style="width: 55%; display: flex; flex-direction: column; gap:8px;">
-        <b style="color: var(--accent);">
-          The system focuses on fixation — the moment when attention is held.
-        </b>
-        <P>
-          Following research on ocular behavior, the system prioritizes Fixations (200-500ms) over Saccades, as they
-          represent the window where the brain processes information.
-        </P>
-        <p>
-          Instead of treating all gaze equally, it focuses on how long a viewer looks at a word.
-          <br>
-          This approach is informed by eye-tracking research,
-          where information is primarily processed during fixations rather than saccades.
-        </p>
-        <p>
-          During reading, words respond dynamically to gaze.<br>
-          When a word is looked at:<br>
-          <span style="margin-left: 30px;">– It becomes larger<br></span>
-          <span style="margin-left: 30px;">– After 1 second, it is highlighted<br></span>
-          <span style="margin-left: 30px;">– After 1.5 seconds, it is recorded<br></span>
-        </p>
-        <p>
-          At the same time, related words are lightly marked.
-          <br>
-          This creates connections between words, allowing meaning to build through attention.
-        </p>
-        <p>
-          Through this process, reading becomes an active experience.
-        </p>
-      </div>
-      <div style="width: 40%; ">
-        <img style="width: 100%; object-fit: contain;" src="../image/Illusory Eyescape/photo1.png">
-        <p>This figure shows how gaze influences text interaction within the "language game."
-          When a viewer fixates on a word (e.g., "Time"), the word is first enlarged to indicate attention.
-          After one second, it is highlighted with a black background, confirming focused reading.
-          At the same time, semantically related words (e.g., "Spring" and "Watch") are activated and displayed with a
-          grey background.
-          This mechanism visualizes how attention not only selects a word, but also triggers connections within a
-          network of meanings.
-        </p>
+        <img style="width: 40%; object-fit: contain;" src="../image/Illusory Eyescape/photo0.png">
       </div>
     </div>
 
-
+    <div style="margin: 10vh 0px;">
+      <h2>Data Extraction</h2>
+      <div style="width: 100%; display: flex; justify-content: space-between;">
+        <div style="width: 55%; display: flex; flex-direction: column; gap:8px;">
+          <b style="color: var(--accent);">
+            The system focuses on fixation — the moment when attention is held.
+          </b>
+          <P>
+            Following research on ocular behavior, the system prioritizes Fixations (200-500ms) over Saccades, as they
+            represent the window where the brain processes information.
+          </P>
+          <p>
+            Instead of treating all gaze equally, it focuses on how long a viewer looks at a word.
+            <br>
+            This approach is informed by eye-tracking research,
+            where information is primarily processed during fixations rather than saccades.
+          </p>
+          <p>
+            During reading, words respond dynamically to gaze.<br>
+            When a word is looked at:<br>
+            <span style="margin-left: 30px;">– It becomes larger<br></span>
+            <span style="margin-left: 30px;">– After 1 second, it is highlighted<br></span>
+            <span style="margin-left: 30px;">– After 1.5 seconds, it is recorded<br></span>
+          </p>
+          <p>
+            At the same time, related words are lightly marked.
+            <br>
+            This creates connections between words, allowing meaning to build through attention.
+          </p>
+          <p>
+            Through this process, reading becomes an active experience.
+          </p>
+        </div>
+        <div style="width: 40%; ">
+          <img style="width: 100%; object-fit: contain;" src="../image/Illusory Eyescape/photo1.png">
+          <p>This figure shows how gaze influences text interaction within the "language game."
+            When a viewer fixates on a word (e.g., "Time"), the word is first enlarged to indicate attention.
+            After one second, it is highlighted with a black background, confirming focused reading.
+            At the same time, semantically related words (e.g., "Spring" and "Watch") are activated and displayed with a
+            grey background.
+            This mechanism visualizes how attention not only selects a word, but also triggers connections within a
+            network of meanings.
+          </p>
+        </div>
+      </div>
+    </div>
   </section>
+
+  <section id="Implementation" class="section-content" style="background: #050505;">
+    <h2 class="section-title">Implementation</h2>
+    <p>The system is implemented as a real-time pipeline that captures, processes, and transforms gaze into generative
+      output.</p>
+
+    <div style="display: flex; margin-top: 10vh; justify-content: space-around;">
+      <div class="card-white-line" style="width: 30%; display: flex; flex-direction: column; text-align: center;">
+
+        <h2 style="color: var(--accent);">Eye Tracking</h2>
+        <p>Gaze is tracked using <a href="https://webgazer.cs.brown.edu/">WebGazer.js</a></p>
+        <div>
+          <p style="color: #999; font-size: small;">Real-time gaze data is captured through a standard webcam, 
+revealing where attention lingers.
+          </p>
+        </div>
+      </div>
+      <div class="card-white-line" style="width: 30%; display: flex; flex-direction: column; text-align: center;">
+        <h2 style="color: var(--accent);">Processing</h2>
+        <p>Fixation filtering & word extraction</p>
+        <div >
+          <p style="color: #999; font-size: small;"> Words are selected based on how long they are viewed,
+            focusing on moments of cognitive processing.</p>
+        </div>
+      </div>
+      <div class="card-white-line"
+        style="width: 30%; display: flex; flex-direction: column; text-align: center; justify-content: center;">
+        <h2 style="color: var(--accent);">Generation</h2>
+        <p><a style="font-size: large;" href="https://openai.com/zh-Hant/index/dall-e-3/">DALL·E</a> to generate images
+        </p>
+        <div >
+          <p style="color: #999; font-size: small;"> Selected words are used as prompts to generate images,
+            forming a feedback loop with perception.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div style="text-align: center; margin-top: 20vh;">
+      <div style="margin-bottom: 5vh;">
+      <h2 style="color: var(--accent);">From Gaze to Image</h2>
+      <p>
+        The following examples show how gaze patterns are translated into generated images.
+        Each output is shaped by different reading behaviors and attention distributions.
+      </p>
+      </div>
+
+      <div style="width: 100;">
+        <img style="width: 100%;" src="../image/Illusory Eyescape/TrackComparisonChart1 2.png">
+        <img style="width: 100%;" src="../image/Illusory Eyescape/TrackComparisonChart2.png">
+        <img style="width: 100%;" src="../image/Illusory Eyescape/TrackComparisonChart3.png">
+      </div>
+
+    </div>
+  </section>
+
 
 
   <section id="doc" class="section-content" style="background: #050505;">
