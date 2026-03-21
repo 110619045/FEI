@@ -1,6 +1,6 @@
 const WORKS_DATA = [
     {
-        img: 'image/Illusory Eyescape/0.jpg',
+        img: 'image/Illusory Eyescape/0.webp',
         link: 'work/IllusoryEyescape.html',
         Ename: 'Illusory Eyescape',
         badge: 'DIGITAL ART',
