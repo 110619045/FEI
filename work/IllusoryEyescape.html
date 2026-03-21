@@ -29,6 +29,7 @@
         <a href="#System" class="w3-bar-item w3-button" style="text-transform: uppercase;">System</a>
         <a href="#DesignDecisions" class="w3-bar-item w3-button" style="text-transform: uppercase;">Design Decisions</a>
         <a href="#Implementation" class="w3-bar-item w3-button" style="text-transform: uppercase;">Implementation</a>
+        <a href="#Exhibition" class="w3-bar-item w3-button" style="text-transform: uppercase;">Exhibition</a>
 
 
         <a href="#doc" class="w3-bar-item w3-button">DOCUMENTATION</a>
@@ -426,9 +427,9 @@
     </div>
 
     <div style="margin: 10vh 0px;">
+      <h2>Visual Framing</h2>
       <div style="width: 100%; display: flex; justify-content: space-between;">
-        <div style="width: 55%; display: flex; flex-direction: column; gap:8px;">
-          <h2>Visual Framing</h2>
+        <div style="width: 50%; display: flex; flex-direction: column; gap:8px;">
           <p>Instead of presenting generated images as independent outputs,
             the system embeds them within the pupil of the eye.
           </p>
@@ -444,6 +445,13 @@
             The visual structure resonates with the duality explored in Magritte's The False Mirror, where seeing and
             being seen collapse into a single frame.
           </p>
+        </div>
+        <!-- <img src="../image/Illusory Eyescape/ex_1.gif" style="width: 45%;"> -->
+        <div class="ie-carousel" style="width: 45%;">
+          <img style="width: 100%; object-fit: contain;" src="../image/Illusory Eyescape/The_False_Mirror.jpg">
+          <img style="width: 100%; object-fit: contain;"
+            src="../image/Illusory Eyescape/astronaut,horse,Surréalisme.png">
+          <img style="width: 100%; object-fit: contain;" src="../image/Illusory Eyescape/disc,aquarium,jewel,jelly.png">
         </div>
       </div>
     </div>
@@ -485,7 +493,6 @@
       </div>
     </div>
 
-
     <div style="text-align: center; margin-top: 20vh;">
       <div style="margin-bottom: 5vh;">
         <h2 style="color: var(--accent);">From Gaze to Image</h2>
@@ -496,19 +503,48 @@
       </div>
 
       <div style="width: 100;">
-        <img style="width: 100%;" src="../image/Illusory Eyescape/TrackComparisonChart1 2.png">
-        <img style="width: 100%;" src="../image/Illusory Eyescape/TrackComparisonChart2.png">
-        <img style="width: 100%;" src="../image/Illusory Eyescape/TrackComparisonChart3.png">
+        <img style="width: 80%;" src="../image/Illusory Eyescape/TrackComparisonChart.png">
       </div>
 
     </div>
   </section>
 
+  <section id="Exhibition" class="section-content" style="background: #050505;">
+    <h2 class="section-title">Exhibition</h2>
 
+    <div style="display: flex; flex-direction: column; gap: 100px; margin-top: 10vh;">
+      <div style="display: flex; gap: 40px; align-items: self-end; justify-content: center; ">
+        <img style="width: 55%; object-fit: contain;" onclick="openLightbox(this)"
+          src="../image/Illusory Eyescape/card-f.png">
+        <img style="width: 35%; object-fit: contain; " onclick="openLightbox(this)"
+          src="../image/Illusory Eyescape/card2.png">
+      </div>
+      <div style="width: 100%; display: flex; flex-direction: row-reverse;">
+        <img style="width: 50%;" src="../image/Illusory Eyescape/0.jpg">
+      </div>
+      <div style="display: flex; width: 100%; gap: 80px; height: 120vh;">
+        <div style="width: 70%;">
+          <img style="width: 100%;" src="../image/Illusory Eyescape/1.jpg">
+        </div>
+        <div style="width: 30%; display: flex; flex-direction:column-reverse;">
+          <img style="width: 100%; object-fit: contain; justify-content: end;" src="../image/Illusory Eyescape/2.jpg">
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <section id="doc" class="section-content" style="background: #050505;">
+  <section id="doc" class="section-content" style="background: #050505; margin-top: 10vh;">
     <h2 class="section-title">Documentation</h2>
-    <div class="video-wrap">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <img style="width: 100%; height: 100%; object-fit:cover;" src="../image/Illusory Eyescape/P1.jpg" alt="Exhibition image 2"
+        onclick="openLightbox(this)">
+      <img style="width: 100%; height: 100%; object-fit: cover;" src="../image/Illusory Eyescape/P2.png" alt="Exhibition image 3"
+        onclick="openLightbox(this)">
+      <img style="width: 100%; height: 100%; object-fit: cover;" src="../image/Illusory Eyescape/P3.jpg" alt="Exhibition image 4"
+        onclick="openLightbox(this)">
+    </div>
+
+    <div class="video-wrap" style="margin-top: 15%;">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/6fc9Asr5d2U?si=oreJHJoqHTn08LL8&amp;start=1"
         title="YouTube video player" frameborder="0"
         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -516,17 +552,6 @@
     </div>
   </section>
   <section>
-    <div class="ie-carousel">
-      <div><img src="../image/Illusory Eyescape/1.jpg" alt="Exhibition image 1" onclick="openLightbox(this)"></div>
-      <div><img src="../image/Illusory Eyescape/2.jpg" alt="Exhibition image 2" onclick="openLightbox(this)"></div>
-      <div><img src="../image/Illusory Eyescape/4.jpg" alt="Exhibition image 3" onclick="openLightbox(this)"></div>
-      <div><img src="../image/Illusory Eyescape/3.jpg" alt="Exhibition image 4" onclick="openLightbox(this)"></div>
-    </div>
-    <div class="ie-carousel">
-      <div><img src="../image/Illusory Eyescape/P2.png" alt="Exhibition image 3" onclick="openLightbox(this)"></div>
-      <div><img src="../image/Illusory Eyescape/P1.jpg" alt="Exhibition image 2" onclick="openLightbox(this)"></div>
-      <div><img src="../image/Illusory Eyescape/P3.jpg" alt="Exhibition image 4" onclick="openLightbox(this)"></div>
-    </div>
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
       <img id="lightbox-img">
     </div>
