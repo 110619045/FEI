@@ -20,12 +20,12 @@
 
   <div class="w3-top">
     <div class="w3-bar w3-black w3-opacity-min w3-hover-opacity-off" style="padding: 10px 5%;">
-      <a href="../core.html" class="w3-bar-item w3-button">BACK TO CORE</a>
+      <a href="../showcase.html" class="w3-bar-item w3-button">BACK</a>
       <div class="w3-right">
         <a href="#Motivation" class="w3-bar-item w3-button" style="text-transform: uppercase;">Motivation</a>
         <a href="#Concept" class="w3-bar-item w3-button" style="text-transform: uppercase;">Concept</a>
-        <a href="#FromConcepttoSystem" class="w3-bar-item w3-button" style="text-transform: uppercase;">From Concept to
-          System</a>
+        <!-- <a href="#FromConcepttoSystem" class="w3-bar-item w3-button" style="text-transform: uppercase;">From Concept to
+          System</a> -->
         <a href="#System" class="w3-bar-item w3-button" style="text-transform: uppercase;">System</a>
         <a href="#DesignDecisions" class="w3-bar-item w3-button" style="text-transform: uppercase;">Design Decisions</a>
         <a href="#Implementation" class="w3-bar-item w3-button" style="text-transform: uppercase;">Implementation</a>
@@ -80,6 +80,27 @@
         final image.
     </div>
   </section>
+
+
+
+
+  <div style="display: flex; flex-direction: column; gap: 100px; margin: 20vh 0;">
+    <div style=" display: flex; justify-content: center;">
+      <img style="width: 100%; object-fit: contain;"class="img-fade-vertical" src="../image/Illusory Eyescape/5.webp" onclick="openLightbox(this)">
+    </div>
+    <div style="width: 100%; display: flex; justify-content:flex-end;" class="img-wrap">
+      <img style="width: 60%; object-fit: contain;" class="img-fade-vertical" src="../image/Illusory Eyescape/0.webp" onclick="openLightbox(this)">
+    </div>
+    <div style="display: flex; width: 100%; gap: 80px; height: 150vh;">
+      <div style="width: 70%;">
+        <img style="width: 100%; object-fit: contain;" class="img-fade-vertical" src="../image/Illusory Eyescape/1.webp" onclick="openLightbox(this)">
+      </div>
+      <div style="width: 30%; display: flex; flex-direction:column-reverse;">
+        <img style="width: 100%; object-fit: contain; justify-content: end;" class="img-fade-vertical" src="../image/Illusory Eyescape/2.webp"
+          onclick="openLightbox(this)">
+      </div>
+    </div>
+  </div>
 
   <section id="Motivation" class="section-content">
     <h2 class="section-title">Motivation</h2>
@@ -290,7 +311,7 @@
         </ul>
       </div>
       <div class="feature-image">
-        <img src="../image/Illusory Eyescape/System.webp" class="n-glow-img">
+        <img src="../image/Illusory Eyescape/System.webp" class="n-glow-img" style="object-fit: contain;">
       </div>
     </div>
   </section>
@@ -446,7 +467,7 @@
             being seen collapse into a single frame.
           </p>
         </div>
-        <img src="../image/Illusory Eyescape/eyes.gif" style="width: 45%;">
+        <img src="../image/Illusory Eyescape/eyes.gif" style="width: 45%; object-fit: contain;">
         <!-- <div class="ie-carousel" style="width: 45%;">
           <img style="width: 100%; object-fit: contain;" src="../image/Illusory Eyescape/The_False_Mirror.jpg">
           <img style="width: 100%; object-fit: contain;"
@@ -503,7 +524,7 @@
       </div>
 
       <div style="width: 100;">
-        <img style="width: 80%;" src="../image/Illusory Eyescape/TrackComparisonChart.webp">
+        <img style="width: 80%; object-fit: contain;" src="../image/Illusory Eyescape/TrackComparisonChart.webp">
       </div>
 
     </div>
@@ -519,29 +540,34 @@
         <img style="width: 35%; object-fit: contain; " onclick="openLightbox(this)"
           src="../image/Illusory Eyescape/card-b.webp">
       </div>
-      <div style="width: 100%; display: flex; flex-direction: row-reverse;">
-        <img style="width: 50%;" src="../image/Illusory Eyescape/0.webp" onclick="openLightbox(this)">
+      <div>
+        <img style="width: 30%; object-fit: contain;" src="../image/Illusory Eyescape/3.webp">
+        <img style="width: 50%; object-fit: contain;" src="../image/Illusory Eyescape/4.webp">
+      </div>
+      <!-- <div style="width: 100%; display: flex; flex-direction: row-reverse;">
+        <img style="width: 50%; object-fit: contain;" src="../image/Illusory Eyescape/0.webp" onclick="openLightbox(this)">
       </div>
       <div style="display: flex; width: 100%; gap: 80px; height: 120vh;">
         <div style="width: 70%;">
-          <img style="width: 100%;" src="../image/Illusory Eyescape/1.webp" onclick="openLightbox(this)">
+          <img style="width: 100%; object-fit: contain;" src="../image/Illusory Eyescape/1.webp" onclick="openLightbox(this)">
         </div>
         <div style="width: 30%; display: flex; flex-direction:column-reverse;">
-          <img style="width: 100%; object-fit: contain; justify-content: end;" src="../image/Illusory Eyescape/2.webp" onclick="openLightbox(this)">
+          <img style="width: 100%; object-fit: contain; justify-content: end;" src="../image/Illusory Eyescape/2.webp"
+            onclick="openLightbox(this)">
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
 
   <section id="doc" class="section-content" style="background: #050505; margin-top: 10vh;">
     <h2 class="section-title">Documentation</h2>
     <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
-      <img style="width: 100%; height: 100%; object-fit:cover;" src="../image/Illusory Eyescape/P1.webp" alt="Exhibition image 2"
-        onclick="openLightbox(this)">
-      <img style="width: 100%; height: 100%; object-fit: cover;" src="../image/Illusory Eyescape/P2.webp" alt="Exhibition image 3"
-        onclick="openLightbox(this)">
-      <img style="width: 100%; height: 100%; object-fit: cover;" src="../image/Illusory Eyescape/P3.webp" alt="Exhibition image 4"
-        onclick="openLightbox(this)">
+      <img style="width: 100%; height: 100%; object-fit:cover;" src="../image/Illusory Eyescape/P1.webp"
+        alt="Exhibition image 2" onclick="openLightbox(this)">
+      <img style="width: 100%; height: 100%; object-fit: cover;" src="../image/Illusory Eyescape/P2.webp"
+        alt="Exhibition image 3" onclick="openLightbox(this)">
+      <img style="width: 100%; height: 100%; object-fit: cover;" src="../image/Illusory Eyescape/P3.webp"
+        alt="Exhibition image 4" onclick="openLightbox(this)">
     </div>
 
     <div class="video-wrap" style="margin-top: 15%;">
