@@ -26,20 +26,20 @@ const WORKS_DATA = [
         Eintro: 'In many product development processes, materials are typically considered only in the middle or later stages by designers. "MATELIGHT" aims to be the ideal platform for designers to explore materials, assisting them when they encounter difficulties in selecting materials. Through an AI system, it provides personalized search and recommendations, along with a community platform for communication. This allows designers to easily access comprehensive material information, including basic properties, usage methods, and production effects, all at their fingertips!',
         imgPosition: ''
     },
-    {
-        img: './image/電子雞/0.png',
-        name: '電子寵物雞',
-        Ename: 'Electronic Pet',
-        badge: 'DEVICE & SYSTEM',
-        tool: [
-            { tools: 'C++' }
-        ],
-        synopsis: '',
-        Esynopsis: '',
-        intro: '使用WiFiBoy開發的掌上型電子寵物。使用者必須隨時注意寵物的狀態，適當清掃他的環境以及適量餵食他。妥善照顧他可以使其進化，但如果疏於照顧他除了會使他不健康，甚至會讓他死掉喔！',
-        Eintro: "Developed using WiFiBoy, this handheld electronic pet requires users to constantly monitor its status, clean its environment appropriately, and feed it in moderation. Proper care can lead to its evolution, but neglecting it will not only make it unhealthy but could even lead to its demise!",
-        imgPosition: ''
-    },
+    // {
+    //     img: './image/電子雞/0.png',
+    //     name: '電子寵物雞',
+    //     Ename: 'Electronic Pet',
+    //     badge: 'DEVICE & SYSTEM',
+    //     tool: [
+    //         { tools: 'C++' }
+    //     ],
+    //     synopsis: '',
+    //     Esynopsis: '',
+    //     intro: '使用WiFiBoy開發的掌上型電子寵物。使用者必須隨時注意寵物的狀態，適當清掃他的環境以及適量餵食他。妥善照顧他可以使其進化，但如果疏於照顧他除了會使他不健康，甚至會讓他死掉喔！',
+    //     Eintro: "Developed using WiFiBoy, this handheld electronic pet requires users to constantly monitor its status, clean its environment appropriately, and feed it in moderation. Proper care can lead to its evolution, but neglecting it will not only make it unhealthy but could even lead to its demise!",
+    //     imgPosition: ''
+    // },
     {
         img: './image/gamejam/0.png',
         name: 'Baboo BEBELU',
@@ -53,5 +53,4 @@ const WORKS_DATA = [
         Eintro: 'Participated in the three-day NTUE DTD Game Jam to create a game with a team. "Baboo BEBELU" is a music-based two-player competitive game. Players must coordinate with the music to control a baby crawling to collect objects, with the first player to gather all the items emerging as the winner.',
         imgPosition: ''
     },
-
 ];

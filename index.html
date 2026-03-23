@@ -15,20 +15,29 @@
     <div id="cursor-blur"></div>
     <div class="instruction">// Move slowly to reveal intention</div>
 
-    <section class="hero">
-        <h1 id="main-title">I design systems and experiences that explore <br> how we perceive and interpret the world<br></h1>
+    <section class="hero" style="cursor: pointer;">
+        <h1 id="main-title">
+            I design systems and experiences that explore <br>
+            how we perceive and interpret the world<br>
+        </h1>
         <div class="subtext" id="subtext">
             To me, the world is not a map to be followed, but a landscape of textures to be sensed
+            <div style="margin: 30px;">
+                <span style="font-size: xx-large; color: var(--accent);">ENTER</span>
+            </div>
         </div>
     </section>
 
-    <nav>
-        <a href="core.html">Core Work</a>
-        <a href="practice.html">Practice</a>
-        <a href="sandbox.html">Sandbox</a>
-        <a href="creative.html">Creative</a>
+
+    <a href="showcase.html">
+        <h1>showcase</h1>
+    </a>
+    <!-- <nav>
+        <a href="showcase.html">showcase</a>
+        <a href="archive.html">archive</a>
+        <a href="playground.html">playground</a>
         <a href="whoami.html">whoami</a>
-    </nav>
+    </nav> -->
 
     <script>
         const blur = document.getElementById('cursor-blur');
@@ -54,6 +63,11 @@
                 title.classList.remove('reveal');
                 subtext.classList.remove('reveal');
             }
+        });
+    </script>
+    <script>
+        document.querySelector('.hero').addEventListener('click', () => {
+            window.location.href = 'showcase.html';
         });
     </script>
 </body>
