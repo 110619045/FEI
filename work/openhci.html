@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Unlocking Inner Vision | LEE SIN FEI</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+
+  <link rel="stylesheet" href="../css/page.css">
+
+</head>
+
+<body>
+
+  <div class="w3-top">
+    <div class="w3-bar w3-black w3-opacity-min w3-hover-opacity-off" style="padding: 10px 5%;">
+      <a href="../archive.html" class="w3-bar-item w3-button">BACK</a>
+      <div class="w3-right">
+        <a href="#introduce" class="w3-bar-item w3-button" style="text-transform: uppercase;">introduce</a>
+        <a href="#Website" class="w3-bar-item w3-button">Website</a>
+        <!-- <a href="#reflect" class="w3-bar-item w3-button">REFLECTIONS</a> -->
+      </div>
+    </div>
+  </div>
+
+  <header class="hero-section" style="  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)), 
+              url('../image/openhci/openhci.webp') center/cover no-repeat;">
+    <div class="hero-subtitle">// An HCI workshop exploring the theme of "Cyberoasis"</div>
+    <h1 class="hero-title">OpenHCI</h1>
+    <div style="display: flex; gap: 30px; margin-top: 20px;">
+    </div>
+  </header>
+
+  <section class="meta-info-grid">
+    <div class="meta-item">
+      <h4>YEAR / VENUE</h4>
+      <p>2022 - TAICHI</p>
+    </div>
+    <div class="meta-item">
+      <h4>TECHNOLOGIES</h4>
+      <p>HTML &emsp;/&emsp;CSS&emsp;/&emsp;JS</p>
+    </div>
+    <div class="meta-item">
+      <h4>MY ROLE</h4>
+      <p>Web Development</p>
+    </div>
+  </section>
+
+  <section id="reflect" class="reflection-box">
+        <h2 class="section-title">Introduce</h2>
+      <P>
+      OpenHCI is a student-organized workshop on human-computer interaction (HCI), aiming to promote HCI as its main
+      mission. The workshop invites students from engineering, design, and interdisciplinary backgrounds to learn and
+      collaborate across fields, exploring various interaction models within human living spaces. This website serves as
+      the official site for the 12th OpenHCI workshop, providing information such as speaker and organizer profiles,
+      detailed schedules, registration methods, and more.
+    </P>
+  </section>
+
+
+  <section id="reflect" class="reflection-box">
+        <h2 class="section-title">Website</h2>
+    <div style=" text-align: center; margin: 50px 0;">
+      <a href="https://www.2022.openhci.com/" target="_blank" rel="noopener noreferrer"
+        margin: 0;>
+        <iframe
+          style="width: 64vw; height: 36vw; background: white; border: 20px solid gainsboro; border-radius:10px; margin: 0;"
+          src="https://www.2022.openhci.com/" title="External page">
+        </iframe>
+      </a>
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <div style="width: 250px; height: 80px; background-color: gainsboro; margin: 0;"></div>
+        <div style="width: 400px; height: 30px; background-color: gainsboro; margin: 0;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section id="reflect" class="reflection-box">
+    <h2 style="text-align: center; color: var(--accent-color); margin-bottom: 40px;">// Reflections </h2>
+
+    <div class="reflection-text" style=" text-align: center;">
+      "Comparing different devices wasn't just a technical exercise; it was an exploration of how we capture a 'gaze.'"
+    </div>
+    <div style="width: 75%; margin: 0 auto;">
+      <br>
+      <p>This exploration deepened my understanding of how consciousness can be visualized through interactive systems.
+        By implementing the project with two different eye-tracking devices, I was able to compare their respective
+        strengths, limitations, and potential application contexts. This hands-on process sharpened my awareness of how
+        hardware choices impact both the design and conceptual outcomes of consciousness-centered interaction.</p>
+    </div>
+
+  </section> -->
+
+  <footer class="w3-center w3-black ">
+    <p class="w3-opacity">© Phoebe 2025</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+
+  <script>
+    $(document).ready(function () {
+      $('.ie-carousel').slick({
+        dots: true,
+        infinite: true,
+        speed: 800,
+        slidesToShow: 1,
+        autoplay: true,
+        arrows: false
+      });
+    });
+  </script>
+  <script>
+    function openLightbox(img) {
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      lightboxImg.src = img.src;
+      lightbox.classList.add("active");
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightbox").classList.remove("active");
+    }
+  </script>
+
+</body>
+
+</html>
