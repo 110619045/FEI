@@ -39,6 +39,15 @@
         <a href="whoami.html">whoami</a>
     </nav> -->
 
+    <div id="mobile-warning">
+        <div class="warning-box">
+            <p class="warning-text">
+                為了你的觀看體驗，建議使用電腦瀏覽
+            </p>
+            <button onclick="closeWarning()">Continue Anyway</button>
+        </div>
+    </div>
+
     <script>
         const blur = document.getElementById('cursor-blur');
         const title = document.getElementById('main-title');
@@ -68,6 +77,20 @@
     <script>
         document.querySelector('.hero').addEventListener('click', () => {
             window.location.href = 'showcase.html';
+        });
+        function isMobile() {
+            return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        }
+
+        function closeWarning() {
+            document.getElementById('mobile-warning').style.display = 'none';
+        }
+
+        window.addEventListener('load', () => {
+            if (!isMobile()) {
+                // 如果不是手機 → 不顯示
+                document.getElementById('mobile-warning').style.display = 'none';
+            }
         });
     </script>
 </body>
