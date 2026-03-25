@@ -13,9 +13,16 @@
   <link rel="stylesheet" href="./css/nav.css">
   <link rel="stylesheet" href="./css/card.css">
 
-
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TFRHM8EJRM"></script>
-  <script src="./js/analytics.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-TFRHM8EJRM', {
+      page_title: document.title,
+      debug_mode: true
+    });
+  </script>
 </head>
 
 <body>

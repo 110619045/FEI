@@ -12,8 +12,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
 
   <link rel="stylesheet" href="../css/page.css">
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TFRHM8EJRM"></script>
-  <script src="../js/analytics.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-TFRHM8EJRM', {
+      page_title: document.title,
+      debug_mode: true
+    });
+  </script>
 </head>
 
 <body>
@@ -260,17 +269,17 @@
           onclick="openLightbox(this)">
       </div>
       <div style="display: flex; gap: 20px; width: 85%; justify-content: center;">
-        <img style="height: 60vh; width: auto; object-fit: contain;" src="../image/PG/venue/7.webp"
-          alt="Venue image 2" onclick="openLightbox(this)">
+        <img style="height: 60vh; width: auto; object-fit: contain;" src="../image/PG/venue/7.webp" alt="Venue image 2"
+          onclick="openLightbox(this)">
         <img style="height: 60vh; width: auto; object-fit: contain;" src="../image/PG/venue/1.webp" alt="Venue image 3"
           onclick="openLightbox(this)">
       </div>
       <div style="display: flex; gap: 20px; width: 85%; justify-content: center;">
-        <img style="height: 60vh; width: auto; object-fit: contain;" src="../image/PG/venue/6.webp"
-          alt="Venue image 4" onclick="openLightbox(this)">
+        <img style="height: 60vh; width: auto; object-fit: contain;" src="../image/PG/venue/6.webp" alt="Venue image 4"
+          onclick="openLightbox(this)">
 
-        <img style="height: 60vh; width: auto; object-fit: contain;" src="../image/PG/venue/5.webp"
-          alt="Venue image 5" onclick="openLightbox(this)">
+        <img style="height: 60vh; width: auto; object-fit: contain;" src="../image/PG/venue/5.webp" alt="Venue image 5"
+          onclick="openLightbox(this)">
       </div>
       <img style="width: 85%; object-fit: contain;" src="../image/PG/venue/8.webp" alt="Venue image 6"
         onclick="openLightbox(this)">

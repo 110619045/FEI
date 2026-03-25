@@ -12,8 +12,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
 
   <link rel="stylesheet" href="../css/page.css">
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TFRHM8EJRM"></script>
-  <script src="../js/analytics.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-TFRHM8EJRM', {
+      page_title: document.title,
+      debug_mode: true
+    });
+  </script>
 </head>
 
 <body>
@@ -53,8 +62,8 @@
   </section>
 
   <section id="reflect" class="reflection-box">
-        <h2 class="section-title">Introduce</h2>
-      <P>
+    <h2 class="section-title">Introduce</h2>
+    <P>
       OpenHCI is a student-organized workshop on human-computer interaction (HCI), aiming to promote HCI as its main
       mission. The workshop invites students from engineering, design, and interdisciplinary backgrounds to learn and
       collaborate across fields, exploring various interaction models within human living spaces. This website serves as
@@ -65,10 +74,9 @@
 
 
   <section id="reflect" class="reflection-box">
-        <h2 class="section-title">Website</h2>
+    <h2 class="section-title">Website</h2>
     <div style=" text-align: center; margin: 50px 0;">
-      <a href="https://www.2022.openhci.com/" target="_blank" rel="noopener noreferrer"
-        margin: 0;>
+      <a href="https://www.2022.openhci.com/" target="_blank" rel="noopener noreferrer" margin: 0;>
         <iframe
           style="width: 64vw; height: 36vw; background: white; border: 20px solid gainsboro; border-radius:10px; margin: 0;"
           src="https://www.2022.openhci.com/" title="External page">
