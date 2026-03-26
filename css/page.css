@@ -10,6 +10,10 @@ body {
   margin: 0;
 }
 
+.w3-bar a{
+  text-transform: uppercase;
+}
+
 /* 1. 沈浸式首屏 Hero Section */
 .hero-section {
   height: 100vh;
@@ -233,13 +237,13 @@ body {
 }
 
 .img-fade-all {
-  -webkit-mask-image: 
+  -webkit-mask-image:
     linear-gradient(to top, transparent, black 5%),
     linear-gradient(to bottom, transparent, black 5%),
     linear-gradient(to left, transparent, black 5%),
     linear-gradient(to right, transparent, black 5%);
-    
-  mask-image: 
+
+  mask-image:
     linear-gradient(to top, transparent, black 20%),
     linear-gradient(to bottom, transparent, black 20%),
     linear-gradient(to left, transparent, black 20%),
@@ -257,4 +261,42 @@ body {
 .img-fade-horizontal {
   -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
   mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+}
+
+
+.pipeline-card {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 28px;
+  align-items: stretch;
+  padding: 30px;
+  backdrop-filter: blur(4px);
+}
+
+.pipeline-card pre {
+  margin: 0;
+  padding: 10px;
+  border-radius: 18px;
+  background: #0d0d0d;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  overflow-x: auto;
+}
+
+.pipeline-card pre code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: small;
+  line-height: 1.5;
+  color: #f3f3f3;
+  white-space: pre;
+}
+
+.pipeline-label {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: medium;
+  color: var(--accent);
+}
+
+.pipeline-text h3 {
+  color: var(--accent);
 }
