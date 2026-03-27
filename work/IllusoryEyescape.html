@@ -148,12 +148,18 @@
 
   <div style="display: flex; flex-direction: column; gap: 100px; margin: 20vh 0;">
     <div style=" display: flex; justify-content: center;">
-      <img style="width: 100%; object-fit: contain;" class="img-fade-vertical" src="../image/Illusory Eyescape/5.webp"
-        onclick="openLightbox(this)">
+      <!-- <img style="width: 70%; object-fit: contain;" class="img-fade-vertical" src="../image/Illusory Eyescape/gif1.gif"
+        onclick="openLightbox(this)"> -->
+      <!-- <video src="../image/Illusory Eyescape/IMG_4345.mp4" width="70%" controls></video> -->
+      <video class="img-fade-vertical" src="../image/Illusory Eyescape/IMG_4345.mp4" width="80%" autoplay loop muted
+        playsinline>
+      </video>
     </div>
-    <div style="width: 100%; display: flex; justify-content:flex-end;" class="img-wrap">
+
+    <!-- <div style="width: 100%; display: flex; justify-content:flex-end;" class="img-wrap">
       <img style="width: 60%; object-fit: contain;" class="img-fade-vertical" src="../image/Illusory Eyescape/0.webp"
         onclick="openLightbox(this)">
+
     </div>
     <div style="display: flex; width: 100%; gap: 80px; height: 150vh;">
       <div style="width: 70%;">
@@ -164,7 +170,7 @@
         <img style="width: 100%; object-fit: contain; justify-content: end;" class="img-fade-vertical"
           src="../image/Illusory Eyescape/2.webp" onclick="openLightbox(this)">
       </div>
-    </div>
+    </div> -->
   </div>
 
   <section id="Motivation" class="section-content">
@@ -683,55 +689,46 @@
   <section id="Exhibition" class="section-content" style="background: #050505;">
     <h2 class="section-title">Exhibition</h2>
 
+    <div style="display: flex; flex-direction: column;  margin-top: 10vh;">
 
-    <div style="display: flex; flex-direction: column; gap: 100px; margin-top: 10vh;">
-      <div style="display: flex; gap: 40px; align-items: self-end; justify-content: center; ">
-        <img style="width: 55%; object-fit: contain;" onclick="openLightbox(this)"
-          src="../image/Illusory Eyescape/card-f.webp">
-        <img style="width: 35%; object-fit: contain; " onclick="openLightbox(this)"
-          src="../image/Illusory Eyescape/card-b.webp">
-      </div>
-      <div style="width: 100%; display: flex; justify-content: center;">
-        <p style="width: 80%;">
-          Viewers initially engaged with the screen by reading the displayed text. After approximately 30 seconds, many
-          recognized that their gaze was being tracked.
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: auto 40vh; gap: 28px; align-items: stretch;">
+        <p style="grid-column: 1 / 4; margin: 0;">
+          Viewers initially engaged with the screen by reading the displayed text. After approximately 30 seconds,
+          many recognized that their gaze was being tracked.
           This awareness prompted active experimentation, as viewers began to intentionally manipulate their attention
-          to
-          affect the generated output.
+          to affect the generated output.
           <br><br>
           As viewers begin to experiment with their gaze, the boundary between observer and system dissolves.
           The machine no longer appears as a tool producing outputs, but as a responsive medium that reflects the
-          viewer's
-          own cognitive process.
+          viewer's own cognitive process.
         </p>
+
+        <img style="width: 100%; height: 100%; display: block; object-fit: cover; grid-column: 4 / 5; grid-row: 1 / 3;"
+          src="../image/Illusory Eyescape/2.webp" onclick="openLightbox(this)">
+
+        <img style="width: 100%; height: 100%; display: block; object-fit: cover; grid-column: 1 / 3; grid-row: 2 / 3;"
+          src="../image/Illusory Eyescape/1.webp" onclick="openLightbox(this)">
+
+        <img style="width: 100%; height: 100%; display: block; object-fit: cover; grid-column: 3 / 4; grid-row: 2 / 3;"
+          class="img-fade-vertical" src="../image/Illusory Eyescape/0.webp" onclick="openLightbox(this)">
       </div>
 
       <div>
-
-
         <div
-          style="width: 100%; display: flex; flex-direction: row-reverse; margin-top: 3.5%; gap: 3.5%; align-items: end;">
-          <div style="width: 70%; display: flex; flex-direction: column; align-items: flex-end;">
-            <div style="width: 100%; display: flex; flex-direction: row-reverse;">
-              <div
-                style="width: 70%; display: flex; flex-direction: row-reverse; justify-content: space-between; align-items: end;">
-                <img style="width: 55%; object-fit: contain;" src="../image/Illusory Eyescape/7.webp">
-                <img style="width: 40%; object-fit: contain;" src="../image/Illusory Eyescape/3.webp">
-              </div>
-            </div>
-            <p style="width: 100%; margin-top: 7%;">
-              Unexpectedly, different personalities led to entirely different modes of engagement.
-              <br>
-              Some actively experimented with the system, testing how their gaze could influence the output.<br>
-              Others focused on understanding the underlying mechanism, attempting to decode how the system
-              operates.<br>
-              Some chose to step back, observing how others interacted before forming their own interpretation.<br>
-              <br>
-              Rather than guiding viewers toward a fixed meaning, the work creates an open structure for interpretation.
-              Each interaction becomes a reflection of how one approaches uncertainty, perception, and control.
-            </p>
-          </div>
-          <img style="width: 26.5%; object-fit: contain;" src="../image/Illusory Eyescape/8.webp">
+          style="width: 100%; display: flex; flex-direction: row-reverse; gap: 50px; align-items: end;">
+
+          <p style="width: 75%; margin-top: 7%;">
+            Unexpectedly, different personalities led to entirely different modes of engagement.
+            <br>
+            Some actively experimented with the system, testing how their gaze could influence the output.<br>
+            Others focused on understanding the underlying mechanism, attempting to decode how the system
+            operates.<br>
+            Some chose to step back, observing how others interacted before forming their own interpretation.<br>
+            <br>
+            Rather than guiding viewers toward a fixed meaning, the work creates an open structure for interpretation.
+            Each interaction becomes a reflection of how one approaches uncertainty, perception, and control.
+          </p>
+          <img style="width: 20%; object-fit: contain;" src="../image/Illusory Eyescape/8.webp">
         </div>
 
         <p style="font-size: x-large; color: var(--accent); margin-top: 3.5%;">
@@ -749,8 +746,12 @@
           </div>
 
           <div class="ie-carousel" style="width: 60%;">
-            <img style="width: 100%; object-fit: contain;" src="../image/Illusory Eyescape/4.webp">
-            <img style="width: 100%; object-fit: contain;" src="../image/Illusory Eyescape/9.webp">
+            <img style="width: 100%; object-fit: contain;" onclick="openLightbox(this)"
+              src="../image/Illusory Eyescape/4.webp">
+            <img style="width: 100%; object-fit: contain;" onclick="openLightbox(this)"
+              src="../image/Illusory Eyescape/9.webp">
+            <img style="width: 100%; object-fit: contain;" onclick="openLightbox(this)"
+              src="../image/Illusory Eyescape/card-f.webp">
           </div>
 
         </div>
