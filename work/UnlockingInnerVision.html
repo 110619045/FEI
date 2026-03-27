@@ -39,7 +39,7 @@
   </div>
 
   <header class="hero-section" style="  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)), 
-              url('../image/UnlockingInnerVision/ganzin.png') center/cover no-repeat;">
+              url('../image/UnlockingInnerVision/ganzin.webp') center/cover no-repeat;">
     <div class="hero-subtitle">// Consciousness Visualization
       with SOL GLASSES and Generative Art</div>
     <h1 class="hero-title">Unlocking Inner Vision</h1>
@@ -62,11 +62,12 @@
     <p class="w3-xlarge" style="color: var(--accent-color); font-weight: 200;">
       Can human subjective experience be captured, translated, and re-presented through computational systems?
     </p>
+    <p>Building upon the Illusory Eyescape series, this work expands interaction beyond controlled exhibition
+      environments and situates consciousness within real-world contexts.</p>
     <p>Unlocking Inner Vision is an interactive system that transforms gaze behavior into generative imagery. By
       integrating wearable eye-tracking technology (SOL GLASSES) with real-time object detection and text-to-image AI,
       the system translates visual attention into machine-generated representations, rendering subjective consciousness
-      visible through computational interpretation. Building upon the Illusory Eyescape series, this work expands
-      interaction beyond controlled exhibition environments and situates consciousness within real-world contexts.
+      visible through computational interpretation.
     </p>
     <p>
       By incorporating a wearable eye-tracking device, the project shifts from static, screen-bound interaction to
@@ -74,6 +75,8 @@
       unfolds dynamically as they navigate the physical world. This transition reframes perception as a mobile and
       context-sensitive process, allowing attention itself to become the driving force of creative generation.
     </p>
+
+    <img src="../image/UnlockingInnerVision/ganzin_g.webp" class="n-glow-img" style="margin-top: 5vh;">
   </section>
 
   <section id="TA" class="section-content">
@@ -107,8 +110,178 @@
   </section>
 
   <section class="section-content" style="clear: both;">
+    <h2 class="section-title">Technical Implementation</h2>
+    <p style="font-size: x-large; text-align: center; margin: 10vh 0;">
+      <span
+        style="border: 1px solid var(--accent); border-radius: 10px; padding: 15px; color: var(--accent);">Gaze</span> →
+      <span style="border: 1px solid var(--accent); border-radius: 10px; padding: 15px; color: var(--accent);">
+        Detection (Object /
+        Text)</span> →
+      <span
+        style="border: 1px solid var(--accent); border-radius: 10px; padding: 15px; color: var(--accent);">Filtering</span>
+      →
+      <span
+        style="border: 1px solid var(--accent);  border-radius: 10px; padding: 15px; color: var(--accent);">Aggregation</span>
+      →
+      <span
+        style="border: 1px solid var(--accent);  border-radius: 10px; padding: 15px; color: var(--accent);">Generation</span>
+    </p>
+    <div class="pipeline-card">
+      <div class="pipeline-text">
+        <span class="pipeline-label">01</span>
+        <h3>Gaze and Scene Alignment</h3>
+        <p>
+          The system aligns gaze data with the scene in real time, ensuring that each gaze point corresponds to the
+          correct visual moment.
+        </p>
+      </div>
+      <box>
+        <ul>
+          <li>
+            Gaze data is streamed using the Ganzin SDK
+          </li>
+          <li>
+            Gaze coordinates (gaze_2d) are directly mapped to the scene image
+          </li>
+          <li>
+            No resolution scaling is applied to preserve spatial accuracy
+          </li>
+          <li>
+            Gaze is matched to the closest frame in time for accurate spatial alignment
+          </li>
+          <li style="list-style-type: none; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;">
+            <br>gaze_data = find_nearest_timestamp_match(ts, gazes).combined
+          </li>
+        </ul>
+      </box>
+    </div>
+    <div class="pipeline-card">
+      <div class="pipeline-text">
+        <span class="pipeline-label">02</span>
+        <h3>Object Detection and Local Text Recognition</h3>
+        <p>
+          The system combines object detection and OCR to extract semantic content from the user's field of view, with
+          OCR applied to a gaze-centered region to improve performance (grayscale, blur, thresholding).
+        </p>
+      </div>
+      <box>
+        <ul>
+          <li>
+            YOLOv8 for object detection
+          </li>
+          <li>
+            EasyOCR for text recognition
+          </li>
+          <li>
+            Applied only around the gaze region to reduce noise and improve relevance.
+          </li>
+          <li>
+            confidence thresholding for both object and text results
+          </li>
+
+          <li style="list-style-type: none; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;">
+            <br>ocr_results = reader.readtext(roi_preprocessed)
+            <br>results = yolo(frame, verbose=False)
+          </li>
+        </ul>
+      </box>
+    </div>
+    <div class="pipeline-card">
+      <div class="pipeline-text">
+        <span class="pipeline-label">03</span>
+        <h3>Attention Filtering</h3>
+        <p>
+          Filters noisy and repetitive gaze inputs to extract meaningful attention patterns. Rather than recording
+          everything, the system selectively stores significant observations.
+        </p>
+      </div>
+      <box>
+        <ul>
+          <li>
+            Reject immediate duplicates
+          </li>
+          <li>
+            Suppress recently stored items
+          </li>
+          <li>
+            Short-term memory window using min_gap
+          </li>
+
+          <li style="list-style-type: none; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;">
+            <br>
+            if item == saved_items[-1]:
+            return False
+            <BR>
+            if item in saved_items[-min_gap:]:
+            return False
+          </li>
+        </ul>
+      </box>
+    </div>
+    <div class="pipeline-card">
+      <div class="pipeline-text">
+        <span class="pipeline-label">04</span>
+        <h3>Prompt Construction</h3>
+        <p>
+          Every 30 seconds, the system counts the accumulated objects and words, selects the most frequent items, and
+          compresses them into a textual prompt.
+        </p>
+      </div>
+      <box>
+        <ul>
+          <li>
+            Frequency counting
+          </li>
+          <li>
+            Top-10 selection
+          </li>
+          <li>
+            Converted into a prompt
+          </li>
+          <li style="list-style-type: none; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;">
+            <br>
+            counter = Counter(saved_items)
+            <br>
+            top_10_items = counter.most_common(10)
+            <br>
+            prompt = ", ".join(top_10_items)
+          </li>
+
+        </ul>
+      </box>
+    </div>
+    <div class="pipeline-card">
+      <div class="pipeline-text">
+        <span class="pipeline-label">05</span>
+        <h3>Asynchronous Image Generation</h3>
+        <p>
+          The prompt is sent to a generative model in a background thread to maintain real-time performance.
+        </p>
+      </div>
+      <box>
+        <ul>
+          <li>
+            Background worker thread
+          </li>
+          <li>
+            Queue-based image handoff
+          </li>
+          <li>
+            Displayed without interrupting the main loop
+          </li>
+          <li style="list-style-type: none; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;">
+            <br>
+            threading.Thread(target=worker, daemon=True).start()
+          </li>
+
+        </ul>
+      </box>
+    </div>
+  </section>
+
+  <section class="section-content" style="clear: both;">
     <h2 class="section-title">Swimlane Diagram</h2>
-    <img style="width: 100%;" src="../image/UnlockingInnerVision/SwimlaneDiagram.png">
+    <img style="width: 100%;" src="../image/UnlockingInnerVision/SwimlaneDiagram.webp">
   </section>
 
 

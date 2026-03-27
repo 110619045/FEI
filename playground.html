@@ -51,8 +51,7 @@
 
     .masonry-page {
       width: min(var(--max), calc(100% - 64px));
-      margin: 0 auto;
-      margin: 5%;
+      margin: 5% auto;
     }
 
     .masonry-header {
@@ -98,7 +97,7 @@
       display: inline-block;
       width: 100%;
       margin: 0 0 var(--gap);
-      cursor: pointer;
+      cursor: zoom-in;
       text-decoration: none;
       color: inherit;
     }
@@ -198,6 +197,34 @@
       margin-right: 4px;
     }
 
+    /* Lightbox */
+    #lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.92);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      z-index: 9999;
+      padding: 24px;
+    }
+
+    #lightbox.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    #lightbox-img {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+      display: block;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.45);
+    }
+
     @media (max-width: 1100px) {
       .masonry {
         column-count: 3;
@@ -254,18 +281,28 @@
       <header class="masonry-header">
         <div>
           <h1 class="w3-text-white w3-xxlarge"
-            style="letter-spacing: 3px; font-weight: bold; margin:0; text-transform: uppercase;">SELECTED_playground
+            style="letter-spacing: 3px; font-weight: bold; margin:0; text-transform: uppercase;">
+            SELECTED_playground
           </h1>
           <p class="masonry-subtitle">// {{ cards.length }} Projects Found</p>
         </div>
       </header>
 
       <section class="masonry">
-        <article v-for="(card, index) in cards" :key="index" class="masonry-card" :class="card.layout || 'mid'"
-          @click="openCard(card)">
+        <article
+          v-for="(card, index) in cards"
+          :key="index"
+          class="masonry-card"
+          :class="card.layout || 'mid'"
+          @click="openCard(card)"
+        >
           <div class="masonry-card-inner">
             <div class="masonry-thumb">
-              <img :src="card.img" :alt="card.Ename" :style="{ objectPosition: card.imgPosition || 'center' }">
+              <img
+                :src="card.img"
+                :alt="card.Ename || card.name || 'project'"
+                :style="{ objectPosition: card.imgPosition || 'center' }"
+              >
             </div>
 
             <div class="masonry-body">
@@ -274,9 +311,9 @@
                 <span v-if="card.link" class="masonry-arrow">→</span>
               </div>
 
-              <h2 class="masonry-name">{{ card.Ename }}</h2>
+              <h2 class="masonry-name">{{ card.Ename || card.name || 'Untitled' }}</h2>
 
-              <div class="masonry-tools">
+              <div class="masonry-tools" v-if="card.tool && card.tool.length">
                 <div v-for="(t, i) in card.tool" :key="i" class="masonry-tool">
                   <span>//</span>{{ t.tools }}
                 </div>
@@ -286,6 +323,11 @@
         </article>
       </section>
 
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" :class="{ active: lightboxOpen }" @click="closeLightbox">
+      <img id="lightbox-img" :src="lightboxSrc" alt="Preview">
     </div>
   </div>
 
@@ -300,10 +342,58 @@
     });
   </script>
 
+  <!-- 你的資料 -->
   <script src="js/playground.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-  <script src="js/card.js"></script>
+
+  <!-- Vue app -->
+  <script>
+    new Vue({
+      el: '#app',
+
+      data: {
+        cards: typeof WORKS_DATA !== 'undefined' ? WORKS_DATA : [],
+        lightboxOpen: false,
+        lightboxSrc: ''
+      },
+
+      methods: {
+        openCard(card) {
+          if (!card || !card.link) return;
+
+          const isImage = /\.(jpg|jpeg|png|webp|gif|avif)$/i.test(card.link);
+
+          if (isImage) {
+            this.lightboxSrc = card.link;
+            this.lightboxOpen = true;
+            document.body.style.overflow = 'hidden';
+          } else {
+            window.location.href = card.link;
+          }
+        },
+
+        closeLightbox() {
+          this.lightboxOpen = false;
+          this.lightboxSrc = '';
+          document.body.style.overflow = '';
+        },
+
+        handleEsc(e) {
+          if (e.key === 'Escape') {
+            this.closeLightbox();
+          }
+        }
+      },
+
+      mounted() {
+        document.addEventListener('keydown', this.handleEsc);
+      },
+
+      beforeDestroy() {
+        document.removeEventListener('keydown', this.handleEsc);
+      }
+    });
+  </script>
 
 </body>
-
 </html>

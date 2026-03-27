@@ -1,6 +1,7 @@
 const WORKS_DATA = [
     {
         img: './image/play around with LoRA/0.webp',
+        link: './image/play around with LoRA/0.webp',
         Ename: 'play around with LoRA',
         badge: 'CREATIVE',
         tool: [
@@ -15,6 +16,7 @@ const WORKS_DATA = [
     },
     {
         img: 'image/inkpaint/daydream.webp',
+        link: 'image/inkpaint/daydream.webp',
         Ename: 'Daydream',
         badge: 'PAINTING',
         tool: [
@@ -29,6 +31,7 @@ const WORKS_DATA = [
     },
     {
         img: 'image/watercolor/181120_0026.webp',
+        link: 'image/watercolor/181120_0026.webp',
         name: '',
         badge: 'PAINTING',
         tool: [
@@ -43,6 +46,7 @@ const WORKS_DATA = [
     },
     {
         img: 'image/故事盒/box.webp',
+        link: 'image/故事盒/box.webp',
         name: '"?"',
         Ename: '"?"',
         badge: 'CREATIVE',
@@ -59,6 +63,7 @@ const WORKS_DATA = [
     },
     {
         img: 'image/inkpaint/blessed.webp',
+        link: 'image/inkpaint/blessed.webp',
         name: '為美好的世界獻上祝福',
         Ename: 'May this beautiful world be blessed',
         badge: 'PAINTING',
@@ -74,6 +79,7 @@ const WORKS_DATA = [
     },
     {
         img: './image/電子雞/0.png',
+        link: './image/電子雞/0.png',
         name: '電子寵物雞',
         Ename: 'Electronic Pet',
         badge: 'DEVICE & SYSTEM',
@@ -89,6 +95,7 @@ const WORKS_DATA = [
     },
     {
         img: 'image/watercolor/jiufen.webp',
+        link: 'image/watercolor/jiufen.webp',
         name: '九份',
         Ename: 'Jiufen',
         badge: 'PAINTING',
@@ -104,6 +111,7 @@ const WORKS_DATA = [
     },
     {
         img: 'image/inkpaint/moon.webp',
+        link: 'image/inkpaint/moon.webp',
         name: '迢迢新秋夕 亭亭月將圓',
         Ename: 'The pale moon slowly rounds',
         badge: 'PAINTING',
@@ -119,6 +127,7 @@ const WORKS_DATA = [
     },
     {
         img: 'image/inkpaint/forgetting.webp',
+        link: 'image/inkpaint/forgetting.webp',
         name: '相望相忘',
         Ename: 'A glance into forgetting',
         badge: 'PAINTING',
@@ -149,6 +158,7 @@ const WORKS_DATA = [
     },
     {
         img: 'image/watercolor/tranquil.webp',
+        link: 'image/watercolor/tranquil.webp',
         name: '靜',
         Ename: 'Tranquil',
         badge: 'PAINTING',
