@@ -36,13 +36,6 @@
         </div>
     </section>
 
-    <!-- <nav>
-        <a href="showcase.html">showcase</a>
-        <a href="archive.html">archive</a>
-        <a href="playground.html">playground</a>
-        <a href="whoami.html">whoami</a>
-    </nav> -->
-
     <div id="mobile-warning">
         <div class="warning-box">
             <p class="warning-text">
@@ -67,12 +60,12 @@
             const centerY = window.innerHeight / 2;
             const distance = Math.sqrt(Math.pow(e.clientX - centerX, 2) + Math.pow(e.clientY - centerY, 2));
 
-            // 如果靠近中心，則文字變清晰 (慢感知的體現)
+            // 如果靠近中心，則文字變清晰
             if (distance < 200) {
                 title.classList.add('reveal');
                 subtext.classList.add('reveal');
             } else {
-                // 離開後慢慢消失，不讓資訊被「輕易擁有」
+                // 離開後慢慢消失
                 title.classList.remove('reveal');
                 subtext.classList.remove('reveal');
             }
