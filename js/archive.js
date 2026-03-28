@@ -68,4 +68,5 @@ const WORKS_DATA = [
     //     imgPosition: '75% center'
     // },
 
+    
 ];

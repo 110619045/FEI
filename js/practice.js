@@ -66,5 +66,4 @@ const WORKS_DATA = [
         Eintro: "In this game, you will play the role of a factory quality control worker, earning rewards through your job. However, work is not everything in your life. When it's time to clock out, you can use your salary to explore different virtual worlds and enjoy a moment of relaxation. But how long can you keep completing tedious and monotonous tasks day after day, only to escape reality into the virtual world?",
         imgPosition: '75% center'
     },
-
 ];
